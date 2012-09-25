@@ -52,6 +52,7 @@
 @synthesize map, publishBtn,toolBar, refreshBtn, bookmarkButtonItem, filterButton, alternativeToolbar, saveJobInPositionBtn, backBtn, jobToPublish;
 //ivar private
 @synthesize annotationsBuffer, zoomBuffer,oldZoom, timer, oldSwitch, oldFieldsString, newJobs, oldKindOffer;
+@synthesize leftPanel, rightPanel;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -642,14 +643,25 @@
                 saveJobInPositionBtn.enabled = YES;
             }
             
-            //carica l'alternativeToolbar con uno slide effect
-            [self.map addSubview:alternativeToolbar];
-            alternativeToolbar.frame = CGRectMake(0, self.view.frame.size.height, self.map.frame.size.width,alternativeToolbar.frame.size.height);
-            [UIView animateWithDuration:.85 
-                             animations:^{
-                                 alternativeToolbar.frame = CGRectMake(0,map.frame.size.height - alternativeToolbar.frame.size.height , self.map.frame.size.width, alternativeToolbar.frame.size.height);
-                             }
+            //mostro il left panel
+
+            [UIView animateWithDuration:2
+                            animations:^{
+                                    leftPanel.frame = CGRectMake(leftPanel.frame.origin.x+leftPanel.frame.size.width,map.frame.size.height - leftPanel.frame.size.height , self.leftPanel.frame.size.width, leftPanel.frame.size.height);
+                            }
+                            completion:^(BOOL finished) {
+                                
+                                //mostro il rightPanel
+                                
+                                [UIView animateWithDuration:2
+                                                 animations:^{
+                                                     rightPanel.frame = CGRectMake(self.map.frame.size.width - rightPanel.frame.size.width,map.frame.size.height - rightPanel.frame.size.height , self.rightPanel.frame.size.width, rightPanel.frame.size.height);
+                                                 }
+                                 ];
+
+                            }
              ];
+            
         }
     }
     else{
@@ -716,15 +728,24 @@
 
 
 -(IBAction)backBtnClicked:(id)sender
-{
-    //fa sparire con uno slide la alternativeToolbar
-    CGRect alternativeToolBarFrame = alternativeToolbar.frame;
-    [UIView beginAnimations:nil context:NULL];
-    [UIView setAnimationDuration:1];
-    alternativeToolBarFrame.origin.y = map.frame.size.height;
-    alternativeToolbar.frame = alternativeToolBarFrame;
-    [UIView commitAnimations]; 
-    
+{      
+    [UIView animateWithDuration:2
+                     animations:^{
+                         //nascondo rightPanel con animazione
+                         rightPanel.frame = CGRectMake(self.rightPanel.frame.origin.x + rightPanel.frame.size.width,map.frame.size.height - rightPanel.frame.size.height , self.rightPanel.frame.size.width, rightPanel.frame.size.height);
+
+                     }
+                     completion:^(BOOL finished) {
+                         
+                                [UIView animateWithDuration:2
+                                          animations:^{
+                                              //nascondo leftPanel con animazione
+                                              leftPanel.frame = CGRectMake(self.leftPanel.frame.origin.x-leftPanel.frame.size.width,map.frame.size.height - leftPanel.frame.size.height , self.leftPanel.frame.size.width, leftPanel.frame.size.height);
+                                          }
+                          ];
+                         
+                     }
+     ];
     
     //rimuovo il pin draggabile dalla mappa
     if(jobToPublish != nil && jobToPublish.isDraggable == YES)
@@ -932,6 +953,14 @@
      */
     self.oldZoom = 18; //max zoom
     
+    /*Aggiungo le subViews alla mappa
+     */
+    leftPanel.frame = CGRectMake(0-leftPanel.frame.size.width, map.frame.size.height - leftPanel.frame.size.height,self.leftPanel.frame.size.width,leftPanel.frame.size.height);
+    [self.map addSubview:leftPanel];
+    rightPanel.frame = CGRectMake(self.map.frame.size.width, map.frame.size.height - rightPanel.frame.size.height,self.rightPanel.frame.size.width,rightPanel.frame.size.height);
+    [self.map addSubview:rightPanel];
+    
+    
     
     /*inizializzo i buffer per lo zoom e per le annotazioni
      */
@@ -1037,6 +1066,9 @@
     
     newJobs = nil;
     
+    self.rightPanel = nil;
+    self.leftPanel = nil;
+    
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -1047,6 +1079,8 @@
 
 - (void)dealloc
 {
+    [rightPanel release];
+    [leftPanel release];
     [geoDec release];
     [oldKindOffer release];
     [newJobs release];

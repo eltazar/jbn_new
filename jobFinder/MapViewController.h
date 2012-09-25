@@ -51,7 +51,8 @@
 @property(nonatomic, retain) IBOutlet UIButton *publishBtn;
 @property(nonatomic, retain) IBOutlet UIBarButtonItem *refreshBtn;
 @property(nonatomic, retain) IBOutlet UIBarButtonItem *bookmarkButtonItem;
-
+@property(nonatomic, retain) IBOutlet UIView *leftPanel;
+@property(nonatomic, retain) IBOutlet UIView *rightPanel;
 
 -(void)setNewPins:(NSArray*)pins;
 -(void)onConnectionRestored;
