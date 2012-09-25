@@ -961,6 +961,20 @@
     [self.map addSubview:rightPanel];
     
     
+    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+    {
+        CGSize result = [[UIScreen mainScreen] bounds].size;
+        if(result.height == 480)
+        {
+            // iPhone Classic
+        }
+        if(result.height == 568)
+        {
+            [publishBtn setFrame:CGRectMake(112,self.view.frame.size.height - 55, 97, 53)];
+        }
+    }
+    
+    
     
     /*inizializzo i buffer per lo zoom e per le annotazioni
      */
