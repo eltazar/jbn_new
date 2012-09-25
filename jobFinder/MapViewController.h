@@ -14,8 +14,9 @@
 #import "FavouriteAnnotation.h"
 #import "DatabaseAccess.h"
 #import "InformationSectionViewController.h"
+#import "GeoDecoder.h"
 
-@interface MapViewController : UIViewController <PublishViewControllerDelegate,  MKMapViewDelegate, DatabaseAccessDelegate,InformationSectionViewControllerDelegate>{
+@interface MapViewController : UIViewController <PublishViewControllerDelegate,  MKMapViewDelegate, DatabaseAccessDelegate,InformationSectionViewControllerDelegate,GeoDecoderDelegate>{
     
     MKMapView *map;
     UIToolbar *toolBar;  
@@ -36,6 +37,8 @@
     DatabaseAccess *dbAccess;
       
     MKCoordinateRegion oldRegion;
+    
+    GeoDecoder *geoDec;
     
 }
 @property(nonatomic, retain)Job *jobToPublish;

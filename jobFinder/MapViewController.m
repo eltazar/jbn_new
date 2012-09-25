@@ -68,7 +68,8 @@
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)annotationView didChangeDragState:(MKAnnotationViewDragState)newState fromOldState:(MKAnnotationViewDragState)oldState {
 	    
 	if (oldState == MKAnnotationViewDragStateDragging) {
-
+        //NSLog(@"DRAG PIN FERMO");
+        [geoDec searchAddressForCoordinate:[annotationView.annotation coordinate]];
 	}
 }
 
@@ -453,6 +454,50 @@
     [jobToShow release];
 }
 
+#pragma mark - GeodecoderDelegate
+
+//date le coordinate del job cerca il relativo indirizzo e lo mostra nella tabella
+-(void)didReceivedGeoDecoderData:(NSDictionary *)geoData
+{
+    NSString *address;
+    
+    if([[geoData objectForKey:@"status"] isEqualToString:@"OK"]){
+        
+        NSArray *resultsArray = [geoData objectForKey:@"results"];
+        
+        NSDictionary *data = [resultsArray objectAtIndex:0];
+        //NSLog(@"DICTIONARY ESTRATTO \n :%@",[data objectForKey:@"address_components"]); //array
+        //NSLog(@"CLASSE: %s", class_getName([[data objectForKey:@"address_components"] class]));
+        
+        NSArray *dataArray = [data objectForKey:@"address_components"];
+        
+        //    NSLog(@"CLASSE: %s", class_getName([[dataArray objectAtIndex:0] class]));
+        //NSLog(@"DATA ARRAY: %@", [[dataArray objectAtIndex:0] objectForKey:@"long_name"]);// 0 = dizionario street number
+        
+        address = @""; //dove mettere "non disponibile" ?
+        NSString *street;
+        NSString *number;
+        if(dataArray != nil && dataArray.count != 0){
+            street = [[dataArray objectAtIndex:1] objectForKey:@"long_name"];
+            number = [[dataArray objectAtIndex:0] objectForKey:@"long_name"];
+        }
+        //formatto la stringa address
+        if(street != nil && !([street isEqualToString:@""])){
+            address = [NSString stringWithFormat:@"%@", street];
+            if( number != nil && !([number isEqualToString:@""]))
+                address = [NSString stringWithFormat:@"%@, %@", address, number];
+            
+        }
+    }
+    else{
+        address = @"Indirizzo non disponibile";
+    }
+    //aggiorno il callout
+    //NSLog(@"INDIRIZZO CALCOLATO = %@",address);
+    jobToPublish.address = address;
+    
+    
+}
 
 #pragma mark - DatabaseAccessDelegate
 
@@ -879,6 +924,10 @@
     // Do any additional setup after loading the view from its nib.
     [super viewDidLoad];
     
+    //per il geocodinge e revers geocoding
+    geoDec = [[GeoDecoder alloc] init];
+    [geoDec setDelegate:self];
+    
     /*Inizializzazione proprietà mapView
      */
     self.oldZoom = 18; //max zoom
@@ -998,6 +1047,7 @@
 
 - (void)dealloc
 {
+    [geoDec release];
     [oldKindOffer release];
     [newJobs release];
     [jobToPublish release], jobToPublish = nil;
