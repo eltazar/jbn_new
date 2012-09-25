@@ -618,7 +618,7 @@
         
         //alloco il job da pubblicare
         self.jobToPublish = [[[Job alloc] initWithCoordinate:coordinate] autorelease];
-                
+        [geoDec searchAddressForCoordinate:coordinate];
         
         if(jobToPublish != nil){
             
