@@ -20,7 +20,7 @@
     
     MKMapView *map;
     UIToolbar *toolBar;  
-    UIBarButtonItem *publishBtn; 
+    UIButton *publishBtn;
     UIBarButtonItem *refreshBtn; 
     UIBarButtonItem *infoBarButtonItem;
     UIBarButtonItem *filterButton;
@@ -48,7 +48,7 @@
 @property(nonatomic, retain) IBOutlet MKMapView *map;
 @property(nonatomic, retain) IBOutlet UIToolbar *toolBar;
 @property(nonatomic, retain) IBOutlet UIBarButtonItem *filterButton;
-@property(nonatomic, retain) IBOutlet UIBarButtonItem *publishBtn;
+@property(nonatomic, retain) IBOutlet UIButton *publishBtn;
 @property(nonatomic, retain) IBOutlet UIBarButtonItem *refreshBtn;
 @property(nonatomic, retain) IBOutlet UIBarButtonItem *bookmarkButtonItem;
 
