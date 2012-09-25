@@ -62,7 +62,7 @@
 - (NSString *)subtitle {
     
     if(isDraggable)
-        return @"CIAO";
+        return address;
     
     if(date != nil){
         //ritorna data formattata secondo la localizzazione dell'utente
