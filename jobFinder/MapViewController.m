@@ -49,7 +49,7 @@
 
 @implementation MapViewController 
 //ivar pubbliche
-@synthesize map, publishBtn,toolBar, refreshBtn, bookmarkButtonItem, filterButton, alternativeToolbar, saveJobInPositionBtn, backBtn, jobToPublish;
+@synthesize map, publishBtn,toolBar, refreshBtn, bookmarkButtonItem, filterButton, saveJobInPositionBtn, backBtn, jobToPublish;
 //ivar private
 @synthesize annotationsBuffer, zoomBuffer,oldZoom, timer, oldSwitch, oldFieldsString, newJobs, oldKindOffer;
 @synthesize leftPanel, rightPanel;
@@ -1063,7 +1063,6 @@
     
     self.backBtn = nil;
     self.saveJobInPositionBtn = nil;
-    self.alternativeToolbar = nil;
     self.map = nil;
     self.toolBar = nil;
     //self.filterButton = nil;

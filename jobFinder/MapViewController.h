@@ -26,7 +26,6 @@
     UIBarButtonItem *filterButton;
     UIBarButtonItem *bookmarkButtonItem;
     Job *jobToPublish;
-    UIView *alternativeToolbar;
     UIButton *saveJobInPositionBtn;
     UIButton *backBtn;
     
@@ -44,7 +43,6 @@
 @property(nonatomic, retain)Job *jobToPublish;
 @property(nonatomic, retain) IBOutlet UIButton *backBtn;
 @property(nonatomic, retain) IBOutlet UIButton *saveJobInPositionBtn;
-@property(nonatomic, retain) IBOutlet UIView *alternativeToolbar;
 @property(nonatomic, retain) IBOutlet MKMapView *map;
 @property(nonatomic, retain) IBOutlet UIToolbar *toolBar;
 @property(nonatomic, retain) IBOutlet UIBarButtonItem *filterButton;
