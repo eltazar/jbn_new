@@ -66,6 +66,9 @@
 		ACB1416E149BBEF500EBB1F5 /* logoSapienza.png in Resources */ = {isa = PBXBuildFile; fileRef = ACB1416C149BBEF500EBB1F5 /* logoSapienza.png */; };
 		ACB1416F149BBEF500EBB1F5 /* logoSapienza@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACB1416D149BBEF500EBB1F5 /* logoSapienza@2x.png */; };
 		ACB38CD8161303E6005CE09B /* insertJobButtonSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = ACB38CD7161303E6005CE09B /* insertJobButtonSelected.png */; };
+		ACB38CDE16133F5C005CE09B /* ShareCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB38CDD16133F5C005CE09B /* ShareCell.m */; };
+		ACB38CE016136161005CE09B /* fbButton.png in Resources */ = {isa = PBXBuildFile; fileRef = ACB38CDF16136161005CE09B /* fbButton.png */; };
+		ACB38CE2161365D7005CE09B /* mailButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACB38CE1161365D7005CE09B /* mailButton@2x.png */; };
 		ACB4D5EF14764E27003DCFCA /* CDataScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB4D5D814764E27003DCFCA /* CDataScanner.m */; };
 		ACB4D5F014764E27003DCFCA /* CFilteringJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB4D5DB14764E27003DCFCA /* CFilteringJSONSerializer.m */; };
 		ACB4D5F114764E27003DCFCA /* CJSONDeserializer_BlocksExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB4D5DD14764E27003DCFCA /* CJSONDeserializer_BlocksExtensions.m */; };
@@ -89,8 +92,6 @@
 		ACBAF56314698F8E006A2A6D /* call.png in Resources */ = {isa = PBXBuildFile; fileRef = ACBAF56214698F8E006A2A6D /* call.png */; };
 		ACBAF56514698F94006A2A6D /* call@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACBAF56414698F94006A2A6D /* call@2x.png */; };
 		ACC0F8961482F39000A4164B /* sectors.plist in Resources */ = {isa = PBXBuildFile; fileRef = ACC0F8951482F39000A4164B /* sectors.plist */; };
-		ACC1FBB31611C3350069545B /* CustomToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC1FBB11611C3350069545B /* CustomToolBar.m */; };
-		ACC1FBB41611C3350069545B /* CustomToolBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACC1FBB21611C3350069545B /* CustomToolBar.xib */; };
 		ACC1FBC51611E1820069545B /* insertJobButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACC1FBC41611E1820069545B /* insertJobButton@2x.png */; };
 		ACC1FBC71611F9760069545B /* insertJobButtonDisabled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACC1FBC61611F9760069545B /* insertJobButtonDisabled@2x.png */; };
 		ACC1FBC91611FBAC0069545B /* starBookmark.png in Resources */ = {isa = PBXBuildFile; fileRef = ACC1FBC81611FBAC0069545B /* starBookmark.png */; };
@@ -245,6 +246,10 @@
 		ACB1416C149BBEF500EBB1F5 /* logoSapienza.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logoSapienza.png; sourceTree = "<group>"; };
 		ACB1416D149BBEF500EBB1F5 /* logoSapienza@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logoSapienza@2x.png"; sourceTree = "<group>"; };
 		ACB38CD7161303E6005CE09B /* insertJobButtonSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = insertJobButtonSelected.png; path = icons/insertJobButtonSelected.png; sourceTree = SOURCE_ROOT; };
+		ACB38CDC16133F5C005CE09B /* ShareCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShareCell.h; path = ../ShareCell.h; sourceTree = "<group>"; };
+		ACB38CDD16133F5C005CE09B /* ShareCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShareCell.m; path = ../ShareCell.m; sourceTree = "<group>"; };
+		ACB38CDF16136161005CE09B /* fbButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fbButton.png; path = icons/fbButton.png; sourceTree = SOURCE_ROOT; };
+		ACB38CE1161365D7005CE09B /* mailButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "mailButton@2x.png"; path = "icons/mailButton@2x.png"; sourceTree = SOURCE_ROOT; };
 		ACB4D5D714764E27003DCFCA /* CDataScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDataScanner.h; path = TouchJson/CDataScanner.h; sourceTree = "<group>"; };
 		ACB4D5D814764E27003DCFCA /* CDataScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDataScanner.m; path = TouchJson/CDataScanner.m; sourceTree = "<group>"; };
 		ACB4D5DA14764E27003DCFCA /* CFilteringJSONSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFilteringJSONSerializer.h; sourceTree = "<group>"; };
@@ -283,9 +288,6 @@
 		ACBAF56214698F8E006A2A6D /* call.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = call.png; path = icons/call.png; sourceTree = SOURCE_ROOT; };
 		ACBAF56414698F94006A2A6D /* call@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "call@2x.png"; path = "icons/call@2x.png"; sourceTree = SOURCE_ROOT; };
 		ACC0F8951482F39000A4164B /* sectors.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = sectors.plist; sourceTree = "<group>"; };
-		ACC1FBB01611C3350069545B /* CustomToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomToolBar.h; sourceTree = "<group>"; };
-		ACC1FBB11611C3350069545B /* CustomToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomToolBar.m; sourceTree = "<group>"; };
-		ACC1FBB21611C3350069545B /* CustomToolBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomToolBar.xib; sourceTree = "<group>"; };
 		ACC1FBC41611E1820069545B /* insertJobButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "insertJobButton@2x.png"; path = "icons/insertJobButton@2x.png"; sourceTree = SOURCE_ROOT; };
 		ACC1FBC61611F9760069545B /* insertJobButtonDisabled@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "insertJobButtonDisabled@2x.png"; path = "icons/insertJobButtonDisabled@2x.png"; sourceTree = SOURCE_ROOT; };
 		ACC1FBC81611FBAC0069545B /* starBookmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = starBookmark.png; path = icons/starBookmark.png; sourceTree = SOURCE_ROOT; };
@@ -413,6 +415,8 @@
 			children = (
 				ACCBD835144D7FA400EEAC2A /* BaseCell.h */,
 				ACCBD836144D7FA500EEAC2A /* BaseCell.m */,
+				ACB38CDC16133F5C005CE09B /* ShareCell.h */,
+				ACB38CDD16133F5C005CE09B /* ShareCell.m */,
 				ACD73AAF143AF4810025DF6C /* ActionCell.h */,
 				ACD73AB0143AF4810025DF6C /* ActionCell.m */,
 				ACD73AB1143AF4810025DF6C /* InfoCell.h */,
@@ -654,9 +658,6 @@
 		ACC1FBB51611C33A0069545B /* Controllers custom */ = {
 			isa = PBXGroup;
 			children = (
-				ACC1FBB01611C3350069545B /* CustomToolBar.h */,
-				ACC1FBB11611C3350069545B /* CustomToolBar.m */,
-				ACC1FBB21611C3350069545B /* CustomToolBar.xib */,
 			);
 			name = "Controllers custom";
 			sourceTree = "<group>";
@@ -701,6 +702,8 @@
 		ACD58178145862DB00CCB281 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				ACB38CE1161365D7005CE09B /* mailButton@2x.png */,
+				ACB38CDF16136161005CE09B /* fbButton.png */,
 				ACB38CD7161303E6005CE09B /* insertJobButtonSelected.png */,
 				AC5E30371612926C003EE1D0 /* gpsPos@2x.png */,
 				AC5E30351612925A003EE1D0 /* starBookmark@2x.png */,
@@ -878,7 +881,6 @@
 				ACD08D6214C0B159000D2D79 /* help.png in Resources */,
 				ACD08D6314C0B159000D2D79 /* help@2x.png in Resources */,
 				ACB8F50116109E22008DB620 /* Default-568h@2x.png in Resources */,
-				ACC1FBB41611C3350069545B /* CustomToolBar.xib in Resources */,
 				ACC1FBC51611E1820069545B /* insertJobButton@2x.png in Resources */,
 				ACC1FBC71611F9760069545B /* insertJobButtonDisabled@2x.png in Resources */,
 				ACC1FBC91611FBAC0069545B /* starBookmark.png in Resources */,
@@ -892,6 +894,8 @@
 				AC5E30361612925A003EE1D0 /* starBookmark@2x.png in Resources */,
 				AC5E30381612926C003EE1D0 /* gpsPos@2x.png in Resources */,
 				ACB38CD8161303E6005CE09B /* insertJobButtonSelected.png in Resources */,
+				ACB38CE016136161005CE09B /* fbButton.png in Resources */,
+				ACB38CE2161365D7005CE09B /* mailButton@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -977,7 +981,7 @@
 				ACD08D3814C08E1B000D2D79 /* PagesControllerViewController.m in Sources */,
 				ACB8F5061610A345008DB620 /* NSString+MD5Addition.m in Sources */,
 				ACB8F5091610A354008DB620 /* UIDevice+IdentifierAddition.m in Sources */,
-				ACC1FBB31611C3350069545B /* CustomToolBar.m in Sources */,
+				ACB38CDE16133F5C005CE09B /* ShareCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
