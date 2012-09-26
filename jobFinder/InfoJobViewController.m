@@ -17,6 +17,7 @@
 #import "Facebook.h"
 #import "jobFinderAppDelegate.h"
 #import "InfoCell.h"
+#import "ShareCell.h"
 
 @implementation InfoJobViewController
 
@@ -37,7 +38,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+
     NSArray *sec = [sectionData objectAtIndex:indexPath.section];
     NSDictionary *rowDesc = [sec objectAtIndex:indexPath.row]; 
     
@@ -63,6 +64,7 @@
     }
     
     return cell;
+    
 }    
 
 //riempe le celle con i relativi dati, semplifica anche il riuso di una cella
@@ -125,6 +127,10 @@
                     cell.detailTextLabel.text = job.urlAsString;
                 else cell.detailTextLabel.text = @"Non specificato";
             }
+            break;
+        case 3:
+            if(row == 0)
+                ((ShareCell*)cell).executor = self;
             break;
         default:
             break;
@@ -286,37 +292,39 @@
                 break; 
         }
     }
-    else if(section == 3){
-        if(row==0){
-            if (![appDelegate.facebook isSessionValid]) {
-                [appDelegate logIntoFacebook];
-                waitingForFacebook = YES;
-//                [self postOnFacebookWall];
-            }
-            else{
-                [self postOnFacebookWall];
-            }
-        }
-        else if(row == 1){
-            
-            MFMailComposeViewController *mail = [[MFMailComposeViewController alloc] init];
-            mail.mailComposeDelegate = self;
-            
-            if([MFMailComposeViewController canSendMail]){
-                //[mail setToRecipients:[NSArray arrayWithObjects:cell.detailTextLabel.text, nil]];
-                [mail setSubject:@"Segnalazione offerta di lavoro da JobNavigator"];
-                [mail setMessageBody:[self createJobString:@"mail"] isHTML:YES];
-                [self presentModalViewController:mail animated:YES];
-                [mail release];
-            }
-        }
-    }
-     
+    
     //deseleziona cella
     [tableView deselectRowAtIndexPath:indexPath animated:YES];  
     
 }
 
+#pragma mark - Pulsanti view
+-(IBAction)shareWithFB:(id)sender{
+    NSLog(@"FACEBOOK SHARING");
+    if (![appDelegate.facebook isSessionValid]) {
+        [appDelegate logIntoFacebook];
+        waitingForFacebook = YES;
+        //                [self postOnFacebookWall];
+    }
+    else{
+        [self postOnFacebookWall];
+    }
+}
+
+-(IBAction)shareWithMail:(id)sender{
+    NSLog(@"MAIL SHARING");
+    MFMailComposeViewController *mail = [[MFMailComposeViewController alloc] init];
+    mail.mailComposeDelegate = self;
+    
+    if([MFMailComposeViewController canSendMail]){
+        //[mail setToRecipients:[NSArray arrayWithObjects:cell.detailTextLabel.text, nil]];
+        [mail setSubject:@"Segnalazione offerta di lavoro da JobNavigator"];
+        [mail setMessageBody:[self createJobString:@"mail"] isHTML:YES];
+        [self presentModalViewController:mail animated:YES];
+        [mail release];
+    }
+
+}
 
 #pragma mark - MFMailComposeViewControllerDelegate
 
@@ -544,26 +552,35 @@
                          [NSString stringWithFormat:@"%d", UITableViewCellStyleSubtitle], @"style",
                          nil]autorelease] atIndex: 3];
     
-    [secD insertObject:[[[NSDictionary alloc] initWithObjectsAndKeys:
-                         @"regular",          @"DataKey",
-                         @"ActionCell",       @"kind", 
-                         @"Facebook",           @"label",
-                         @"facebook.png",         @"img",
-                         [NSString stringWithFormat:@"%d", UITableViewCellStyleSubtitle], @"style",
-                         nil]autorelease] atIndex: 0];
+    [secD insertObject:[[[NSMutableDictionary alloc] initWithObjectsAndKeys:
+                         @"regular",             @"DataKey",
+                         @"ShareCell",         @"kind",
+                         @"Condividi",                 @"label",
+                         @"",                 @"placeholder",
+                         @"",                 @"img",
+                         [NSString stringWithFormat:@"%d", UITableViewCellStyleDefault], @"style",
+                         nil] autorelease] atIndex: 0];
     
-    [secD insertObject:[[[NSDictionary alloc] initWithObjectsAndKeys:
-                         @"regular",          @"DataKey",
-                         @"ActionCell",       @"kind", 
-                         @"E-mail",           @"label",
-                         @"mail.png",         @"img",
-                         [NSString stringWithFormat:@"%d", UITableViewCellStyleSubtitle], @"style",
-                         nil]autorelease] atIndex: 1];
+//    [secD insertObject:[[[NSDictionary alloc] initWithObjectsAndKeys:
+//                         @"regular",          @"DataKey",
+//                         @"ActionCell",       @"kind", 
+//                         @"Facebook",           @"label",
+//                         @"facebook.png",         @"img",
+//                         [NSString stringWithFormat:@"%d", UITableViewCellStyleSubtitle], @"style",
+//                         nil]autorelease] atIndex: 0];
+//    
+//    [secD insertObject:[[[NSDictionary alloc] initWithObjectsAndKeys:
+//                         @"regular",          @"DataKey",
+//                         @"ActionCell",       @"kind", 
+//                         @"E-mail",           @"label",
+//                         @"mail.png",         @"img",
+//                         [NSString stringWithFormat:@"%d", UITableViewCellStyleSubtitle], @"style",
+//                         nil]autorelease] atIndex: 1];
 
 
     
     sectionData = [[NSArray alloc] initWithObjects: secA, secB, secC, secD,nil];
-    sectionDescripition = [[NSArray alloc] initWithObjects:@"Informazioni generali", @"Descrizione", @"Contatti",@"Condividi con", nil];  
+    sectionDescripition = [[NSArray alloc] initWithObjects:@"Informazioni generali", @"Descrizione", @"Contatti",@"", nil];
     
     
     /* Quando viene caricata la view controllo se il job scaricato dal server ha il campo address a nil o @"". Se si fa partire il reverse geocoding, altrimenti vuol dire che il job era già stato visualizzato in precedenza ed era già stato fatto il geocoding. In questo 

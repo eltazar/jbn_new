@@ -28,11 +28,15 @@
     jobFinderAppDelegate *appDelegate;
     BOOL waitingForFacebook;
     InfoCell *spinnerCell;
+    
 }
 
 -(id) initWithJob:(Job *)aJob;
 -(void) fillCell:(UITableViewCell*)cell InRow:(int)row inSection:(int)section;
 
+
+-(IBAction)shareWithFB:(id)sender;
+-(IBAction)sharewWithMail:(id)sender;
 //@property(nonatomic,retain) Job *job;
 @end
 
