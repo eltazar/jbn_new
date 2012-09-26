@@ -645,10 +645,10 @@
             
             //mostro il left panel
 
-            [UIView animateWithDuration:.6
+            [UIView animateWithDuration:.5
                             animations:^{
-                                    leftPanel.frame = CGRectMake(leftPanel.frame.origin.x+leftPanel.frame.size.width,map.frame.size.height - leftPanel.frame.size.height , self.leftPanel.frame.size.width, leftPanel.frame.size.height);
                                     rightPanel.frame = CGRectMake(self.map.frame.size.width - rightPanel.frame.size.width,map.frame.size.height - rightPanel.frame.size.height , self.rightPanel.frame.size.width, rightPanel.frame.size.height);
+                                    leftPanel.frame = CGRectMake(leftPanel.frame.origin.x+leftPanel.frame.size.width,map.frame.size.height - leftPanel.frame.size.height , self.leftPanel.frame.size.width, leftPanel.frame.size.height);
                             }
              ];
             
@@ -719,7 +719,7 @@
 
 -(IBAction)backBtnClicked:(id)sender
 {      
-    [UIView animateWithDuration:.6
+    [UIView animateWithDuration:.5
                      animations:^{
                          //nascondo rightPanel con animazione
                          rightPanel.frame = CGRectMake(self.rightPanel.frame.origin.x + rightPanel.frame.size.width,map.frame.size.height - rightPanel.frame.size.height , self.rightPanel.frame.size.width, rightPanel.frame.size.height);
@@ -802,7 +802,7 @@
     }
     
     //rimuovo left e rightPanel
-    [UIView animateWithDuration:.6
+    [UIView animateWithDuration:.5
                      animations:^{
                          //nascondo rightPanel con animazione
                          rightPanel.frame = CGRectMake(self.rightPanel.frame.origin.x + rightPanel.frame.size.width,map.frame.size.height - rightPanel.frame.size.height , self.rightPanel.frame.size.width, rightPanel.frame.size.height);
