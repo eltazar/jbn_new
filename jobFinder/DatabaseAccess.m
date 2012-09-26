@@ -403,7 +403,7 @@ NSString* key(NSURLConnection* con)
 
     //NSLog(@"DONE. Received Bytes: %d", [receivedData length]);
     NSString *json = [[NSString alloc] initWithBytes: [receivedData mutableBytes] length:[receivedData length] encoding:NSUTF8StringEncoding];
-    NSLog(@"JSON  %@", json);
+    //NSLog(@"JSON  %@", json);
     
     if([readConnections containsObject:connection]){
         //creo array di job
@@ -426,7 +426,7 @@ NSString* key(NSURLConnection* con)
                            
                 //sistemare il tipo ritornato da field e da date
                //job.employee = [Utilities sectorFromCode:[tempDict objectForKey:@"field"]];
-               NSLog(@"TIPO ANNUNCIO = %@", [tempDict objectForKey:@"tipoAnnuncio"]);
+               //NSLog(@"TIPO ANNUNCIO = %@", [tempDict objectForKey:@"tipoAnnuncio"]);
                job.kind = [tempDict objectForKey:@"tipoAnnuncio"];
                job.time = [tempDict objectForKey:@"time"];
                job.idDb = [[tempDict objectForKey:@"id"] integerValue];
