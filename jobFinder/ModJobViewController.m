@@ -14,6 +14,8 @@
 #import "TextAreaCell.h"
 #import "Utilities.h"
 
+#define SECTORS_CELL 2
+
 @implementation ModJobViewController
 @synthesize delegate;
 
@@ -36,6 +38,20 @@
            [segmentedCtrl setSelectedSegmentIndex:0];
         else if([theNewJob.time isEqualToString:@"Full-time"])
             [segmentedCtrl setSelectedSegmentIndex:1];
+        
+        kindSegmentedCtrl = [[UISegmentedControl alloc] initWithItems:[NSArray arrayWithObjects:@"Offro",@"Cerco", nil]];
+        kindSegmentedCtrl.frame = CGRectMake(27, 7, 140, 30);
+        [kindSegmentedCtrl addTarget:self
+                              action:@selector(chooseKind:)
+                    forControlEvents:UIControlEventValueChanged];
+        kindSegmentedCtrl.segmentedControlStyle = UISegmentedControlStyleBar;
+        
+        NSLog(@"CONTROLLER MODIFICA -> kind = %@",theNewJob.kind);
+        
+        if([theNewJob.kind isEqualToString:@"Offro"])
+            [kindSegmentedCtrl setSelectedSegmentIndex:0];
+        else if([theNewJob.kind isEqualToString:@"Cerco"])
+            [kindSegmentedCtrl setSelectedSegmentIndex:1];
     }
     
     return self;
@@ -51,12 +67,17 @@
     NSDictionary *rowDesc = [sec objectAtIndex:indexPath.row]; 
     
     BaseCell *cell = (BaseCell*)[super tableView:tableView cellForRowAtIndexPath:indexPath];
-    
+      
+    if(indexPath.section == 0 && indexPath.row == 0){
+        cell.accessoryView = kindSegmentedCtrl;
+        //[cell.contentView addSubview:segmentedCtrl];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    }
     if(indexPath.section == 0 && indexPath.row == 1){
         
         cell.accessoryView = segmentedCtrl;
-        //[cell.contentView addSubview:segmentedCtrl]; 
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;        
+        //[cell.contentView addSubview:segmentedCtrl];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     
     [self fillCell:cell rowDesc:rowDesc];
@@ -123,7 +144,7 @@
     int section = indexPath.section;
     int row = indexPath.row;
     
-    if(section == 0 && row == 0){
+    if(section == 0 && row == SECTORS_CELL){
         
         SectorTableViewController *sectorTable = [[SectorTableViewController alloc] initWithPlist:@"sector-table"];
         sectorTable.secDelegate = self;
@@ -173,7 +194,7 @@
 //prende i dati dalla tabella settori ed aggiorna la cella con il nuovo dato
 -(void) didReceiveSectorFromTable:(NSString*) jobSector andCode:(NSString*)code
 {
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:SECTORS_CELL inSection:0];
     NSString *placeholder;
     
     if(jobSector != nil){
@@ -241,6 +262,26 @@
     NSLog(@"job.time = %@",job.time);
 }
 
+- (void) chooseKind:(id)sender{
+    NSLog(@"SELECTOR kind");
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"employeeDidSet" object:self userInfo:nil];
+    switch(kindSegmentedCtrl.selectedSegmentIndex)
+    {
+        case 0:
+            job.kind = @"Offro";
+            break;
+        case 1:
+            job.kind = @"Cerco";
+            break;
+        default: job.kind = @"";
+            break;
+    }
+    
+    //NSLog(@"job.time = %@",job.time);
+    
+    
+}
+
 #pragma mark - Gestione azioni bottoni view
 
 -(void)cancelBtnClicked:(id)sender{
@@ -275,7 +316,7 @@
     [super viewDidLoad];
     
     //     job = [[Job alloc]initWithCoordinate:CLLocationCoordinate2DMake(0,0)];
-    NSLog(@"job in MOD: %p",job);
+    NSLog(@"job in MOD: %p, kind = %@",job, job.kind);
     
     [self.navigationItem setTitle:@"Modifica lavoro"];    
     //creo il model della tabella
@@ -283,7 +324,25 @@
     NSMutableArray *secB = [[NSMutableArray alloc] init];
     NSMutableArray *secC = [[NSMutableArray alloc] init];
     NSMutableArray *secD = [[NSMutableArray alloc] init];
-        
+    
+    [secA insertObject:[[[NSMutableDictionary alloc] initWithObjectsAndKeys:
+                         @"kind",             @"DataKey",
+                         @"BaseCell",         @"kind",
+                         @"Tipo annuncio",                 @"label",
+                         @"",                 @"placeholder",
+                         @"",                 @"img",
+                         [NSString stringWithFormat:@"%d", UITableViewCellStyleDefault], @"style",
+                         nil] autorelease] atIndex: 0];
+    
+    [secA insertObject:[[[NSMutableDictionary alloc] initWithObjectsAndKeys:
+                         @"time",             @"DataKey",
+                         @"BaseCell",         @"kind",
+                         @"Contratto",                 @"label",
+                         @"",                 @"placeholder",
+                         @"",                 @"img",
+                         [NSString stringWithFormat:@"%d", UITableViewCellStyleDefault], @"style",
+                         nil] autorelease] atIndex: 1];
+    
     [secA insertObject:[[[NSMutableDictionary alloc] initWithObjectsAndKeys:
                          @"employee",         @"DataKey",
                          @"ActionCell",       @"kind", 
@@ -291,16 +350,9 @@
                          [Utilities sectorFromCode:job.code],        @"placeholder",
                          @"",                 @"img",
                          [NSString stringWithFormat:@"%d", UITableViewCellStyleValue1], @"style",
-                         nil] autorelease] atIndex: 0];
+                         nil] autorelease] atIndex: SECTORS_CELL];
     
-    [secA insertObject:[[[NSMutableDictionary alloc] initWithObjectsAndKeys:
-                         @"time",             @"DataKey",
-                         @"BaseCell",         @"kind", 
-                         @"Contratto",                 @"label",
-                         @"",                 @"placeholder",
-                         @"",                 @"img",
-                         [NSString stringWithFormat:@"%d", UITableViewCellStyleDefault], @"style",
-                         nil] autorelease] atIndex: 1];
+
     
     [secB insertObject:[[[NSDictionary alloc] initWithObjectsAndKeys:
                          @"description",      @"DataKey",
@@ -397,7 +449,8 @@
 }
 
 -(void) dealloc
-{   
+{
+    [kindSegmentedCtrl release];
     [segmentedCtrl release];
     [job release]; //aggiunti 19 novembre
     job = nil; 

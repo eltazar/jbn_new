@@ -13,6 +13,7 @@
 
 @interface ModJobViewController : RootJobViewController<UITextFieldDelegate, UITextViewDelegate, SectorTableDelegate>{
     UISegmentedControl *segmentedCtrl;
+    UISegmentedControl *kindSegmentedCtrl;
     id<ModJobViewControllerDelegate> delegate;
 }
 @property(nonatomic, assign) id<ModJobViewControllerDelegate> delegate;
