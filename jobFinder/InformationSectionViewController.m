@@ -66,6 +66,7 @@
     if([[rowDesc objectForKey:@"kind"] isEqualToString:@"TextAreaCell"]){
         //rendo la cella non editabile
         ((TextAreaCell *)cell).textView.editable = NO;
+        [((TextAreaCell *)cell).textView setFrame:CGRectMake(((TextAreaCell *)cell).textView.frame.origin.x, ((TextAreaCell *)cell).textView.frame.origin.y, ((TextAreaCell *)cell).textView.frame.size.width, ((TextAreaCell *)cell).textView.frame.size.height*2)];
         ((TextAreaCell *)cell).textView.text = @"JobNavigator è un servizio contenente informazioni messe a disposizione dalla community di utenti che ne usufruiscono. I creatori di tale applicazione non esercitano alcun controllo e non sono in alcun modo responsabili dell'affidabilità e delll'esattezza dei contenuti e delle informazioni riportate nell'applicazione. Allo stesso modo i creatori dell'applicazione declinano ogni responsabilità diretta e indiretta per i danni o le perdite di profitti che potrebbero derivare agli utenti dall'uso dei dati e delle informazioni gratuitamente fornite.";
     }
     else{
@@ -77,7 +78,7 @@
 - (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section
 {
     if(section == 1)
-        return @"\n JobNavigator 2.0";
+        return @"JobNavigator 2.0";
     
     return nil;
 }
@@ -87,7 +88,11 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [self tableView:self.tableView cellForRowAtIndexPath:indexPath];
-    return cell.frame.size.height;
+    
+    if(indexPath.section == 1 && indexPath.row == 0){
+        return  cell.frame.size.height * 2;
+    }
+    else return cell.frame.size.height;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
