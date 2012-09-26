@@ -176,13 +176,13 @@ NSString* key(NSURLConnection* con)
 
 -(void)jobModRequest:(Job *)job
 {
-    NSMutableString *urlString = [NSMutableString stringWithFormat:@"http://www.sapienzaapps.it/jobfinder/edit.php"];    
+    NSMutableString *urlString = [NSMutableString stringWithFormat:@"http://www.sapienzaapps.it/jobfinder/editV2.php"];
     //Replace Spaces with a '+' character.
     [urlString setString:[urlString stringByReplacingOccurrencesOfString:@" " withString:@"+"]];  
     NSURL *url = [[[NSURL alloc] initWithString:urlString] autorelease]; //aggiunto autorelease
     
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
-    NSString *postFormatString = @"jobId=%d&time=%@&description=%@&phone=%@&phone2=%@&email=%@&url=%@&field=%@";
+    NSString *postFormatString = @"jobId=%d&kind=%@&time=%@&description=%@&phone=%@&phone2=%@&email=%@&url=%@&field=%@";
     
     NSMutableString *phoneTmp;
     NSMutableString *phone2Tmp;
@@ -205,6 +205,7 @@ NSString* key(NSURLConnection* con)
     
     NSString *postString = [NSString stringWithFormat:postFormatString,
                             job.idDb,
+                            job.kind,
                             job.time,
                             job.description,
                             phoneTmp,
@@ -287,13 +288,13 @@ NSString* key(NSURLConnection* con)
 //invia richiesta scrittura su db
 -(void)jobWriteRequest:(Job *)job
 { 
-    NSMutableString *urlString = [NSMutableString stringWithFormat:@"http://www.sapienzaapps.it/jobfinder/write2.php"];    
+    NSMutableString *urlString = [NSMutableString stringWithFormat:@"http://www.sapienzaapps.it/jobfinder/writeV2.php"];    
     //Replace Spaces with a '+' character.
     [urlString setString:[urlString stringByReplacingOccurrencesOfString:@" " withString:@"+"]];  
     NSURL *url = [[[NSURL alloc] initWithString:urlString] autorelease]; //aggiunto autorelease
     
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
-    NSString *postFormatString = @"time=%@&description=%@&phone=%@&phone2=%@&email=%@&url=%@&date=%@&latitude=%f&longitude=%f&field=%@&user=%@";
+    NSString *postFormatString = @"kind=%@&time=%@&description=%@&phone=%@&phone2=%@&email=%@&url=%@&date=%@&latitude=%f&longitude=%f&field=%@&user=%@";
     
     NSMutableString *phoneTmp;
     NSMutableString *phone2Tmp;
@@ -316,6 +317,7 @@ NSString* key(NSURLConnection* con)
     
     
     NSString *postString = [NSString stringWithFormat:postFormatString,
+        job.kind,
         job.time,
         job.description,
         phoneTmp,
