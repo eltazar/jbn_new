@@ -964,6 +964,19 @@
     [self.map addSubview:rightPanel];
     
     
+    /*inizializzo i buffer per lo zoom e per le annotazioni
+     */
+    //buffer di annotazioni aggiunte sotto la soglia di zoom 10
+    annotationsBuffer = [[NSMutableArray alloc] init];
+    
+    //buffer composto da nove sotto array che contengono le annotazioni aggiunte ad ogni livello di zoom sopra la soglia 10
+    zoomBuffer = [[NSMutableArray alloc] initWithCapacity:11];
+    for(int i=0;i<11;i++)
+        [zoomBuffer insertObject:[[[NSMutableArray alloc]init]autorelease] atIndex:i];  
+   
+    /*inizializzazione pulsanti view
+     */
+    
     if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
     {
         CGSize result = [[UIScreen mainScreen] bounds].size;
@@ -977,20 +990,6 @@
         }
     }
     
-    
-    
-    /*inizializzo i buffer per lo zoom e per le annotazioni
-     */
-    //buffer di annotazioni aggiunte sotto la soglia di zoom 10
-    annotationsBuffer = [[NSMutableArray alloc] init];
-    
-    //buffer composto da nove sotto array che contengono le annotazioni aggiunte ad ogni livello di zoom sopra la soglia 10
-    zoomBuffer = [[NSMutableArray alloc] initWithCapacity:11];
-    for(int i=0;i<11;i++)
-        [zoomBuffer insertObject:[[[NSMutableArray alloc]init]autorelease] atIndex:i];  
-   
-    /*inizializzazione pulsanti view
-     */
     //aggiungo bottone Info alla navigation bar
     UIButton *tempInfoButton = [UIButton buttonWithType:UIButtonTypeInfoLight];
 	[tempInfoButton addTarget:self action:@selector(configBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
@@ -1004,6 +1003,13 @@
     
     /* configurazione pulsanti della view
      */
+    
+    [publishBtn setTitle:@"Segnala lavoro" forState:UIControlStateNormal];
+    [publishBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [publishBtn setTitleColor:[UIColor grayColor] forState:UIControlStateDisabled];
+    [publishBtn setTitleEdgeInsets:UIEdgeInsetsMake(28.0, 0.0, 0.0, 0.0 )];
+    publishBtn.titleLabel.font = [UIFont boldSystemFontOfSize:12];
+    
     saveJobInPositionBtn.layer.cornerRadius = 8;
     saveJobInPositionBtn.layer.borderWidth = 1;
     saveJobInPositionBtn.layer.borderColor = [UIColor grayColor].CGColor;
