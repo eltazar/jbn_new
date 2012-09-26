@@ -47,6 +47,12 @@
 		AC4A04CA142239E300FE96F7 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC4A04C8142239E300FE96F7 /* MapViewController.m */; };
 		AC5E3020161265CA003EE1D0 /* leftPanel2.png in Resources */ = {isa = PBXBuildFile; fileRef = AC5E301F161265CA003EE1D0 /* leftPanel2.png */; };
 		AC5E302316126A13003EE1D0 /* rightPanel.png in Resources */ = {isa = PBXBuildFile; fileRef = AC5E302216126A13003EE1D0 /* rightPanel.png */; };
+		AC5E302D1612922E003EE1D0 /* insertJobButton.png in Resources */ = {isa = PBXBuildFile; fileRef = AC5E302C1612922E003EE1D0 /* insertJobButton.png */; };
+		AC5E303016129238003EE1D0 /* insertJobButtonDisabled.png in Resources */ = {isa = PBXBuildFile; fileRef = AC5E302F16129238003EE1D0 /* insertJobButtonDisabled.png */; };
+		AC5E303216129242003EE1D0 /* rightPanel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AC5E303116129242003EE1D0 /* rightPanel@2x.png */; };
+		AC5E30341612924C003EE1D0 /* leftPanel2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AC5E30331612924C003EE1D0 /* leftPanel2@2x.png */; };
+		AC5E30361612925A003EE1D0 /* starBookmark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AC5E30351612925A003EE1D0 /* starBookmark@2x.png */; };
+		AC5E30381612926C003EE1D0 /* gpsPos@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AC5E30371612926C003EE1D0 /* gpsPos@2x.png */; };
 		AC7135DD144F45CD0022A47C /* SearchZoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7135DB144F45CC0022A47C /* SearchZoneViewController.m */; };
 		AC7135DE144F45CD0022A47C /* SearchZoneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC7135DC144F45CD0022A47C /* SearchZoneViewController.xib */; };
 		AC736EFD1434D176003626F7 /* ConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC736EFC1434D176003626F7 /* ConfigViewController.m */; };
@@ -59,6 +65,7 @@
 		ACA915E2145EA10500806FD3 /* filter-table.plist in Resources */ = {isa = PBXBuildFile; fileRef = ACA915E1145EA10500806FD3 /* filter-table.plist */; };
 		ACB1416E149BBEF500EBB1F5 /* logoSapienza.png in Resources */ = {isa = PBXBuildFile; fileRef = ACB1416C149BBEF500EBB1F5 /* logoSapienza.png */; };
 		ACB1416F149BBEF500EBB1F5 /* logoSapienza@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACB1416D149BBEF500EBB1F5 /* logoSapienza@2x.png */; };
+		ACB38CD8161303E6005CE09B /* insertJobButtonSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = ACB38CD7161303E6005CE09B /* insertJobButtonSelected.png */; };
 		ACB4D5EF14764E27003DCFCA /* CDataScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB4D5D814764E27003DCFCA /* CDataScanner.m */; };
 		ACB4D5F014764E27003DCFCA /* CFilteringJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB4D5DB14764E27003DCFCA /* CFilteringJSONSerializer.m */; };
 		ACB4D5F114764E27003DCFCA /* CJSONDeserializer_BlocksExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB4D5DD14764E27003DCFCA /* CJSONDeserializer_BlocksExtensions.m */; };
@@ -215,6 +222,12 @@
 		AC4A04C8142239E300FE96F7 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		AC5E301F161265CA003EE1D0 /* leftPanel2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = leftPanel2.png; path = icons/leftPanel2.png; sourceTree = SOURCE_ROOT; };
 		AC5E302216126A13003EE1D0 /* rightPanel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rightPanel.png; path = icons/rightPanel.png; sourceTree = SOURCE_ROOT; };
+		AC5E302C1612922E003EE1D0 /* insertJobButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = insertJobButton.png; path = icons/insertJobButton.png; sourceTree = SOURCE_ROOT; };
+		AC5E302F16129238003EE1D0 /* insertJobButtonDisabled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = insertJobButtonDisabled.png; path = icons/insertJobButtonDisabled.png; sourceTree = SOURCE_ROOT; };
+		AC5E303116129242003EE1D0 /* rightPanel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "rightPanel@2x.png"; path = "icons/rightPanel@2x.png"; sourceTree = SOURCE_ROOT; };
+		AC5E30331612924C003EE1D0 /* leftPanel2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "leftPanel2@2x.png"; path = "icons/leftPanel2@2x.png"; sourceTree = SOURCE_ROOT; };
+		AC5E30351612925A003EE1D0 /* starBookmark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "starBookmark@2x.png"; path = "icons/starBookmark@2x.png"; sourceTree = SOURCE_ROOT; };
+		AC5E30371612926C003EE1D0 /* gpsPos@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "gpsPos@2x.png"; path = "icons/gpsPos@2x.png"; sourceTree = SOURCE_ROOT; };
 		AC7135DA144F45CC0022A47C /* SearchZoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchZoneViewController.h; sourceTree = "<group>"; };
 		AC7135DB144F45CC0022A47C /* SearchZoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchZoneViewController.m; sourceTree = "<group>"; };
 		AC7135DC144F45CD0022A47C /* SearchZoneViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchZoneViewController.xib; sourceTree = "<group>"; };
@@ -231,6 +244,7 @@
 		ACA915E1145EA10500806FD3 /* filter-table.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "filter-table.plist"; sourceTree = "<group>"; };
 		ACB1416C149BBEF500EBB1F5 /* logoSapienza.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logoSapienza.png; sourceTree = "<group>"; };
 		ACB1416D149BBEF500EBB1F5 /* logoSapienza@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logoSapienza@2x.png"; sourceTree = "<group>"; };
+		ACB38CD7161303E6005CE09B /* insertJobButtonSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = insertJobButtonSelected.png; path = icons/insertJobButtonSelected.png; sourceTree = SOURCE_ROOT; };
 		ACB4D5D714764E27003DCFCA /* CDataScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDataScanner.h; path = TouchJson/CDataScanner.h; sourceTree = "<group>"; };
 		ACB4D5D814764E27003DCFCA /* CDataScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDataScanner.m; path = TouchJson/CDataScanner.m; sourceTree = "<group>"; };
 		ACB4D5DA14764E27003DCFCA /* CFilteringJSONSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFilteringJSONSerializer.h; sourceTree = "<group>"; };
@@ -687,6 +701,13 @@
 		ACD58178145862DB00CCB281 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				ACB38CD7161303E6005CE09B /* insertJobButtonSelected.png */,
+				AC5E30371612926C003EE1D0 /* gpsPos@2x.png */,
+				AC5E30351612925A003EE1D0 /* starBookmark@2x.png */,
+				AC5E30331612924C003EE1D0 /* leftPanel2@2x.png */,
+				AC5E303116129242003EE1D0 /* rightPanel@2x.png */,
+				AC5E302F16129238003EE1D0 /* insertJobButtonDisabled.png */,
+				AC5E302C1612922E003EE1D0 /* insertJobButton.png */,
 				AC5E302216126A13003EE1D0 /* rightPanel.png */,
 				AC5E301F161265CA003EE1D0 /* leftPanel2.png */,
 				ACC1FBCA1611FF260069545B /* gpsPos.png */,
@@ -864,6 +885,13 @@
 				ACC1FBCB1611FF260069545B /* gpsPos.png in Resources */,
 				AC5E3020161265CA003EE1D0 /* leftPanel2.png in Resources */,
 				AC5E302316126A13003EE1D0 /* rightPanel.png in Resources */,
+				AC5E302D1612922E003EE1D0 /* insertJobButton.png in Resources */,
+				AC5E303016129238003EE1D0 /* insertJobButtonDisabled.png in Resources */,
+				AC5E303216129242003EE1D0 /* rightPanel@2x.png in Resources */,
+				AC5E30341612924C003EE1D0 /* leftPanel2@2x.png in Resources */,
+				AC5E30361612925A003EE1D0 /* starBookmark@2x.png in Resources */,
+				AC5E30381612926C003EE1D0 /* gpsPos@2x.png in Resources */,
+				ACB38CD8161303E6005CE09B /* insertJobButtonSelected.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
