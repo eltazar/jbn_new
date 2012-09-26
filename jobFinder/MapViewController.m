@@ -650,17 +650,6 @@
                                     leftPanel.frame = CGRectMake(leftPanel.frame.origin.x+leftPanel.frame.size.width,map.frame.size.height - leftPanel.frame.size.height , self.leftPanel.frame.size.width, leftPanel.frame.size.height);
                                     rightPanel.frame = CGRectMake(self.map.frame.size.width - rightPanel.frame.size.width,map.frame.size.height - rightPanel.frame.size.height , self.rightPanel.frame.size.width, rightPanel.frame.size.height);
                             }
-                            completion:^(BOOL finished) {
-                                
-//                                //mostro il rightPanel
-//                                
-//                                [UIView animateWithDuration:.6
-//                                                 animations:^{
-//                                                     rightPanel.frame = CGRectMake(self.map.frame.size.width - rightPanel.frame.size.width,map.frame.size.height - rightPanel.frame.size.height , self.rightPanel.frame.size.width, rightPanel.frame.size.height);
-//                                                 }
-//                                 ];
-
-                            }
              ];
             
         }
@@ -735,16 +724,6 @@
                          //nascondo rightPanel con animazione
                          rightPanel.frame = CGRectMake(self.rightPanel.frame.origin.x + rightPanel.frame.size.width,map.frame.size.height - rightPanel.frame.size.height , self.rightPanel.frame.size.width, rightPanel.frame.size.height);
                          leftPanel.frame = CGRectMake(self.leftPanel.frame.origin.x-leftPanel.frame.size.width,map.frame.size.height - leftPanel.frame.size.height , self.leftPanel.frame.size.width, leftPanel.frame.size.height);
-                     }
-                     completion:^(BOOL finished) {
-                         
-                                [UIView animateWithDuration:.6
-                                          animations:^{
-                                              //nascondo leftPanel con animazione
-//                                              leftPanel.frame = CGRectMake(self.leftPanel.frame.origin.x-leftPanel.frame.size.width,map.frame.size.height - leftPanel.frame.size.height , self.leftPanel.frame.size.width, leftPanel.frame.size.height);
-                                          }
-                          ];
-                         
                      }
      ];
     
