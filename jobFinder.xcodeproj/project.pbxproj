@@ -369,6 +369,7 @@
 		ACF415A016147C92002D6272 /* rightPanelSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rightPanelSelected.png; path = icons/rightPanelSelected.png; sourceTree = SOURCE_ROOT; };
 		ACF415AC1614999B002D6272 /* pinOrange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pinOrange.png; path = icons/pinOrange.png; sourceTree = SOURCE_ROOT; };
 		ACF415AD1614999B002D6272 /* pinOrange@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "pinOrange@2x.png"; path = "icons/pinOrange@2x.png"; sourceTree = SOURCE_ROOT; };
+		ACF415B016149CFF002D6272 /* Anzio, IT.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Anzio, IT.gpx"; sourceTree = "<group>"; };
 		ACF9CA26149522DB00E6F4EF /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		ACF9CA28149522E500E6F4EF /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		ACF9CA2A149522F300E6F4EF /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
@@ -490,6 +491,7 @@
 		AC4A04821422369200FE96F7 = {
 			isa = PBXGroup;
 			children = (
+				ACF415B016149CFF002D6272 /* Anzio, IT.gpx */,
 				ACB8F50016109E22008DB620 /* Default-568h@2x.png */,
 				ACFD0A521497B49000153DF2 /* Default@2x.png */,
 				ACFD0A501497B48800153DF2 /* Default.png */,
