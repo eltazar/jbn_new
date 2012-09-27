@@ -8,6 +8,8 @@
 
 #import "FilterViewController.h"
 
+#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+
 //metodi privati
 @interface FilterViewController()
 -(void)switchChanged;
@@ -293,6 +295,15 @@
     [super viewDidLoad];
     NSLog(@"did load");
     
+    self.contentTable.separatorColor = UIColorFromRGB(0xf3f3f3);
+    
+    //self.contentTable.backgroundColor = [UIColor clearColor];
+    //self.contentTable.backgroundView.backgroundColor = [UIColor clearColor];
+    self.switchTable.separatorColor = UIColorFromRGB(0xf3f3f3);
+    
+    
+    self.switchTable.backgroundView = [[UIImageView alloc] initWithImage:
+                                     [UIImage imageNamed:@"tableBackground.png"]];
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
     
     //recupero path del file plist
@@ -369,11 +380,11 @@
 -(void)changeFrameTables
 {
     if(aSwitch.on){
-        self.switchTable.frame = CGRectMake(mainView.frame.origin.x, mainView.frame.origin.y+self.navigationController.view.frame.origin.y+10,mainView.frame.size.width,mainView.frame.size.height - contentTable.frame.size.height);
+       // self.switchTable.frame = CGRectMake(mainView.frame.origin.x, mainView.frame.origin.y+self.navigationController.view.frame.origin.y+10,mainView.frame.size.width,mainView.frame.size.height - contentTable.frame.size.height);
         switchTable.scrollEnabled = NO;
     }
     else{
-        self.switchTable.frame = CGRectMake(mainView.frame.origin.x, mainView.frame.origin.y+self.navigationController.view.frame.origin.y+10,mainView.frame.size.width,mainView.frame.size.height);
+        //self.switchTable.frame = CGRectMake(mainView.frame.origin.x, mainView.frame.origin.y+self.navigationController.view.frame.origin.y+10,mainView.frame.size.width,mainView.frame.size.height);
         switchTable.scrollEnabled = YES;
     }
     
