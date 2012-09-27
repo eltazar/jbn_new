@@ -629,7 +629,7 @@
         
         //alloco il job da pubblicare
         self.jobToPublish = [[[Job alloc] initWithCoordinate:coordinate] autorelease];
-        [geoDec searchAddressForCoordinate:coordinate];
+        //[geoDec searchAddressForCoordinate:coordinate];
         
         if(jobToPublish != nil){
             
@@ -650,6 +650,7 @@
              */
             if(isDragPinOnMap){
                 publishBtn.enabled = NO;
+                //publishBtn.userInteractionEnabled = NO;
                 saveJobInPositionBtn.enabled = YES;
             }
             

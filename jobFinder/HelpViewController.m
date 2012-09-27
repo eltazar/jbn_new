@@ -9,7 +9,7 @@
 #import "HelpViewController.h"
 #import "PagesControllerViewController.h"
 
-static NSUInteger numeroTotalePagine = 5;
+static NSUInteger numeroTotalePagine = 4;
 
 @implementation HelpViewController
 @synthesize  scrollView, pageControl, arrayDelleView;
