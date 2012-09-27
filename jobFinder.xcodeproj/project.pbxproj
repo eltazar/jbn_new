@@ -16,6 +16,7 @@
 		AC18EF0714A89D1A00490D2A /* CreditsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC18EF0514A89D1A00490D2A /* CreditsViewController.m */; };
 		AC18EF0814A89D1A00490D2A /* CreditsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC18EF0614A89D1A00490D2A /* CreditsViewController.xib */; };
 		AC22FFED145763BC00DEECB7 /* myPosition.png in Resources */ = {isa = PBXBuildFile; fileRef = AC22FFEC145763BC00DEECB7 /* myPosition.png */; };
+		AC25A1611615022C0013F656 /* tableBackgroundSimple.png in Resources */ = {isa = PBXBuildFile; fileRef = AC25A1601615022C0013F656 /* tableBackgroundSimple.png */; };
 		AC2C73B814897C4500922345 /* Facebook.m in Sources */ = {isa = PBXBuildFile; fileRef = AC2C73A114897C4500922345 /* Facebook.m */; };
 		AC2C73B914897C4500922345 /* FBDialog.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AC2C73A314897C4500922345 /* FBDialog.bundle */; };
 		AC2C73BA14897C4500922345 /* FBDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = AC2C73A514897C4500922345 /* FBDialog.m */; };
@@ -185,6 +186,7 @@
 		AC18EF0514A89D1A00490D2A /* CreditsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreditsViewController.m; sourceTree = "<group>"; };
 		AC18EF0614A89D1A00490D2A /* CreditsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreditsViewController.xib; sourceTree = "<group>"; };
 		AC22FFEC145763BC00DEECB7 /* myPosition.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = myPosition.png; path = icons/myPosition.png; sourceTree = SOURCE_ROOT; };
+		AC25A1601615022C0013F656 /* tableBackgroundSimple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tableBackgroundSimple.png; path = icons/tableBackgroundSimple.png; sourceTree = SOURCE_ROOT; };
 		AC2C73A014897C4500922345 /* Facebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Facebook.h; sourceTree = "<group>"; };
 		AC2C73A114897C4500922345 /* Facebook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Facebook.m; sourceTree = "<group>"; };
 		AC2C73A214897C4500922345 /* FBConnect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBConnect.h; sourceTree = "<group>"; };
@@ -724,6 +726,7 @@
 		ACD58178145862DB00CCB281 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				AC25A1601615022C0013F656 /* tableBackgroundSimple.png */,
 				ACF415AC1614999B002D6272 /* pinOrange.png */,
 				ACF415AD1614999B002D6272 /* pinOrange@2x.png */,
 				ACF415A016147C92002D6272 /* rightPanelSelected.png */,
@@ -938,6 +941,7 @@
 				ACF415A116147C92002D6272 /* rightPanelSelected.png in Resources */,
 				ACF415AE1614999C002D6272 /* pinOrange.png in Resources */,
 				ACF415AF1614999C002D6272 /* pinOrange@2x.png in Resources */,
+				AC25A1611615022C0013F656 /* tableBackgroundSimple.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
