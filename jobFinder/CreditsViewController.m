@@ -13,6 +13,7 @@
 #define EMAIL_CONTACT_1 @"mrgreco3@gmail.com"
 #define EMAIL_CONTACT_2 @"panizzi@uniroma1.it"
 #define URL_INFO @"http://www.sapienzaapps.it/jobfinder/index.html"
+#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
 @implementation CreditsViewController
 
@@ -145,6 +146,9 @@
     //self.navigationItem.hidesBackButton = TRUE;
     //aggiungo bottone "fatto" alla barra e setto azione
 
+    self.tableView.separatorColor = UIColorFromRGB(0xf3f3f3);
+    self.tableView.backgroundView = [[UIImageView alloc] initWithImage:
+                                     [UIImage imageNamed:@"tableBackgroundSimple.png"]];
     
     //creo le sezioni
     NSMutableArray *secB = [[NSMutableArray alloc] init];
