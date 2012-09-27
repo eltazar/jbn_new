@@ -141,16 +141,29 @@
     
     NSInteger annotationIndexInNewJobs = [self.newJobs indexOfObject:[NSNumber numberWithInt:((Job*)annotation).idDb]];
     
+    NSString *identifier = ((Job*)annotation).kind;
+    
     //se invece la annotation riguarda un lavoro creo e ritorno la annotationView dedicata
-    MKPinAnnotationView* pinView = (MKPinAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:@"pin" ];
+    MKPinAnnotationView* pinView = (MKPinAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:identifier ];
     
     //se non sono riuscito a riciclare un pin, lo creo
     if(pinView == nil){     
         
-        pinView = [[[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"pin"]autorelease]; 
+        pinView = [[[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:identifier]autorelease];
         //setto colore, disclosure button ed animazione     
         pinView.canShowCallout = YES;
         pinView.animatesDrop = YES;
+        
+        //se annuncio è di tipo cerco associo una view persnalizzata
+        if([identifier isEqualToString:@"Cerco"]){
+            UIImage * image = [UIImage imageNamed:@"pinOrange.png"];
+            UIImageView *imageView = [[[UIImageView alloc] initWithImage:image] autorelease];
+            [pinView addSubview:imageView];
+        }
+        else{
+            //altrimenti colore classico
+            pinView.pinColor = MKPinAnnotationColorGreen;
+        }
         
     }
     else{ 
@@ -165,19 +178,16 @@
         [pinView setDraggable:YES];
         pinView.pinColor = MKPinAnnotationColorRed;
     }
-    else if(newJobs && annotationIndexInNewJobs != NSNotFound ){
+    else if(newJobs && annotationIndexInNewJobs != NSNotFound && [identifier isEqualToString:@"Offro"] ){
         pinView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
         [pinView setDraggable:NO];
         pinView.pinColor = MKPinAnnotationColorPurple;
     }
-    else{
+    else {
         //NSLog(@"IS NOT DRAGGABLE");
         pinView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
         [pinView setDraggable:NO];
-        pinView.pinColor = MKPinAnnotationColorGreen;
     }
-    
-    
     
     return pinView;
 }
