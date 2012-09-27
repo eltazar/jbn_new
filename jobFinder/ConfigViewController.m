@@ -13,6 +13,9 @@
 #import "jobFinderAppDelegate.h"
 #import "Utilities.h"
 
+#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+
+
 @implementation ConfigViewController
 @synthesize delegate;
 
@@ -175,6 +178,24 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.tableView.separatorColor = UIColorFromRGB(0xf3f3f3);
+    
+    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+    {
+        CGSize result = [[UIScreen mainScreen] bounds].size;
+        if(result.height == 480)
+        {
+            // iPhone Classic
+            self.tableView.backgroundView = [[UIImageView alloc] initWithImage:
+                                             [UIImage imageNamed:@"tableBackground.png"]];
+        }
+        if(result.height == 568)
+        {
+            self.tableView.backgroundView = [[UIImageView alloc] initWithImage:
+                                             [UIImage imageNamed:@"tableBackgroundiP5.png"]];
+        }
+    }
     
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
     if([prefs objectForKey:@"address"] == nil || [[prefs objectForKey:@"address"] isEqualToString:@""]){

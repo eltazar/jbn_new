@@ -87,9 +87,23 @@
     
     self.tableView.separatorColor = UIColorFromRGB(0xf3f3f3);
 
+    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+    {
+        CGSize result = [[UIScreen mainScreen] bounds].size;
+        if(result.height == 480)
+        {
+            // iPhone Classic
+            self.tableView.backgroundView = [[UIImageView alloc] initWithImage:
+                                             [UIImage imageNamed:@"tableBackground.png"]];
+        }
+        if(result.height == 568)
+        {
+            self.tableView.backgroundView = [[UIImageView alloc] initWithImage:
+                                             [UIImage imageNamed:@"tableBackgroundiP5.png"]];
+        }
+    }
 
-    self.tableView.backgroundView = [[UIImageView alloc] initWithImage:
-                                     [UIImage imageNamed:@"tableBackground.png"]];
+    
 }
 
 

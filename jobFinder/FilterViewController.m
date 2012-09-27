@@ -296,14 +296,25 @@
     NSLog(@"did load");
     
     self.contentTable.separatorColor = UIColorFromRGB(0xf3f3f3);
-    
-    //self.contentTable.backgroundColor = [UIColor clearColor];
-    //self.contentTable.backgroundView.backgroundColor = [UIColor clearColor];
     self.switchTable.separatorColor = UIColorFromRGB(0xf3f3f3);
     
+    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+    {
+        CGSize result = [[UIScreen mainScreen] bounds].size;
+        if(result.height == 480)
+        {
+            // iPhone Classic
+            self.switchTable.backgroundView = [[UIImageView alloc] initWithImage:
+                                               [UIImage imageNamed:@"tableBackground.png"]];
+        }
+        if(result.height == 568)
+        {
+            self.switchTable.backgroundView = [[UIImageView alloc] initWithImage:
+                                               [UIImage imageNamed:@"tableBackgroundiP5.png"]];;
+        }
+    }
     
-    self.switchTable.backgroundView = [[UIImageView alloc] initWithImage:
-                                     [UIImage imageNamed:@"tableBackground.png"]];
+    
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
     
     //recupero path del file plist

@@ -11,6 +11,10 @@
 #import <objc/runtime.h>
 #import "CoreLocation/CLLocation.h"
 #import "Utilities.h"
+
+#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+
+
 @implementation SearchZoneViewController
 @synthesize tableData, theSearchBar, theTableView, disableViewOverlay, delegate;
 
@@ -213,6 +217,25 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
+    
+    self.theTableView.separatorColor = UIColorFromRGB(0xf3f3f3);
+    
+    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+    {
+        CGSize result = [[UIScreen mainScreen] bounds].size;
+        if(result.height == 480)
+        {
+            // iPhone Classic
+            self.theTableView.backgroundView = [[UIImageView alloc] initWithImage:
+                                             [UIImage imageNamed:@"tableBackground.png"]];
+        }
+        if(result.height == 568)
+        {
+            self.theTableView.backgroundView = [[UIImageView alloc] initWithImage:
+                                             [UIImage imageNamed:@"tableBackgroundiP5.png"]];
+        }
+    }
+    
 //    self.navigationController.navigationBarHidden = YES;
     [self setTitle:@"Cerca Zona"];
     self.tableData =[[[NSMutableArray alloc]init] autorelease];
