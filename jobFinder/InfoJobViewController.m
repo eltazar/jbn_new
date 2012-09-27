@@ -461,7 +461,7 @@
     [secA insertObject:[[[NSDictionary alloc] initWithObjectsAndKeys:
                          @"regular",          @"DataKey",
                          @"InfoCell",         @"kind",
-                         @"Annuncio",          @"label",
+                         @"Tipo annuncio",          @"label",
                          @"",                 @"detailLabel",
                          @"",                 @"img",
                          [NSString stringWithFormat:@"%d", UITableViewCellStyleValue1],
