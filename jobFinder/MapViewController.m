@@ -886,7 +886,7 @@
     //gestisco alla comparsa della view come settare il tasto per il filtro e come effettuare le query
         
     if(  [prefs boolForKey:@"switch"]){
-        [filterButton setImage:[UIImage imageNamed:@"filterYellow.png"]];
+        [filterButton setImage:[UIImage imageNamed:@"filtroAttivo.png"]];
         if(oldSwitch == FALSE){
             [map removeAnnotations:[map jobAnnotations]];
             [dbAccess jobReadRequest:map.region field:[Utilities createFieldsString] kind: [prefs objectForKey:@"kindOfOffer"]?[prefs objectForKey:@"kindOfOffer"]:@"Offro"];
@@ -898,7 +898,7 @@
     }
     else{
         if(oldSwitch == TRUE){
-            [filterButton setImage:[UIImage imageNamed:@"filterWhite.png"]];
+            [filterButton setImage:[UIImage imageNamed:@"filtroDisattivato.png"]];
             [dbAccess jobReadRequest:map.region field:[Utilities createFieldsString] kind: [prefs objectForKey:@"kindOfOffer"]?[prefs objectForKey:@"kindOfOffer"]:@"Offro"];
         }
     }
@@ -982,26 +982,19 @@
     
     /* configurazione pulsanti della view
      */
-    
+        
     [publishBtn setTitle:@"Segnala lavoro" forState:UIControlStateNormal];
     [publishBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [publishBtn setTitleColor:[UIColor grayColor] forState:UIControlStateDisabled];
     [publishBtn setTitleEdgeInsets:UIEdgeInsetsMake(28.0, 0.0, 0.0, 0.0 )];
     publishBtn.titleLabel.font = [UIFont boldSystemFontOfSize:12];
     
-    saveJobInPositionBtn.layer.cornerRadius = 8;
-    saveJobInPositionBtn.layer.borderWidth = 1;
-    saveJobInPositionBtn.layer.borderColor = [UIColor grayColor].CGColor;
-    saveJobInPositionBtn.clipsToBounds = YES;
-    
-    backBtn.layer.cornerRadius = 8;
-    backBtn.layer.borderWidth = 1;
-    backBtn.layer.borderColor = [UIColor grayColor].CGColor;
-    backBtn.clipsToBounds = YES;
-    
-    //[filterButton setImage:[UIImage imageNamed:@"filterWhite.png"]];
+    //[filterButton setImage:[UIImage imageNamed:@"filtroDisattivato.png"]];
 
 
+    //[publishBtn setBackgroundImage:[UIImage imageNamed:@"insertJobButtonDisabled.png"] forState:UIControlStateDisabled];
+    //[bookmarkButtonItem setImage:[UIImage imageNamed:@"starBookmark.png"]];
+    
     /* Gestione delle configurazioni preferite dell'utente
      */
     //recupero le coordinate preferite all'avvio dell'app ed aggiungo la relativa annotation
@@ -1017,11 +1010,11 @@
     } 
     
     if(  [prefs boolForKey:@"switch"]){
-        [filterButton setImage:[UIImage imageNamed:@"filterYellow.png"]];
+        [filterButton setImage:[UIImage imageNamed:@"filtroAttivo.png"]];
     }
     else{
-        //NSLog(@"MAP LOAD SWITCH off = %p",[UIImage imageNamed:@"filterWhite.png"]);
-        [filterButton setImage:[UIImage imageNamed:@"filterWhite.png"]];
+        //NSLog(@"MAP LOAD SWITCH off = %p",[UIImage imageNamed:@"filtroDisattivato.png"]);
+        [filterButton setImage:[UIImage imageNamed:@"filtroDisattivato.png"]];
     }
     
     /* Inizializzazione valori booleani per la classe
