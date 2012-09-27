@@ -19,7 +19,9 @@
 		// Custom initialization    
         self.dataKey = [dictionary objectForKey:@"DataKey"];
         [self setImg:[dictionary objectForKey:@"img"]];
-        self.textLabel.text = [dictionary objectForKey:@"label"];	
+        self.textLabel.text = [dictionary objectForKey:@"label"];
+        self.backgroundColor = [UIColor whiteColor];
+        
     }
     return self;
    
