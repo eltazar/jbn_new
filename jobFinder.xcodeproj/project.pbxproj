@@ -122,7 +122,6 @@
 		ACD08D4614C08EFB000D2D79 /* helpView4.png in Resources */ = {isa = PBXBuildFile; fileRef = ACD08D4214C08EFB000D2D79 /* helpView4.png */; };
 		ACD08D4D14C09F04000D2D79 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACD08D4C14C09F04000D2D79 /* MapViewController.xib */; };
 		ACD08D5914C0A108000D2D79 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACD08D5714C0A108000D2D79 /* MainWindow.xib */; };
-		ACD08D5B14C0A549000D2D79 /* helpView5.png in Resources */ = {isa = PBXBuildFile; fileRef = ACD08D5A14C0A549000D2D79 /* helpView5.png */; };
 		ACD08D5E14C0B06F000D2D79 /* config.png in Resources */ = {isa = PBXBuildFile; fileRef = ACD08D5C14C0B068000D2D79 /* config.png */; };
 		ACD08D5F14C0B06F000D2D79 /* config@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACD08D5D14C0B06B000D2D79 /* config@2x.png */; };
 		ACD08D6214C0B159000D2D79 /* help.png in Resources */ = {isa = PBXBuildFile; fileRef = ACD08D6014C0B154000D2D79 /* help.png */; };
@@ -156,6 +155,7 @@
 		ACF9CA29149522E500E6F4EF /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACF9CA28149522E500E6F4EF /* Icon@2x.png */; };
 		ACF9CA2C149522F400E6F4EF /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = ACF9CA2A149522F300E6F4EF /* Icon-Small.png */; };
 		ACF9CA2D149522F400E6F4EF /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACF9CA2B149522F300E6F4EF /* Icon-Small@2x.png */; };
+		ACFA972D1618ADF300832F8F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = ACFA972F1618ADF300832F8F /* Localizable.strings */; };
 		ACFAB5121435E88700AB1490 /* PublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACFAB5111435E88700AB1490 /* PublishViewController.m */; };
 		ACFD0A511497B48800153DF2 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = ACFD0A501497B48800153DF2 /* Default.png */; };
 		ACFD0A531497B49000153DF2 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACFD0A521497B49000153DF2 /* Default@2x.png */; };
@@ -336,7 +336,6 @@
 		ACD08D4214C08EFB000D2D79 /* helpView4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = helpView4.png; path = icons/helpView4.png; sourceTree = SOURCE_ROOT; };
 		ACD08D4C14C09F04000D2D79 /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
 		ACD08D5814C0A108000D2D79 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		ACD08D5A14C0A549000D2D79 /* helpView5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = helpView5.png; path = icons/helpView5.png; sourceTree = SOURCE_ROOT; };
 		ACD08D5C14C0B068000D2D79 /* config.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = config.png; path = icons/config.png; sourceTree = SOURCE_ROOT; };
 		ACD08D5D14C0B06B000D2D79 /* config@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "config@2x.png"; path = "icons/config@2x.png"; sourceTree = SOURCE_ROOT; };
 		ACD08D6014C0B154000D2D79 /* help.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = help.png; path = icons/help.png; sourceTree = SOURCE_ROOT; };
@@ -376,6 +375,7 @@
 		ACF9CA28149522E500E6F4EF /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		ACF9CA2A149522F300E6F4EF /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
 		ACF9CA2B149522F300E6F4EF /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
+		ACFA972E1618ADF300832F8F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		ACFAB5101435E88700AB1490 /* PublishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublishViewController.h; sourceTree = "<group>"; };
 		ACFAB5111435E88700AB1490 /* PublishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublishViewController.m; sourceTree = "<group>"; };
 		ACFD0A501497B48800153DF2 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -493,6 +493,7 @@
 		AC4A04821422369200FE96F7 = {
 			isa = PBXGroup;
 			children = (
+				ACFA972F1618ADF300832F8F /* Localizable.strings */,
 				ACF415B016149CFF002D6272 /* Anzio, IT.gpx */,
 				ACB8F50016109E22008DB620 /* Default-568h@2x.png */,
 				ACFD0A521497B49000153DF2 /* Default@2x.png */,
@@ -760,7 +761,6 @@
 				ACD08D6114C0B156000D2D79 /* help@2x.png */,
 				ACD08D5C14C0B068000D2D79 /* config.png */,
 				ACD08D5D14C0B06B000D2D79 /* config@2x.png */,
-				ACD08D5A14C0A549000D2D79 /* helpView5.png */,
 				ACD08D3F14C08EFB000D2D79 /* helpView1.png */,
 				ACD08D4014C08EFB000D2D79 /* helpView2.png */,
 				ACD08D4114C08EFB000D2D79 /* helpView3.png */,
@@ -906,7 +906,6 @@
 				ACD08D4614C08EFB000D2D79 /* helpView4.png in Resources */,
 				ACD08D4D14C09F04000D2D79 /* MapViewController.xib in Resources */,
 				ACD08D5914C0A108000D2D79 /* MainWindow.xib in Resources */,
-				ACD08D5B14C0A549000D2D79 /* helpView5.png in Resources */,
 				ACD08D5E14C0B06F000D2D79 /* config.png in Resources */,
 				ACD08D5F14C0B06F000D2D79 /* config@2x.png in Resources */,
 				ACD08D6214C0B159000D2D79 /* help.png in Resources */,
@@ -942,6 +941,7 @@
 				ACF415AE1614999C002D6272 /* pinOrange.png in Resources */,
 				ACF415AF1614999C002D6272 /* pinOrange@2x.png in Resources */,
 				AC25A1611615022C0013F656 /* tableBackgroundSimple.png in Resources */,
+				ACFA972D1618ADF300832F8F /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1072,6 +1072,14 @@
 				ACD08D5814C0A108000D2D79 /* en */,
 			);
 			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		ACFA972F1618ADF300832F8F /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ACFA972E1618ADF300832F8F /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
