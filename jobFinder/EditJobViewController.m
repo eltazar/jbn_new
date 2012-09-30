@@ -231,7 +231,7 @@
 //     job = [[Job alloc]initWithCoordinate:CLLocationCoordinate2DMake(0,0)];
      //NSLog(@"job in EDTI_VIEW: %p",job);
      
-     [self.navigationItem setTitle:@"Nuovo lavoro"];
+     [self.navigationItem setTitle:NSLocalizedString(@"NEW JOB",@"")];
      
      //creo il model della tabella
      NSMutableArray *secA = [[NSMutableArray alloc] init];
@@ -241,7 +241,7 @@
      [secA insertObject:[[[NSMutableDictionary alloc] initWithObjectsAndKeys:
                           @"kind",             @"DataKey",
                           @"BaseCell",         @"kind",
-                          @"Tipo annuncio",                 @"label",
+                          NSLocalizedString(@"KIND OF OFFER",@""),    @"label",
                           @"",                 @"placeholder",
                           @"",                 @"img",
                           [NSString stringWithFormat:@"%d", UITableViewCellStyleDefault], @"style",
@@ -250,7 +250,7 @@
      [secA insertObject:[[[NSMutableDictionary alloc] initWithObjectsAndKeys:
                           @"time",             @"DataKey",
                           @"BaseCell",         @"kind",
-                          @"Contratto",                 @"label",
+                          NSLocalizedString(@"CONTRACT",@""),                 @"label",
                           @"",                 @"placeholder",
                           @"",                 @"img",
                           [NSString stringWithFormat:@"%d", UITableViewCellStyleDefault], @"style",
@@ -259,7 +259,7 @@
      [secA insertObject:[[[NSMutableDictionary alloc] initWithObjectsAndKeys:
                           @"employee",         @"DataKey",
                           @"ActionCell",       @"kind", 
-                          @"Settore",          @"label",
+                          NSLocalizedString(@"SECTOR",@""),          @"label",
                           @"Scegli...",        @"placeholder",
                           @"",                 @"img",
                           [NSString stringWithFormat:@"%d", UITableViewCellStyleValue1], @"style",
@@ -268,7 +268,7 @@
      [secB insertObject:[[[NSDictionary alloc] initWithObjectsAndKeys:
                           @"description",      @"DataKey",
                           @"TextAreaCell",     @"kind",
-                          @"Descrizione",      @"label",
+                          NSLocalizedString(@"DESCRIPTION",@""),      @"label",
                           @"",                 @"placeholder",
                           @"",                 @"img",
                           [NSString stringWithFormat:@"%d", UITableViewCellStyleValue1], @"style",
@@ -278,7 +278,7 @@
      [secC insertObject:[[[NSDictionary alloc] initWithObjectsAndKeys:
                           @"phone",            @"DataKey",
                           @"TextFieldCell",    @"kind",
-                          @"Telefono 1",         @"label",
+                          NSLocalizedString(@"PHONE",@""),         @"label",
                           @"44112233",         @"placeholder",
                           @"",                 @"img",
                           [NSString stringWithFormat:@"%d", UITableViewCellStyleValue1], @"style",
@@ -288,7 +288,7 @@
      [secC insertObject:[[[NSDictionary alloc] initWithObjectsAndKeys:
                           @"phone2",            @"DataKey",
                           @"TextFieldCell",    @"kind",
-                          @"Telefono 2",         @"label",
+                          NSLocalizedString(@"PHONE",@""),         @"label",
                           @"44112233",         @"placeholder",
                           @"",                 @"img",
                           [NSString stringWithFormat:@"%d", UITableViewCellStyleValue1], @"style",
@@ -318,7 +318,7 @@
      
      //il release è lasciato alla classe madre
      sectionData = [[NSArray alloc] initWithObjects: secA, secB, secC, nil];
-     sectionDescripition = [[NSArray alloc] initWithObjects:@"Informazioni generali", @"Descrizione", @"Contatti", nil];   
+     sectionDescripition = [[NSArray alloc] initWithObjects:NSLocalizedString(@"GENERAL INFORMATION",@""), NSLocalizedString(@"DESCRIPTION",@"") , NSLocalizedString(@"CONTACTS",@""), nil];   
      
      [secA autorelease]; 
      [secB autorelease];

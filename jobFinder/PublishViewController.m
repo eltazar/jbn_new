@@ -157,8 +157,8 @@
     //tableView.navigationItem.title = @"Nuovo lavoro";
     
     //aggiungo bottone "inserisci" ed "annulla" alla barra
-    UIBarButtonItem *insertButton = [[UIBarButtonItem alloc] initWithTitle:@"Invia" style:UIBarButtonItemStyleDone target:self action:@selector(insertBtnPressed:)];
-    UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc] initWithTitle:@"Annulla" style:UIBarButtonItemStylePlain target:self action:@selector(cancelBtnPressed:)];     
+    UIBarButtonItem *insertButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"SEND", @"") style:UIBarButtonItemStyleDone target:self action:@selector(insertBtnPressed:)];
+    UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"CANCEL", @"") style:UIBarButtonItemStylePlain target:self action:@selector(cancelBtnPressed:)];
     tableView.navigationItem.rightBarButtonItem = insertButton;
     tableView.navigationItem.leftBarButtonItem = cancelButton;
     

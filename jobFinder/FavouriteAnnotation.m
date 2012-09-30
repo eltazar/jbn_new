@@ -31,7 +31,7 @@
 }
 
 - (NSString *)title {
-    return @"Zona preferita";
+    return NSLocalizedString(@"PREF ZONE", @"");
 }
 
 -(NSString *) subtitle{

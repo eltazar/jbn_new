@@ -51,7 +51,7 @@
 //        return employee;
     
     if(isDraggable)
-        return @"Sposta il pin se vuoi";
+        return NSLocalizedString(@"CHANGE POSITION",@"");
     if([Utilities sectorFromCode:code] != nil)
         return [Utilities sectorFromCode:code];
     

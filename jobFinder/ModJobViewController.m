@@ -90,7 +90,7 @@
 - (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section
 {
     if(section == 3){
-            return @"Attenzione: premendo \"Cancella offerta\" eliminerai definitivamente la tua inserzione dal sistema";
+        return NSLocalizedString(@"DELETING ADV", @"");
     }
     return nil;
 
@@ -113,7 +113,7 @@
         [b setBackgroundImage:[[UIImage imageNamed:@"cancelButton.png"] stretchableImageWithLeftCapWidth:12.0 topCapHeight:0.0] forState:UIControlStateNormal];
         
         b.frame = CGRectMake(10.0, 0.0, 300.0, 44.0);
-        [b setTitle:@"Cancella offerta" forState:UIControlStateNormal];
+        [b setTitle:NSLocalizedString(@"DELETE", @"") forState:UIControlStateNormal];
         
         // give it a tag in case you need it later
         //b.tag = 1;
@@ -291,7 +291,7 @@
             [delegate didDeletedJob:self];
     }
     else{
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Per favore controlla le impostazioni di rete e riprova" message:@"Impossibile collegarsi ad internet" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle: NSLocalizedString(@"NO NETWORK TITLE", @"") message: NSLocalizedString(@"NO NETWORK MEX", @"") delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
         [alert show];
         [alert release];
     }
@@ -328,7 +328,7 @@
     [secA insertObject:[[[NSMutableDictionary alloc] initWithObjectsAndKeys:
                          @"kind",             @"DataKey",
                          @"BaseCell",         @"kind",
-                         @"Tipo annuncio",                 @"label",
+                         NSLocalizedString(@"KIND OF OFFER",@""),                 @"label",
                          @"",                 @"placeholder",
                          @"",                 @"img",
                          [NSString stringWithFormat:@"%d", UITableViewCellStyleDefault], @"style",
@@ -337,7 +337,7 @@
     [secA insertObject:[[[NSMutableDictionary alloc] initWithObjectsAndKeys:
                          @"time",             @"DataKey",
                          @"BaseCell",         @"kind",
-                         @"Contratto",                 @"label",
+                        NSLocalizedString(@"CONTRACT",@""),                 @"label",
                          @"",                 @"placeholder",
                          @"",                 @"img",
                          [NSString stringWithFormat:@"%d", UITableViewCellStyleDefault], @"style",
@@ -346,7 +346,7 @@
     [secA insertObject:[[[NSMutableDictionary alloc] initWithObjectsAndKeys:
                          @"employee",         @"DataKey",
                          @"ActionCell",       @"kind", 
-                         @"Settore",          @"label",
+                         NSLocalizedString(@"SECTOR",@""),          @"label",
                          [Utilities sectorFromCode:job.code],        @"placeholder",
                          @"",                 @"img",
                          [NSString stringWithFormat:@"%d", UITableViewCellStyleValue1], @"style",
@@ -357,7 +357,7 @@
     [secB insertObject:[[[NSDictionary alloc] initWithObjectsAndKeys:
                          @"description",      @"DataKey",
                          @"TextAreaCell",     @"kind",
-                         @"Descrizione",      @"label",
+                         NSLocalizedString(@"DESCRIPTION",@""),      @"label",
                          @"",                 @"placeholder",
                          @"",                 @"img",
                          [NSString stringWithFormat:@"%d", UITableViewCellStyleValue1], @"style",
@@ -367,7 +367,7 @@
     [secC insertObject:[[[NSDictionary alloc] initWithObjectsAndKeys:
                          @"phone",            @"DataKey",
                          @"TextFieldCell",    @"kind",
-                         @"Telefono 1",         @"label",
+                         NSLocalizedString(@"PHONE",@""),         @"label",
                          @"44112233",         @"placeholder",
                          @"",                 @"img",
                          [NSString stringWithFormat:@"%d", UITableViewCellStyleValue1], @"style",
@@ -377,7 +377,7 @@
     [secC insertObject:[[[NSDictionary alloc] initWithObjectsAndKeys:
                          @"phone2",            @"DataKey",
                          @"TextFieldCell",    @"kind",
-                         @"Telefono 2",         @"label",
+                         NSLocalizedString(@"PHONE",@""),         @"label",
                          @"44112233",         @"placeholder",
                          @"",                 @"img",
                          [NSString stringWithFormat:@"%d", UITableViewCellStyleValue1], @"style",
@@ -407,7 +407,7 @@
     
     //il release è lasciato alla classe madre
     sectionData = [[NSArray alloc] initWithObjects: secA, secB, secC,secD, nil];
-    sectionDescripition = [[NSArray alloc] initWithObjects:@"Informazioni generali", @"Descrizione", @"Contatti",@"", nil];   
+    sectionDescripition = [[NSArray alloc] initWithObjects:NSLocalizedString(@"GENERAL INFORMATION",@""), NSLocalizedString(@"DESCRIPTION",@"") , NSLocalizedString(@"CONTACTS",@""), nil];   
     
     [secA autorelease]; 
     [secB autorelease];

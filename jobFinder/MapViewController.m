@@ -119,7 +119,7 @@
 {    
     //se la annotation è la nostra posizione, ritorna annotationView standard
     if (annotation == mapView.userLocation) {
-        [mapView.userLocation setTitle:@"Tua posizione"];
+        [mapView.userLocation setTitle:NSLocalizedString(@"USER POSITION", @"")];
         return nil;
     }
     
@@ -277,7 +277,7 @@
     }
     else{
            //se non c'è internet mostro alert
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Per favore controlla le impostazioni di rete e riprova" message:@"Impossibile collegarsi ad internet" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle: NSLocalizedString(@"NO NETWORK TITLE", @"") message: NSLocalizedString(@"NO NETWORK MEX", @"") delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
                 [alert show];
                 [alert release];
     }
@@ -502,7 +502,7 @@
         }
     }
     else{
-        address = @"Indirizzo non disponibile";
+        address = NSLocalizedString(@"NO ADDRESS", @"");
     }
     //aggiorno il callout
     //NSLog(@"INDIRIZZO CALCOLATO = %@",address);
@@ -537,15 +537,15 @@
     
     if([receivedData isEqualToString:@"Deleted"]){
         
-        [alert setTitle:@"Annuncio cancellato"];
-        [alert setMessage:@"Il tuo annuncio è stato cancellato"];
+        [alert setTitle:NSLocalizedString(@"OFFER DELETED TITLE", @"")];
+        [alert setMessage:NSLocalizedString(@"OFFER DELETED MEX", @"")];
 
         [alert show];
     }
     else if([receivedData isEqualToString:@"Modified"]){
     
-        [alert setTitle:@"Annuncio modificato"];
-        [alert setMessage:@"Il tuo annuncio è stato modificato"];
+        [alert setTitle:NSLocalizedString(@"OFFER MODIFIED TITLE", @"")];
+        [alert setMessage:NSLocalizedString(@"OFFER MODIFIED MEX", @"")];
         [alert show];
         [dbAccess jobReadRequest:map.region field:[Utilities createFieldsString] kind: [prefs objectForKey:@"kindOfOffer"]?[prefs objectForKey:@"kindOfOffer"]:@"Offro"];
 
@@ -559,8 +559,8 @@
 
     }
     else{
-        [alert setTitle:@"Errore connessione"];
-        [alert setMessage:@"Non è stato possibile portare a termine la tua richiesta, riprovare"];
+        [alert setTitle:NSLocalizedString(@"NETWORK ERROR TITLE", @"")];
+        [alert setMessage:NSLocalizedString(@"NETWORK ERROR MEX", @"")];
         [alert show];
     }
 
@@ -667,7 +667,7 @@
         }
     }
     else{
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Per favore controlla le impostazioni di rete e riprova" message:@"Impossibile collegarsi ad internet" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"NO NETWORK TITLE", @"") message:NSLocalizedString(@"NO NETWORK MEX", @"") delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
         [alert show];
         [alert release];
         
@@ -713,7 +713,7 @@
 -(IBAction)bookmarkBtnClicked:(id)sender
 {
     if(favouriteAnnotation == nil){
-        UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Scegli prima la tua zona preferita nella sezione i (in alto a sinistra)" message:nil delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+        UIAlertView * alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"PREF ZONE AD", @"") message:nil delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
         [alert show];
         [alert release];
     }
@@ -995,7 +995,7 @@
     /* configurazione pulsanti della view
      */
         
-    [publishBtn setTitle:@"Segnala lavoro" forState:UIControlStateNormal];
+    [publishBtn setTitle:NSLocalizedString(@"PUBLISH BTN TITLE",@"") forState:UIControlStateNormal];
     [publishBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [publishBtn setTitleColor:[UIColor grayColor] forState:UIControlStateDisabled];
     [publishBtn setTitleEdgeInsets:UIEdgeInsetsMake(28.0, 0.0, 0.0, 0.0 )];

@@ -58,7 +58,7 @@
         ((TextAreaCell *)cell).textView.editable = NO;
     }
     
-    if([cell.detailTextLabel.text isEqualToString:@"Non specificato"]){
+    if([cell.detailTextLabel.text isEqualToString:NSLocalizedString(@"NOT SPECIFIED",@"")]){
         cell.accessoryType = UITableViewCellAccessoryNone;
         [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     }
@@ -83,7 +83,7 @@
             else if(row == 2){
                 if(job.time != nil && ![job.time isEqualToString:@""])
                     cell.detailTextLabel.text = job.time;
-                else cell.detailTextLabel.text = @"Non specificato";
+                else cell.detailTextLabel.text = NSLocalizedString(@"NOT SPECIFIED",@"");
             }
             else if(row == 3)
                 cell.detailTextLabel.text = [job stringFromDate];
@@ -110,22 +110,22 @@
             if(row == 0){
                 if(![job.phone isEqualToString:@""])
                     cell.detailTextLabel.text = job.phone;
-                else cell.detailTextLabel.text = @"Non specificato";
+                else cell.detailTextLabel.text = NSLocalizedString(@"NOT SPECIFIED",@"");
             }
             if(row == 1){
                 if(![job.phone2 isEqualToString:@""])
                     cell.detailTextLabel.text = job.phone2;
-                else cell.detailTextLabel.text = @"Non specificato";
+                else cell.detailTextLabel.text = NSLocalizedString(@"NOT SPECIFIED",@"");
             }
             else if(row == 2){
                 if(![job.email isEqualToString:@""])
                     cell.detailTextLabel.text = job.email;
-                else cell.detailTextLabel.text = @"Non specificato";
+                else cell.detailTextLabel.text = NSLocalizedString(@"NOT SPECIFIED",@"");
             } 
             else if(row == 3){
                 if(![[job urlAsString] isEqualToString:@""])
                     cell.detailTextLabel.text = job.urlAsString;
-                else cell.detailTextLabel.text = @"Non specificato";
+                else cell.detailTextLabel.text = NSLocalizedString(@"NOT SPECIFIED",@"");
             }
             break;
         case 3:
@@ -232,18 +232,18 @@
     if(section == 2){
         switch (row) {
             case 0:
-                if(![cell.detailTextLabel.text isEqualToString:@"Non specificato"]){
+                if(![cell.detailTextLabel.text isEqualToString:NSLocalizedString(@"NOT SPECIFIED",@"")]){
                     //fa partire una chiamata
                     UIDevice *device = [UIDevice currentDevice];    
                     if ([[device model] isEqualToString:@"iPhone"]){
                         
-                        if(![cell.detailTextLabel.text isEqualToString:@"Non specificato"]){
+                        if(![cell.detailTextLabel.text isEqualToString:NSLocalizedString(@"NOT SPECIFIED",@"")]){
                             NSString *number = [NSString stringWithFormat:@"%@%@", @"tel://", cell.detailTextLabel.text];
                             [[UIApplication sharedApplication] openURL:[NSURL URLWithString:number]];
                         }
                     }
                     else{
-                        UIAlertView *Notpermitted=[[UIAlertView alloc] initWithTitle:@"Attenzione" message:@"Il tuo device non supporta questa feature." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                        UIAlertView *Notpermitted=[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"SORRY",@"") message:NSLocalizedString(@"NO IPHONE",@"") delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
                         [Notpermitted show];
                         [Notpermitted release];
                     }
@@ -251,12 +251,12 @@
                 break;
                 
             case 1:
-                if(![cell.detailTextLabel.text isEqualToString:@"Non specificato"]){
+                if(![cell.detailTextLabel.text isEqualToString:NSLocalizedString(@"NOT SPECIFIED",@"")]){
                     //fa partire una chiamata
                     UIDevice *device = [UIDevice currentDevice];    
                     if ([[device model] isEqualToString:@"iPhone"]){
                         
-                        if(![cell.detailTextLabel.text isEqualToString:@"Non Specificato"]){
+                        if(![cell.detailTextLabel.text isEqualToString:NSLocalizedString(@"NOT SPECIFIED",@"")]){
                             NSString *number = [NSString stringWithFormat:@"%@%@", @"tel://", cell.detailTextLabel.text];
                             [[UIApplication sharedApplication] openURL:[NSURL URLWithString:number]];
                         }
@@ -270,7 +270,7 @@
                 break;
                 
             case 2:
-                if(![cell.detailTextLabel.text isEqualToString:@"Non specificato"]){
+                if(![cell.detailTextLabel.text isEqualToString:NSLocalizedString(@"NOT SPECIFIED",@"")]){
                     MFMailComposeViewController *mail = [[MFMailComposeViewController alloc] init];
                     mail.mailComposeDelegate = self;
                     
@@ -284,7 +284,7 @@
                 }
                 break;  
             case 3:
-                if(![cell.detailTextLabel.text isEqualToString:@"Non specificato"]){
+                if(![cell.detailTextLabel.text isEqualToString:NSLocalizedString(@"NOT SPECIFIED",@"")]){
                     url = [NSURL URLWithString:cell.detailTextLabel.text];
                     //this will open the selected URL into the safari
                     [[UIApplication sharedApplication]openURL: url ]; 
@@ -360,7 +360,7 @@
         NSLog(@"post non inserito");
     }
     else {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Messaggio pubblicato sulla tua bacheca" message:nil delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"FACEBOOK MEX OK", @"") message:nil delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
         [alert show];
         [alert release];
         
@@ -374,7 +374,7 @@
 - (void)dialog:(FBDialog*)dialog didFailWithError:(NSError *)error{
     
     NSLog(@"DIALOG FAIL WITH ERROR: %@", error);
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Errore" message:@"Non è stato possibile condividere questo contenuto su facebook, riprova" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"FACEBOOK ERR TITLE", @"") message:NSLocalizedString(@"FACEBOOK ERR MEX", @"") delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
     [alert show];
     [alert release];
 }
@@ -450,7 +450,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self setTitle:@"Lavoro"]; 
+    [self setTitle:NSLocalizedString(@"JOB",@"")]; 
     
     //creo il model della tabella
     NSMutableArray *secA = [[NSMutableArray alloc] init];
@@ -461,7 +461,7 @@
     [secA insertObject:[[[NSDictionary alloc] initWithObjectsAndKeys:
                          @"regular",          @"DataKey",
                          @"InfoCell",         @"kind",
-                         @"Tipo annuncio",          @"label",
+                         NSLocalizedString(@"KIND OF OFFER",@""),          @"label",
                          @"",                 @"detailLabel",
                          @"",                 @"img",
                          [NSString stringWithFormat:@"%d", UITableViewCellStyleValue1],
@@ -471,7 +471,7 @@
     [secA insertObject:[[[NSDictionary alloc] initWithObjectsAndKeys:
                          @"regular",          @"DataKey",
                          @"InfoCell",         @"kind", 
-                         @"Settore",          @"label",
+                         NSLocalizedString(@"SECTOR",@""),          @"label",
                          @"",                 @"detailLabel",
                          @"",                 @"img",
                          [NSString stringWithFormat:@"%d", UITableViewCellStyleValue1],
@@ -480,7 +480,7 @@
     [secA insertObject:[[[NSDictionary alloc] initWithObjectsAndKeys:
                          @"regular",          @"DataKey",
                          @"InfoCell",         @"kind", 
-                         @"Contratto",        @"label",
+                         NSLocalizedString(@"CONTRACT",@""),        @"label",
                          @"",                 @"detailLabel",
                          @"",                 @"img",
                          [NSString stringWithFormat:@"%d", UITableViewCellStyleValue1],
@@ -490,7 +490,7 @@
     [secA insertObject:[[[NSDictionary alloc] initWithObjectsAndKeys:
                          @"regular",          @"DataKey",
                          @"InfoCell",         @"kind", 
-                         @"Inserito il",      @"label",
+                         NSLocalizedString(@"PUBLISHED",@""),      @"label",
                          @"",                 @"detailLabel",
                          @"",                 @"img",
                          [NSString stringWithFormat:@"%d", UITableViewCellStyleValue1],
@@ -500,7 +500,7 @@
     [secA insertObject:[[[NSMutableDictionary alloc] initWithObjectsAndKeys:
                          @"regular",                 @"DataKey",
                          @"InfoCell",         @"kind", 
-                         @"Zona",             @"label",
+                         NSLocalizedString(@"ZONE",@""),             @"label",
                          @"",                 @"detailLabel",
                          @"",                 @"img",
                          [NSString stringWithFormat:@"%d", UITableViewCellStyleValue1],
@@ -523,7 +523,7 @@
     [secC insertObject:[[[NSDictionary alloc] initWithObjectsAndKeys:
                          @"regular",          @"DataKey",
                          @"ActionCell",       @"kind", 
-                         @"Chiama 1",           @"label", 
+                         NSLocalizedString(@"CALL",@""),           @"label", 
                          @"call.png",         @"img", 
                          [NSString stringWithFormat:@"%d", UITableViewCellStyleSubtitle], @"style",
                          nil]autorelease] atIndex: 0];
@@ -531,7 +531,7 @@
     [secC insertObject:[[[NSDictionary alloc] initWithObjectsAndKeys:
                          @"regular",          @"DataKey",
                          @"ActionCell",       @"kind", 
-                         @"Chiama 2",           @"label", 
+                         NSLocalizedString(@"CALL",@""),           @"label", 
                          @"call.png",         @"img", 
                          [NSString stringWithFormat:@"%d", UITableViewCellStyleSubtitle], @"style",
                          nil]autorelease] atIndex: 1];
@@ -539,7 +539,7 @@
     [secC insertObject:[[[NSDictionary alloc] initWithObjectsAndKeys:
                          @"regular",          @"DataKey",
                          @"ActionCell",       @"kind",
-                         @"Scrivi",           @"label",
+                         NSLocalizedString(@"MAIL",@""),           @"label",
                          @"mail.png",         @"img",
                          [NSString stringWithFormat:@"%d", UITableViewCellStyleSubtitle], @"style",
                          nil] autorelease] atIndex: 2];
@@ -547,7 +547,7 @@
     [secC insertObject:[[[NSDictionary alloc] initWithObjectsAndKeys:
                          @"regular",          @"DataKey",
                          @"ActionCell",       @"kind", 
-                         @"Visita",           @"label",
+                         NSLocalizedString(@"WEBSITE",@""),           @"label",
                          @"home.png",         @"img",
                          [NSString stringWithFormat:@"%d", UITableViewCellStyleSubtitle], @"style",
                          nil]autorelease] atIndex: 3];
@@ -555,7 +555,7 @@
     [secD insertObject:[[[NSMutableDictionary alloc] initWithObjectsAndKeys:
                          @"regular",             @"DataKey",
                          @"ShareCell",         @"kind",
-                         @"Condividi",                 @"label",
+                         NSLocalizedString(@"SHARE",@""),                 @"label",
                          @"",                 @"placeholder",
                          @"",                 @"img",
                          [NSString stringWithFormat:@"%d", UITableViewCellStyleDefault], @"style",
@@ -580,7 +580,7 @@
 
     
     sectionData = [[NSArray alloc] initWithObjects: secA, secB, secC, secD,nil];
-    sectionDescripition = [[NSArray alloc] initWithObjects:@"Informazioni generali", @"Descrizione", @"Contatti",@"", nil];
+    sectionDescripition = [[NSArray alloc] initWithObjects:NSLocalizedString(@"GENERAL INFORMATION",@""), NSLocalizedString(@"DESCRIPTION",@"") , NSLocalizedString(@"CONTACTS",@""),@"", nil];
     
     
     /* Quando viene caricata la view controllo se il job scaricato dal server ha il campo address a nil o @"". Se si fa partire il reverse geocoding, altrimenti vuol dire che il job era già stato visualizzato in precedenza ed era già stato fatto il geocoding. In questo 
