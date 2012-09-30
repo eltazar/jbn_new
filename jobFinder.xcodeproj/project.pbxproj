@@ -105,6 +105,8 @@
 		ACCAC505145D7E48008B0B9F /* home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACCAC503145D7E47008B0B9F /* home@2x.png */; };
 		ACCAC508145D80B3008B0B9F /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = ACCAC506145D80B3008B0B9F /* search.png */; };
 		ACCAC509145D80B3008B0B9F /* search@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACCAC507145D80B3008B0B9F /* search@2x.png */; };
+		ACCB82AF1618E468001339D9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = ACCB82AD1618E468001339D9 /* Localizable.strings */; };
+		ACCB82B41618E6E3001339D9 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACCB82B21618E6E3001339D9 /* MapViewController.xib */; };
 		ACCBD837144D7FA500EEAC2A /* BaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCBD836144D7FA500EEAC2A /* BaseCell.m */; };
 		ACCC4E14148B7F4A00EEF4AE /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = ACCC4E12148B7F4900EEF4AE /* facebook.png */; };
 		ACCC4E15148B7F4A00EEF4AE /* facebook@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACCC4E13148B7F4900EEF4AE /* facebook@2x.png */; };
@@ -154,8 +156,6 @@
 		ACF9CA29149522E500E6F4EF /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACF9CA28149522E500E6F4EF /* Icon@2x.png */; };
 		ACF9CA2C149522F400E6F4EF /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = ACF9CA2A149522F300E6F4EF /* Icon-Small.png */; };
 		ACF9CA2D149522F400E6F4EF /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACF9CA2B149522F300E6F4EF /* Icon-Small@2x.png */; };
-		ACFA972D1618ADF300832F8F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = ACFA972F1618ADF300832F8F /* Localizable.strings */; };
-		ACFA97341618DC1400832F8F /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACFA97361618DC1400832F8F /* MapViewController.xib */; };
 		ACFAB5121435E88700AB1490 /* PublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACFAB5111435E88700AB1490 /* PublishViewController.m */; };
 		ACFD0A511497B48800153DF2 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = ACFD0A501497B48800153DF2 /* Default.png */; };
 		ACFD0A531497B49000153DF2 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACFD0A521497B49000153DF2 /* Default@2x.png */; };
@@ -314,6 +314,11 @@
 		ACCAC503145D7E47008B0B9F /* home@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "home@2x.png"; path = "icons/home@2x.png"; sourceTree = SOURCE_ROOT; };
 		ACCAC506145D80B3008B0B9F /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = search.png; path = icons/search.png; sourceTree = SOURCE_ROOT; };
 		ACCAC507145D80B3008B0B9F /* search@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "search@2x.png"; path = "icons/search@2x.png"; sourceTree = SOURCE_ROOT; };
+		ACCB82AE1618E468001339D9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = jobFinder/en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		ACCB82B01618E474001339D9 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = jobFinder/it.lproj/Localizable.strings; sourceTree = "<group>"; };
+		ACCB82B31618E6E3001339D9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MapViewController.xib; sourceTree = "<group>"; };
+		ACCB82B51618E6E8001339D9 /* it */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = it; path = it.lproj/MapViewController.xib; sourceTree = "<group>"; };
+		ACCB82B61618E81B001339D9 /* it */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = it; path = it.lproj/MainWindow.xib; sourceTree = "<group>"; };
 		ACCBD835144D7FA400EEAC2A /* BaseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseCell.h; sourceTree = "<group>"; };
 		ACCBD836144D7FA500EEAC2A /* BaseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseCell.m; sourceTree = "<group>"; };
 		ACCC4E12148B7F4900EEF4AE /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook.png; sourceTree = "<group>"; };
@@ -374,13 +379,8 @@
 		ACF9CA28149522E500E6F4EF /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		ACF9CA2A149522F300E6F4EF /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
 		ACF9CA2B149522F300E6F4EF /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
-		ACFA972E1618ADF300832F8F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		ACFA97301618AF9300832F8F /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
-		ACFA97311618AF9300832F8F /* it */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = it; path = it.lproj/MainWindow.xib; sourceTree = "<group>"; };
 		ACFA97321618AF9300832F8F /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		ACFA97331618AF9300832F8F /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		ACFA97351618DC1400832F8F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MapViewController.xib; sourceTree = "<group>"; };
-		ACFA97371618DC1B00832F8F /* it */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = it; path = it.lproj/MapViewController.xib; sourceTree = "<group>"; };
 		ACFAB5101435E88700AB1490 /* PublishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublishViewController.h; sourceTree = "<group>"; };
 		ACFAB5111435E88700AB1490 /* PublishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublishViewController.m; sourceTree = "<group>"; };
 		ACFD0A501497B48800153DF2 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -505,6 +505,7 @@
 				ACF9CA26149522DB00E6F4EF /* Icon.png */,
 				ACF9CA2A149522F300E6F4EF /* Icon-Small.png */,
 				ACF9CA2B149522F300E6F4EF /* Icon-Small@2x.png */,
+				ACCB82AD1618E468001339D9 /* Localizable.strings */,
 				ACC1FBB51611C33A0069545B /* Controllers custom */,
 				ACB8F5031610A32D008DB620 /* Utilities */,
 				AC4A04971422369200FE96F7 /* jobFinder */,
@@ -551,7 +552,7 @@
 				AC3CD533147D5F9300F80C76 /* Utilities.m */,
 				AC4A04C7142239E300FE96F7 /* MapViewController.h */,
 				AC4A04C8142239E300FE96F7 /* MapViewController.m */,
-				ACFA97361618DC1400832F8F /* MapViewController.xib */,
+				ACCB82B21618E6E3001339D9 /* MapViewController.xib */,
 				ACBAF54E14696963006A2A6D /* MKMapView+Utils.h */,
 				ACBAF54F14696963006A2A6D /* MKMapView+Utils.m */,
 				ACD08D4714C08FC1000D2D79 /* information interfaces */,
@@ -581,7 +582,6 @@
 				ACA915D9145E994E00806FD3 /* table plists */,
 				AC4A04991422369200FE96F7 /* jobFinder-Info.plist */,
 				AC4A049A1422369200FE96F7 /* InfoPlist.strings */,
-				ACFA972F1618ADF300832F8F /* Localizable.strings */,
 				ACF415B016149CFF002D6272 /* Anzio, IT.gpx */,
 				AC4A049D1422369200FE96F7 /* main.m */,
 				AC4A049F1422369200FE96F7 /* jobFinder-Prefix.pch */,
@@ -910,7 +910,6 @@
 				ACD08D4414C08EFB000D2D79 /* helpView2.png in Resources */,
 				ACD08D4514C08EFB000D2D79 /* helpView3.png in Resources */,
 				ACD08D4614C08EFB000D2D79 /* helpView4.png in Resources */,
-				ACFA97341618DC1400832F8F /* MapViewController.xib in Resources */,
 				ACD08D5914C0A108000D2D79 /* MainWindow.xib in Resources */,
 				ACD08D5E14C0B06F000D2D79 /* config.png in Resources */,
 				ACD08D5F14C0B06F000D2D79 /* config@2x.png in Resources */,
@@ -947,7 +946,8 @@
 				ACF415AE1614999C002D6272 /* pinOrange.png in Resources */,
 				ACF415AF1614999C002D6272 /* pinOrange@2x.png in Resources */,
 				AC25A1611615022C0013F656 /* tableBackgroundSimple.png in Resources */,
-				ACFA972D1618ADF300832F8F /* Localizable.strings in Resources */,
+				ACCB82AF1618E468001339D9 /* Localizable.strings in Resources */,
+				ACCB82B41618E6E3001339D9 /* MapViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1074,32 +1074,31 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
+		ACCB82AD1618E468001339D9 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ACCB82AE1618E468001339D9 /* en */,
+				ACCB82B01618E474001339D9 /* it */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		ACCB82B21618E6E3001339D9 /* MapViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ACCB82B31618E6E3001339D9 /* en */,
+				ACCB82B51618E6E8001339D9 /* it */,
+			);
+			name = MapViewController.xib;
+			sourceTree = "<group>";
+		};
 		ACD08D5714C0A108000D2D79 /* MainWindow.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				ACD08D5814C0A108000D2D79 /* en */,
-				ACFA97311618AF9300832F8F /* it */,
+				ACCB82B61618E81B001339D9 /* it */,
 			);
 			name = MainWindow.xib;
-			sourceTree = "<group>";
-		};
-		ACFA972F1618ADF300832F8F /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				ACFA972E1618ADF300832F8F /* en */,
-				ACFA97301618AF9300832F8F /* it */,
-			);
-			name = Localizable.strings;
-			path = ..;
-			sourceTree = "<group>";
-		};
-		ACFA97361618DC1400832F8F /* MapViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				ACFA97351618DC1400832F8F /* en */,
-				ACFA97371618DC1B00832F8F /* it */,
-			);
-			name = MapViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
