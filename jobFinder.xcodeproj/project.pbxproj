@@ -120,7 +120,6 @@
 		ACD08D4414C08EFB000D2D79 /* helpView2.png in Resources */ = {isa = PBXBuildFile; fileRef = ACD08D4014C08EFB000D2D79 /* helpView2.png */; };
 		ACD08D4514C08EFB000D2D79 /* helpView3.png in Resources */ = {isa = PBXBuildFile; fileRef = ACD08D4114C08EFB000D2D79 /* helpView3.png */; };
 		ACD08D4614C08EFB000D2D79 /* helpView4.png in Resources */ = {isa = PBXBuildFile; fileRef = ACD08D4214C08EFB000D2D79 /* helpView4.png */; };
-		ACD08D4D14C09F04000D2D79 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACD08D4C14C09F04000D2D79 /* MapViewController.xib */; };
 		ACD08D5914C0A108000D2D79 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACD08D5714C0A108000D2D79 /* MainWindow.xib */; };
 		ACD08D5E14C0B06F000D2D79 /* config.png in Resources */ = {isa = PBXBuildFile; fileRef = ACD08D5C14C0B068000D2D79 /* config.png */; };
 		ACD08D5F14C0B06F000D2D79 /* config@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACD08D5D14C0B06B000D2D79 /* config@2x.png */; };
@@ -156,6 +155,7 @@
 		ACF9CA2C149522F400E6F4EF /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = ACF9CA2A149522F300E6F4EF /* Icon-Small.png */; };
 		ACF9CA2D149522F400E6F4EF /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACF9CA2B149522F300E6F4EF /* Icon-Small@2x.png */; };
 		ACFA972D1618ADF300832F8F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = ACFA972F1618ADF300832F8F /* Localizable.strings */; };
+		ACFA97341618DC1400832F8F /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACFA97361618DC1400832F8F /* MapViewController.xib */; };
 		ACFAB5121435E88700AB1490 /* PublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACFAB5111435E88700AB1490 /* PublishViewController.m */; };
 		ACFD0A511497B48800153DF2 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = ACFD0A501497B48800153DF2 /* Default.png */; };
 		ACFD0A531497B49000153DF2 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACFD0A521497B49000153DF2 /* Default@2x.png */; };
@@ -334,7 +334,6 @@
 		ACD08D4014C08EFB000D2D79 /* helpView2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = helpView2.png; path = icons/helpView2.png; sourceTree = SOURCE_ROOT; };
 		ACD08D4114C08EFB000D2D79 /* helpView3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = helpView3.png; path = icons/helpView3.png; sourceTree = SOURCE_ROOT; };
 		ACD08D4214C08EFB000D2D79 /* helpView4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = helpView4.png; path = icons/helpView4.png; sourceTree = SOURCE_ROOT; };
-		ACD08D4C14C09F04000D2D79 /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
 		ACD08D5814C0A108000D2D79 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
 		ACD08D5C14C0B068000D2D79 /* config.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = config.png; path = icons/config.png; sourceTree = SOURCE_ROOT; };
 		ACD08D5D14C0B06B000D2D79 /* config@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "config@2x.png"; path = "icons/config@2x.png"; sourceTree = SOURCE_ROOT; };
@@ -370,12 +369,18 @@
 		ACF415A016147C92002D6272 /* rightPanelSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rightPanelSelected.png; path = icons/rightPanelSelected.png; sourceTree = SOURCE_ROOT; };
 		ACF415AC1614999B002D6272 /* pinOrange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pinOrange.png; path = icons/pinOrange.png; sourceTree = SOURCE_ROOT; };
 		ACF415AD1614999B002D6272 /* pinOrange@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "pinOrange@2x.png"; path = "icons/pinOrange@2x.png"; sourceTree = SOURCE_ROOT; };
-		ACF415B016149CFF002D6272 /* Anzio, IT.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Anzio, IT.gpx"; sourceTree = "<group>"; };
+		ACF415B016149CFF002D6272 /* Anzio, IT.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = "Anzio, IT.gpx"; path = "../Anzio, IT.gpx"; sourceTree = "<group>"; };
 		ACF9CA26149522DB00E6F4EF /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		ACF9CA28149522E500E6F4EF /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		ACF9CA2A149522F300E6F4EF /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
 		ACF9CA2B149522F300E6F4EF /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
 		ACFA972E1618ADF300832F8F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		ACFA97301618AF9300832F8F /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
+		ACFA97311618AF9300832F8F /* it */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = it; path = it.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		ACFA97321618AF9300832F8F /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		ACFA97331618AF9300832F8F /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		ACFA97351618DC1400832F8F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MapViewController.xib; sourceTree = "<group>"; };
+		ACFA97371618DC1B00832F8F /* it */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = it; path = it.lproj/MapViewController.xib; sourceTree = "<group>"; };
 		ACFAB5101435E88700AB1490 /* PublishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublishViewController.h; sourceTree = "<group>"; };
 		ACFAB5111435E88700AB1490 /* PublishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublishViewController.m; sourceTree = "<group>"; };
 		ACFD0A501497B48800153DF2 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -493,8 +498,6 @@
 		AC4A04821422369200FE96F7 = {
 			isa = PBXGroup;
 			children = (
-				ACFA972F1618ADF300832F8F /* Localizable.strings */,
-				ACF415B016149CFF002D6272 /* Anzio, IT.gpx */,
 				ACB8F50016109E22008DB620 /* Default-568h@2x.png */,
 				ACFD0A521497B49000153DF2 /* Default@2x.png */,
 				ACFD0A501497B48800153DF2 /* Default.png */,
@@ -548,7 +551,7 @@
 				AC3CD533147D5F9300F80C76 /* Utilities.m */,
 				AC4A04C7142239E300FE96F7 /* MapViewController.h */,
 				AC4A04C8142239E300FE96F7 /* MapViewController.m */,
-				ACD08D4C14C09F04000D2D79 /* MapViewController.xib */,
+				ACFA97361618DC1400832F8F /* MapViewController.xib */,
 				ACBAF54E14696963006A2A6D /* MKMapView+Utils.h */,
 				ACBAF54F14696963006A2A6D /* MKMapView+Utils.m */,
 				ACD08D4714C08FC1000D2D79 /* information interfaces */,
@@ -578,6 +581,8 @@
 				ACA915D9145E994E00806FD3 /* table plists */,
 				AC4A04991422369200FE96F7 /* jobFinder-Info.plist */,
 				AC4A049A1422369200FE96F7 /* InfoPlist.strings */,
+				ACFA972F1618ADF300832F8F /* Localizable.strings */,
+				ACF415B016149CFF002D6272 /* Anzio, IT.gpx */,
 				AC4A049D1422369200FE96F7 /* main.m */,
 				AC4A049F1422369200FE96F7 /* jobFinder-Prefix.pch */,
 			);
@@ -841,6 +846,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				it,
 			);
 			mainGroup = AC4A04821422369200FE96F7;
 			productRefGroup = AC4A048E1422369200FE96F7 /* Products */;
@@ -904,7 +910,7 @@
 				ACD08D4414C08EFB000D2D79 /* helpView2.png in Resources */,
 				ACD08D4514C08EFB000D2D79 /* helpView3.png in Resources */,
 				ACD08D4614C08EFB000D2D79 /* helpView4.png in Resources */,
-				ACD08D4D14C09F04000D2D79 /* MapViewController.xib in Resources */,
+				ACFA97341618DC1400832F8F /* MapViewController.xib in Resources */,
 				ACD08D5914C0A108000D2D79 /* MainWindow.xib in Resources */,
 				ACD08D5E14C0B06F000D2D79 /* config.png in Resources */,
 				ACD08D5F14C0B06F000D2D79 /* config@2x.png in Resources */,
@@ -1054,6 +1060,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				AC4A049B1422369200FE96F7 /* en */,
+				ACFA97321618AF9300832F8F /* it */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -1062,6 +1069,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				AC4A04B71422369200FE96F7 /* en */,
+				ACFA97331618AF9300832F8F /* it */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -1070,6 +1078,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				ACD08D5814C0A108000D2D79 /* en */,
+				ACFA97311618AF9300832F8F /* it */,
 			);
 			name = MainWindow.xib;
 			sourceTree = "<group>";
@@ -1078,8 +1087,19 @@
 			isa = PBXVariantGroup;
 			children = (
 				ACFA972E1618ADF300832F8F /* en */,
+				ACFA97301618AF9300832F8F /* it */,
 			);
 			name = Localizable.strings;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		ACFA97361618DC1400832F8F /* MapViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ACFA97351618DC1400832F8F /* en */,
+				ACFA97371618DC1B00832F8F /* it */,
+			);
+			name = MapViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
