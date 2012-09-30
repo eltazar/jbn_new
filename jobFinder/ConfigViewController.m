@@ -79,7 +79,7 @@
 {
     switch (section) {
         case 0:
-            return @"Scegliendo una zona preferita e attivando le notifiche push sarai avvisato se è stato aggiunto un nuovo lavoro nella tua zona";
+            return NSLocalizedString(@"SEARCH ZONE MEX",@"");
             break;
         case 1:
             return @"";
@@ -203,7 +203,7 @@
     }
 
     //setta titolo vista
-    [self setTitle:@"Impostazioni"];
+    [self setTitle:NSLocalizedString(@"CONFIG", @"")];
     self.navigationItem.hidesBackButton = TRUE;
     //aggiungo bottone "fatto" alla barra e setto azione
     UIBarButtonItem *anotherButton = [[UIBarButtonItem alloc] initWithTitle:@"Fatto" style:UIBarButtonItemStyleDone target:self action:@selector(doneButtonClicked:)];          
@@ -225,14 +225,14 @@
     [secA insertObject:[[[NSDictionary alloc] initWithObjectsAndKeys:
                          @"search",           @"DataKey",
                          @"ActionCell",       @"kind",
-                         @"Cerca zona",       @"label",
+                         NSLocalizedString(@"SEARCH ADDR", @""),       @"label",
                          @"search.png",       @"img",
                          [NSString stringWithFormat:@"%d", UITableViewCellStyleDefault], @"style",
                          nil] autorelease] atIndex: 1];
     
         
     sectionData = [[NSArray alloc] initWithObjects: secA, nil];
-    sectionDescripition = [[NSArray alloc] initWithObjects:@"Zona preferita",nil];
+    sectionDescripition = [[NSArray alloc] initWithObjects:NSLocalizedString(@"PREF ZONE",@""),nil];
     
     [secA autorelease];
 }

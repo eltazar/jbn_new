@@ -184,7 +184,7 @@
     [secA insertObject:[[[NSMutableDictionary alloc] initWithObjectsAndKeys:
                          @"config",                @"DataKey",
                          @"ActionCell",               @"kind",
-                         @"Impostazioni",           @"label",
+                         NSLocalizedString(@"CONFIG", @""),           @"label",
                          @"",                       @"detailLabel",
                          @"config.png",               @"img",
                          [NSString stringWithFormat:@"%d", UITableViewCellStyleDefault], @"style",

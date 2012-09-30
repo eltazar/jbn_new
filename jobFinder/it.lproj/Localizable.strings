@@ -47,3 +47,7 @@
 "NO IPHONE" = "Il tuo dispositivo non supporta questa funzione";
 "SEND" = "Invia";
 "CANCEL" = "Annulla";
+"CONFIG" = "Impostazioni";
+"SEARCH ADDR" = "Cerca zona";
+"SEARCH ZONE MEX" = "Scegliendo una zona preferita e attivando le notifiche push sarai avvisato se è stato aggiunto un nuovo lavoro nella tua zona";
+"GENERAL" = "Generali";

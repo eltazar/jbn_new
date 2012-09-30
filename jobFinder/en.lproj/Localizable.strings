@@ -47,3 +47,7 @@
 "NO IPHONE" ="Your device doesn't support this feature";
 "SEND" = "Send";
 "CANCEL" = "Cancel";
+"CONFIG" = "Configuration";
+"SEARCH ADDR" = "Search address";
+"SEARCH ZONE MEX" = "Choose your favourite zone and you will receive push notifications about new jobs in such zone";
+"GENERAL" = "General";
