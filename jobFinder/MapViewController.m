@@ -142,6 +142,7 @@
     NSInteger annotationIndexInNewJobs = [self.newJobs indexOfObject:[NSNumber numberWithInt:((Job*)annotation).idDb]];
     
     NSString *identifier = ((Job*)annotation).kind;
+    //NSLog(@"IDENTIFIER = %@",identifier);
     
     //se invece la annotation riguarda un lavoro creo e ritorno la annotationView dedicata
     MKPinAnnotationView* pinView = (MKPinAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:identifier ];
