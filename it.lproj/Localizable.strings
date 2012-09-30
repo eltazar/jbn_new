@@ -1,0 +1,49 @@
+/* 
+  Localizable.strings
+  jobFinder
+
+  Created by mario greco on 30/09/12.
+
+*/
+
+"USER POSITION" = "Tua posizione";
+"NO NETWORK MEX" = "Per favore controlla le impostazioni di rete e riprova";
+"NO NETWORK TITLE" = "Impossibile collegarsi ad internet";
+"CLOSE" = "Chiudi";
+"NO ADDRESS" = "Indirizzo non disponibile";
+"OFFER DELETED TITLE" = "Annuncio cancellato";
+"OFFER DELETED MEX" = "Il tuo annuncio è stato cancellato";
+"OFFER MODIFIED TITLE" = "Annuncio modificato";
+"OFFER MODIFIED MEX" = "Il tuo annuncio è stato modificato";
+"NETWORK ERROR TITLE" = "Errore di connessione";
+"NETWORK ERROR MEX" = "Non è stato possibile portare a termine la tua richiesta, riprovare";
+"PREF ZONE AD" = "Scegli prima la tua zona preferita nella sezione i (in alto a sinistra)";
+"PUBLISH BTN TITLE" = "Segnala lavoro";
+"NEW JOB" = "Nuovo lavoro";
+"KIND OF OFFER" = "Tipo di annuncio";
+"CONTRACT" = "Contratto";
+"SECTOR" = "Settore";
+"DESCRIPTION" = "Descrizione";
+"PHONE" = "Telefono";
+"GENERAL INFORMATION" = "Informazioni generali";
+"CONTACTS" = "Contatti";
+"DELETING ADV" = "Attenzione: premendo \"Cancella offerta\" eliminerai definitivamente la tua inserzione dal sistema";
+"DELETE" = "Cancella annuncio";
+"SHARE" = "Condividi";
+"WEBSITE" = "Visita";
+"MAIL" = "Scrivi";
+"CALL" = "Chiama";
+"PUBLISHED" = "Pubblicato il";
+"ZONE" = "Zona";
+"JOB" = "Lavoro";
+"CHANGE POSITION" = "Sposta il pin se vuoi";
+"NOT AVAILABLE" = "Non disponibile";
+"PREF ZONE" = "Zona preferita";
+"NOT SPECIFIED" = "Non specificato";
+"FACEBOOK MEX OK" = "Il messaggio è stato pubblicato sulla tua bacheca";
+"FACEBOOK ERR TITLE" = "Ooops!";
+"FACEBOOK ERR MEX" = "Non è stato possibile condividere questo contenuto su facebook, riprova";
+"SORRY" = "Spiacenti";
+"NO IPHONE" = "Il tuo dispositivo non supporta questa funzione";
+"SEND" = "Invia";
+"CANCEL" = "Annulla";

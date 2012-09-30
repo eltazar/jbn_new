@@ -1,0 +1,49 @@
+/* 
+  Localizable.strings
+  jobFinder
+
+  Created by mario greco on 30/09/12.
+
+*/
+
+"USER POSITION" = "Your position";
+"NO NETWORK MEX" = "Please check your internet configuration and try again";
+"NO NETWORK TITLE" = "No internet connection";
+"CLOSE" = "Close";
+"NO ADDRESS" = "Address not available";
+"OFFER DELETED TITLE" = "Offer deleted";
+"OFFER DELETED MEX" = "Your offer has been deleted";
+"OFFER MODIFIED TITLE" = "Offer modified";
+"OFFER MODIFIED MEX" = "Your offer has been modified";
+"NETWORK ERROR TITLE" = "Network error";
+"NETWORK ERROR MEX" = "Sorry, we can't satisfy your request, please try later";
+"PREF ZONE AD" = "Please choose a favourite zone through i panel (in the top left corner)";
+"PUBLISH BTN TITLE" = "Publish a job";
+"NEW JOB" = "New job";
+"KIND OF OFFER" = "Kind of offer";
+"CONTRACT" = "Contract";
+"SECTOR" = "Sector";
+"DESCRIPTION" = "Description";
+"PHONE" = "Phone";
+"GENERAL INFORMATION" = "General information";
+"CONTACTS" = "Contacts";
+"DELETING ADV" = "Pushing \"Delete Offer\" you'll delete permanently your offer";
+"DELETE" = "Delete";
+"SHARE" = "Share";
+"WEBSITE" = "Visit web site";
+"MAIL" = "Write a mail";
+"CALL" = "Call";
+"PUBLISHED" = "Published";
+"ZONE" = "Zone";
+"JOB" = "Job";
+"CHANGE POSITION" = "Change position if you like";
+"NOT AVAILABLE" = "Not available";
+"PREF ZONE" = "Favourite zone";
+"NOT SPECIFIED" = "Not specified";
+"FACEBOOK MEX OK" = "Your message has been posted on your wall";
+"FACEBOOK ERR TITLE" = "Ooops!";
+"FACEBOOK ERR MEX" = "We can't post your message on facebook, please try again";
+"SORRY" = "Sorry";
+"NO IPHONE" ="Your device doesn't support this feature";
+"SEND" = "Send";
+"CANCEL" = "Cancel";
