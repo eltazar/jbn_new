@@ -51,3 +51,7 @@
 "SEARCH ADDR" = "Search address";
 "SEARCH ZONE MEX" = "Choose your favourite zone and you will receive push notifications about new jobs in such zone";
 "GENERAL" = "General";
+"FILTER TITLE" = "Set up a filter";
+"FILTER OFF MEX" = "Turning of the filter you will see any kind of job on the map";
+"FILTER ON MEX" = "Turning on the filter you will see just the jobs that belong to the filter selected";
+"CHOOSE..." = "Choose...";

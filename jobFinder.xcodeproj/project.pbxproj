@@ -8,13 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		AC0363E91445CD2400060465 /* SectorTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC0363E81445CD2400060465 /* SectorTableViewController.m */; };
-		AC0B0405147EB74000788ADC /* filter-tableSingleSection.plist in Resources */ = {isa = PBXBuildFile; fileRef = AC0B0404147EB74000788ADC /* filter-tableSingleSection.plist */; };
+		AC0B0405147EB74000788ADC /* it-filter-tableSingleSection.plist in Resources */ = {isa = PBXBuildFile; fileRef = AC0B0404147EB74000788ADC /* it-filter-tableSingleSection.plist */; };
 		AC154CD2143A310000AE5FAD /* RootJobViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC154CD1143A310000AE5FAD /* RootJobViewController.m */; };
 		AC154CD4143A315600AE5FAD /* RootJobViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC154CD3143A315600AE5FAD /* RootJobViewController.xib */; };
 		AC154CD7143A33B300AE5FAD /* EditJobViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC154CD6143A33B300AE5FAD /* EditJobViewController.m */; };
 		AC154CDA143A343600AE5FAD /* InfoJobViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC154CD9143A343600AE5FAD /* InfoJobViewController.m */; };
 		AC18EF0714A89D1A00490D2A /* CreditsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC18EF0514A89D1A00490D2A /* CreditsViewController.m */; };
 		AC18EF0814A89D1A00490D2A /* CreditsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC18EF0614A89D1A00490D2A /* CreditsViewController.xib */; };
+		AC22B6AB1619FCA40065641C /* en-filter-tableSingleSection.plist in Resources */ = {isa = PBXBuildFile; fileRef = AC22B6AA1619FCA40065641C /* en-filter-tableSingleSection.plist */; };
+		AC22B6AD161A02320065641C /* en-sectors-table.plist in Resources */ = {isa = PBXBuildFile; fileRef = AC22B6AC161A02320065641C /* en-sectors-table.plist */; };
 		AC22FFED145763BC00DEECB7 /* myPosition.png in Resources */ = {isa = PBXBuildFile; fileRef = AC22FFEC145763BC00DEECB7 /* myPosition.png */; };
 		AC25A1611615022C0013F656 /* tableBackgroundSimple.png in Resources */ = {isa = PBXBuildFile; fileRef = AC25A1601615022C0013F656 /* tableBackgroundSimple.png */; };
 		AC2C73B814897C4500922345 /* Facebook.m in Sources */ = {isa = PBXBuildFile; fileRef = AC2C73A114897C4500922345 /* Facebook.m */; };
@@ -61,7 +63,7 @@
 		AC7ED930145188B50070DA49 /* GeoDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7ED92F145188B50070DA49 /* GeoDecoder.m */; };
 		AC81AFC2147A9DA40034A5AA /* favPin.png in Resources */ = {isa = PBXBuildFile; fileRef = AC81AFC0147A9DA30034A5AA /* favPin.png */; };
 		AC81AFC3147A9DA40034A5AA /* favPin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AC81AFC1147A9DA30034A5AA /* favPin@2x.png */; };
-		AC840BAA1463F25F00070F1D /* sector-table.plist in Resources */ = {isa = PBXBuildFile; fileRef = AC840BA91463F25F00070F1D /* sector-table.plist */; };
+		AC840BAA1463F25F00070F1D /* it-sectors-table.plist in Resources */ = {isa = PBXBuildFile; fileRef = AC840BA91463F25F00070F1D /* it-sectors-table.plist */; };
 		AC8C34EC1454359D007BEE76 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC8C34EB1454359D007BEE76 /* SystemConfiguration.framework */; };
 		AC8C34EF14543642007BEE76 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = AC8C34EE14543642007BEE76 /* Reachability.m */; };
 		ACA915E2145EA10500806FD3 /* filter-table.plist in Resources */ = {isa = PBXBuildFile; fileRef = ACA915E1145EA10500806FD3 /* filter-table.plist */; };
@@ -174,7 +176,7 @@
 /* Begin PBXFileReference section */
 		AC0363E71445CD2400060465 /* SectorTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectorTableViewController.h; sourceTree = "<group>"; };
 		AC0363E81445CD2400060465 /* SectorTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectorTableViewController.m; sourceTree = "<group>"; };
-		AC0B0404147EB74000788ADC /* filter-tableSingleSection.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "filter-tableSingleSection.plist"; sourceTree = "<group>"; };
+		AC0B0404147EB74000788ADC /* it-filter-tableSingleSection.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "it-filter-tableSingleSection.plist"; sourceTree = "<group>"; };
 		AC154CD0143A310000AE5FAD /* RootJobViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootJobViewController.h; sourceTree = "<group>"; };
 		AC154CD1143A310000AE5FAD /* RootJobViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootJobViewController.m; sourceTree = "<group>"; };
 		AC154CD3143A315600AE5FAD /* RootJobViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootJobViewController.xib; sourceTree = "<group>"; };
@@ -185,6 +187,8 @@
 		AC18EF0414A89D1A00490D2A /* CreditsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreditsViewController.h; sourceTree = "<group>"; };
 		AC18EF0514A89D1A00490D2A /* CreditsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreditsViewController.m; sourceTree = "<group>"; };
 		AC18EF0614A89D1A00490D2A /* CreditsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreditsViewController.xib; sourceTree = "<group>"; };
+		AC22B6AA1619FCA40065641C /* en-filter-tableSingleSection.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "en-filter-tableSingleSection.plist"; sourceTree = "<group>"; };
+		AC22B6AC161A02320065641C /* en-sectors-table.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "en-sectors-table.plist"; sourceTree = "<group>"; };
 		AC22FFEC145763BC00DEECB7 /* myPosition.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = myPosition.png; path = icons/myPosition.png; sourceTree = SOURCE_ROOT; };
 		AC25A1601615022C0013F656 /* tableBackgroundSimple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tableBackgroundSimple.png; path = icons/tableBackgroundSimple.png; sourceTree = SOURCE_ROOT; };
 		AC2C73A014897C4500922345 /* Facebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Facebook.h; sourceTree = "<group>"; };
@@ -250,7 +254,7 @@
 		AC7ED92F145188B50070DA49 /* GeoDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoDecoder.m; sourceTree = "<group>"; };
 		AC81AFC0147A9DA30034A5AA /* favPin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = favPin.png; path = icons/favPin.png; sourceTree = SOURCE_ROOT; };
 		AC81AFC1147A9DA30034A5AA /* favPin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "favPin@2x.png"; path = "icons/favPin@2x.png"; sourceTree = SOURCE_ROOT; };
-		AC840BA91463F25F00070F1D /* sector-table.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "sector-table.plist"; sourceTree = "<group>"; };
+		AC840BA91463F25F00070F1D /* it-sectors-table.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "it-sectors-table.plist"; sourceTree = "<group>"; };
 		AC8B8BA114501C0E00102E2D /* GeoDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoDecoder.h; sourceTree = "<group>"; };
 		AC8C34EB1454359D007BEE76 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		AC8C34ED14543642007BEE76 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
@@ -613,8 +617,10 @@
 			children = (
 				ACA915E1145EA10500806FD3 /* filter-table.plist */,
 				ACC0F8951482F39000A4164B /* sectors.plist */,
-				AC0B0404147EB74000788ADC /* filter-tableSingleSection.plist */,
-				AC840BA91463F25F00070F1D /* sector-table.plist */,
+				AC0B0404147EB74000788ADC /* it-filter-tableSingleSection.plist */,
+				AC22B6AA1619FCA40065641C /* en-filter-tableSingleSection.plist */,
+				AC840BA91463F25F00070F1D /* it-sectors-table.plist */,
+				AC22B6AC161A02320065641C /* en-sectors-table.plist */,
 			);
 			name = "table plists";
 			sourceTree = "<group>";
@@ -882,12 +888,12 @@
 				ACA915E2145EA10500806FD3 /* filter-table.plist in Resources */,
 				AC442BD01462ACC60083F9B6 /* greenButton.png in Resources */,
 				AC442BD31462AE5B0083F9B6 /* redButton.png in Resources */,
-				AC840BAA1463F25F00070F1D /* sector-table.plist in Resources */,
+				AC840BAA1463F25F00070F1D /* it-sectors-table.plist in Resources */,
 				ACBAF56314698F8E006A2A6D /* call.png in Resources */,
 				ACBAF56514698F94006A2A6D /* call@2x.png in Resources */,
 				AC81AFC2147A9DA40034A5AA /* favPin.png in Resources */,
 				AC81AFC3147A9DA40034A5AA /* favPin@2x.png in Resources */,
-				AC0B0405147EB74000788ADC /* filter-tableSingleSection.plist in Resources */,
+				AC0B0405147EB74000788ADC /* it-filter-tableSingleSection.plist in Resources */,
 				ACC0F8961482F39000A4164B /* sectors.plist in Resources */,
 				AC2C73B914897C4500922345 /* FBDialog.bundle in Resources */,
 				ACCC4E14148B7F4A00EEF4AE /* facebook.png in Resources */,
@@ -948,6 +954,8 @@
 				AC25A1611615022C0013F656 /* tableBackgroundSimple.png in Resources */,
 				ACCB82AF1618E468001339D9 /* Localizable.strings in Resources */,
 				ACCB82B41618E6E3001339D9 /* MapViewController.xib in Resources */,
+				AC22B6AB1619FCA40065641C /* en-filter-tableSingleSection.plist in Resources */,
+				AC22B6AD161A02320065641C /* en-sectors-table.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

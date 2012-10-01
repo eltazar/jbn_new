@@ -204,7 +204,7 @@
     }    
     else{
         job.field = @"";
-        placeholder = @"Scegli...";
+        placeholder = NSLocalizedString(@"CHOOSE...", @"");
         job.code = @"";
     } 
     

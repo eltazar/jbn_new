@@ -167,8 +167,8 @@
         switch (section) {
             case 0:
                 if(aSwitch.on)
-                    return @"Disattivando il filtro ti verranno mostrati i lavori appartenenti a qualsiasi settore";
-                else return @"Attivando il filtro potrai scegliere i settori di tuo interesse e visualizzare solo i lavori appartenenti a essi";
+                    return NSLocalizedString(@"FILTER OFF MEX", @"");
+                else return NSLocalizedString(@"FILTER ON MEX", @"");
                 break;
             default:
                 return nil;
@@ -317,8 +317,17 @@
     
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
     
+    NSString * language = [[NSLocale preferredLanguages] objectAtIndex:0];
+    
+    NSLog(@"LINGUA = %@",language);
+    
+    NSString *plistStructure1 = nil;
+    
     //recupero path del file plist
-    NSString *plistStructure1 = [[NSBundle mainBundle] pathForResource:@"filter-tableSingleSection" ofType:@"plist"];
+    if([language isEqualToString:@"it"])
+        plistStructure1 = [[NSBundle mainBundle] pathForResource:@"it-filter-tableSingleSection" ofType:@"plist"];
+    else plistStructure1 = [[NSBundle mainBundle] pathForResource:@"en-filter-tableSingleSection" ofType:@"plist"];
+    NSLog(@"PLIST = %@",plistStructure1);
     
     NSString *plistStructure2 = [[NSBundle mainBundle] pathForResource:@"filter-table" ofType:@"plist"];
     
@@ -385,7 +394,7 @@
     self.indices = [NSArray arrayWithObjects:@"A",@"B",@"C",@"D",@"E",@"F",@"G",@"H",@"I",@"J",
                     @"K",@"L",@"M",@"N",@"O",@"P",@"Q",@"R",@"S",@"T",@"U",@"V",@"W",@"X",@"Y",@"Z", nil];
 
-    self.title = @"Imposta filtro";//[[structureFromPlist objectAtIndex:0] objectForKey:@"name"];
+    self.title = NSLocalizedString(@"FILTER TITLE", @"");//[[structureFromPlist objectAtIndex:0] objectForKey:@"name"];
 }
 
 -(void)changeFrameTables

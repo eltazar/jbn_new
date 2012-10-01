@@ -51,3 +51,7 @@
 "SEARCH ADDR" = "Cerca zona";
 "SEARCH ZONE MEX" = "Scegliendo una zona preferita e attivando le notifiche push sarai avvisato se è stato aggiunto un nuovo lavoro nella tua zona";
 "GENERAL" = "Generali";
+"FILTER TITLE" = "Imposta filtro";
+"FILTER OFF MEX" = "Disattivando il filtro ti verranno mostrati i lavori appartenenti a qualsiasi settore";
+"FILTER ON MEX" = "Attivando il filtro potrai scegliere i settori di tuo interesse e visualizzare solo i lavori appartenenti a essi";
+"CHOOSE..." = "Scegli...";

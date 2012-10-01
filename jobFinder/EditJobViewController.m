@@ -76,7 +76,14 @@
     
     if(section == 0 && row == 2){
 
-        SectorTableViewController *sectorTable = [[SectorTableViewController alloc] initWithPlist:@"sector-table"];
+        NSString * language = [[NSLocale preferredLanguages] objectAtIndex:0];
+        
+        SectorTableViewController *sectorTable = nil;
+        
+        if([language isEqualToString:@"it"])        
+            sectorTable = [[SectorTableViewController alloc] initWithPlist:@"it-sectors-table"];
+        else sectorTable = [[SectorTableViewController alloc] initWithPlist:@"en-sectors-table"];
+        
         sectorTable.secDelegate = self;
         [self.navigationController pushViewController:sectorTable animated:YES];
         [sectorTable release];
@@ -134,7 +141,7 @@
     }    
     else{
         job.field = @"";
-        placeholder = @"Scegli...";
+        placeholder = NSLocalizedString(@"CHOOSE...", @"");
         job.code = @"";
     } 
     
@@ -260,7 +267,7 @@
                           @"employee",         @"DataKey",
                           @"ActionCell",       @"kind", 
                           NSLocalizedString(@"SECTOR",@""),          @"label",
-                          @"Scegli...",        @"placeholder",
+                          NSLocalizedString(@"CHOOSE...", @""),        @"placeholder",
                           @"",                 @"img",
                           [NSString stringWithFormat:@"%d", UITableViewCellStyleValue1], @"style",
                           nil] autorelease] atIndex: 2];

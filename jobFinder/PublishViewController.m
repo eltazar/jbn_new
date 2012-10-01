@@ -83,7 +83,7 @@
         NSLog(@"THE NEW JOB KIND = %@",theNewJob.kind);
         //controllo stato connessione
         if(![Utilities networkReachable]){
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Per favore controlla le impostazioni di rete e riprova" message:@"Impossibile collegarsi ad internet" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle: NSLocalizedString(@"NO NETWORK TITLE", @"") message: NSLocalizedString(@"NO NETWORK MEX", @"") delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
             [alert show];
             [alert release];
         }
