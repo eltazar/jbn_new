@@ -407,7 +407,7 @@
     
     //il release è lasciato alla classe madre
     sectionData = [[NSArray alloc] initWithObjects: secA, secB, secC,secD, nil];
-    sectionDescripition = [[NSArray alloc] initWithObjects:NSLocalizedString(@"GENERAL INFORMATION",@""), NSLocalizedString(@"DESCRIPTION",@"") , NSLocalizedString(@"CONTACTS",@""), nil];   
+    sectionDescripition = [[NSArray alloc] initWithObjects:NSLocalizedString(@"GENERAL INFORMATION",@""), NSLocalizedString(@"DESCRIPTION",@"") , NSLocalizedString(@"CONTACTS",@""),@"", nil];
     
     [secA autorelease]; 
     [secB autorelease];
