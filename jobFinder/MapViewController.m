@@ -630,7 +630,7 @@
         
         //alloco il job da pubblicare
         self.jobToPublish = [[[Job alloc] initWithCoordinate:coordinate] autorelease];
-        //[geoDec searchAddressForCoordinate:coordinate];
+        [geoDec searchAddressForCoordinate:coordinate];
         
         if(jobToPublish != nil){
             
@@ -656,7 +656,13 @@
             }
             
             //mostro il left panel
-
+            
+            leftPanel.frame = CGRectMake(0-leftPanel.frame.size.width, map.frame.size.height - leftPanel.frame.size.height,self.leftPanel.frame.size.width,leftPanel.frame.size.height);
+            [self.map addSubview:leftPanel];
+            rightPanel.frame = CGRectMake(self.map.frame.size.width, map.frame.size.height - rightPanel.frame.size.height,self.rightPanel.frame.size.width,rightPanel.frame.size.height);
+            [self.map addSubview:rightPanel];
+            
+            NSLog(@"LEFT PANEL x=%f, y=%f, w=%f,h=%f",leftPanel.frame.origin.x,leftPanel.frame.origin.y,leftPanel.frame.size.width,leftPanel.frame.size.height);
             [UIView animateWithDuration:.5
                             animations:^{
                                     rightPanel.frame = CGRectMake(self.map.frame.size.width - rightPanel.frame.size.width,map.frame.size.height - rightPanel.frame.size.height , self.rightPanel.frame.size.width, rightPanel.frame.size.height);
@@ -949,10 +955,10 @@
     
     /*Aggiungo le subViews alla mappa
      */
-    leftPanel.frame = CGRectMake(0-leftPanel.frame.size.width, map.frame.size.height - leftPanel.frame.size.height,self.leftPanel.frame.size.width,leftPanel.frame.size.height);
-    [self.map addSubview:leftPanel];
-    rightPanel.frame = CGRectMake(self.map.frame.size.width, map.frame.size.height - rightPanel.frame.size.height,self.rightPanel.frame.size.width,rightPanel.frame.size.height);
-    [self.map addSubview:rightPanel];
+//    leftPanel.frame = CGRectMake(0-leftPanel.frame.size.width, map.frame.size.height - leftPanel.frame.size.height,self.leftPanel.frame.size.width,leftPanel.frame.size.height);
+//    [self.map addSubview:leftPanel];
+//    rightPanel.frame = CGRectMake(self.map.frame.size.width, map.frame.size.height - rightPanel.frame.size.height,self.rightPanel.frame.size.width,rightPanel.frame.size.height);
+//    [self.map addSubview:rightPanel];
     
     
     /*inizializzo i buffer per lo zoom e per le annotazioni
