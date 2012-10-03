@@ -30,6 +30,8 @@
 /*Dichiaro property e metodi privati per il MapViewController
  */
 @interface MapViewController()
+@property(nonatomic, retain) NSString *filterBtnImgActive;
+@property(nonatomic, retain) NSString *filterBtnImgNoactive;
 @property(nonatomic,retain) NSArray *newJobs;
 @property(nonatomic,retain) NSString *oldFieldsString;
 @property(nonatomic,retain) NSString *oldKindOffer;
@@ -52,7 +54,7 @@
 @synthesize map, publishBtn,toolBar, refreshBtn, bookmarkButtonItem, filterButton, saveJobInPositionBtn, backBtn, jobToPublish;
 //ivar private
 @synthesize annotationsBuffer, zoomBuffer,oldZoom, timer, oldSwitch, oldFieldsString, newJobs, oldKindOffer;
-@synthesize leftPanel, rightPanel;
+@synthesize leftPanel, rightPanel, filterBtnImgActive,filterBtnImgNoactive;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -904,7 +906,7 @@
     //gestisco alla comparsa della view come settare il tasto per il filtro e come effettuare le query
         
     if(  [prefs boolForKey:@"switch"]){
-        [filterButton setImage:[UIImage imageNamed:@"filtroAttivo.png"]];
+        [filterButton setImage:[UIImage imageNamed:filterBtnImgActive]];
         if(oldSwitch == FALSE){
             [map removeAnnotations:[map jobAnnotations]];
             [dbAccess jobReadRequest:map.region field:[Utilities createFieldsString] kind: [prefs objectForKey:@"kindOfOffer"]?[prefs objectForKey:@"kindOfOffer"]:@"Offro"];
@@ -916,7 +918,7 @@
     }
     else{
         if(oldSwitch == TRUE){
-            [filterButton setImage:[UIImage imageNamed:@"filtroDisattivato.png"]];
+            [filterButton setImage:[UIImage imageNamed:filterBtnImgNoactive]];
             [dbAccess jobReadRequest:map.region field:[Utilities createFieldsString] kind: [prefs objectForKey:@"kindOfOffer"]?[prefs objectForKey:@"kindOfOffer"]:@"Offro"];
         }
     }
@@ -944,6 +946,17 @@
 {
     // Do any additional setup after loading the view from its nib.
     [super viewDidLoad];
+    
+    NSString * language = [[NSLocale preferredLanguages] objectAtIndex:0];
+        
+    if([language isEqualToString:@"it"]){
+        filterBtnImgActive = @"filtroAttivo.png";
+        filterBtnImgNoactive = @"filtroDisattivato.png";
+    }
+    else{
+        filterBtnImgActive = @"filterActive.png";
+        filterBtnImgNoactive = @"filterDeactive.png";
+    }
     
     //per il geocodinge e revers geocoding
     geoDec = [[GeoDecoder alloc] init];
@@ -1028,11 +1041,11 @@
     } 
     
     if(  [prefs boolForKey:@"switch"]){
-        [filterButton setImage:[UIImage imageNamed:@"filtroAttivo.png"]];
+        [filterButton setImage:[UIImage imageNamed:filterBtnImgActive]];
     }
     else{
         //NSLog(@"MAP LOAD SWITCH off = %p",[UIImage imageNamed:@"filtroDisattivato.png"]);
-        [filterButton setImage:[UIImage imageNamed:@"filtroDisattivato.png"]];
+        [filterButton setImage:[UIImage imageNamed:filterBtnImgNoactive]];
     }
     
     /* Inizializzazione valori booleani per la classe
@@ -1091,6 +1104,8 @@
 
 - (void)dealloc
 {
+    self.filterBtnImgNoactive = nil;
+    self.filterBtnImgActive = nil;
     [rightPanel release];
     [leftPanel release];
     [geoDec release];

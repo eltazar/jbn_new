@@ -67,6 +67,10 @@
 		AC8C34EC1454359D007BEE76 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC8C34EB1454359D007BEE76 /* SystemConfiguration.framework */; };
 		AC8C34EF14543642007BEE76 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = AC8C34EE14543642007BEE76 /* Reachability.m */; };
 		ACA915E2145EA10500806FD3 /* filter-table.plist in Resources */ = {isa = PBXBuildFile; fileRef = ACA915E1145EA10500806FD3 /* filter-table.plist */; };
+		ACAF3868161CB657007D1A3B /* filterActive.png in Resources */ = {isa = PBXBuildFile; fileRef = ACAF3864161CB657007D1A3B /* filterActive.png */; };
+		ACAF3869161CB657007D1A3B /* filterActive@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACAF3865161CB657007D1A3B /* filterActive@2x.png */; };
+		ACAF386A161CB657007D1A3B /* filterDeactive.png in Resources */ = {isa = PBXBuildFile; fileRef = ACAF3866161CB657007D1A3B /* filterDeactive.png */; };
+		ACAF386B161CB657007D1A3B /* filterDeactive@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACAF3867161CB657007D1A3B /* filterDeactive@2x.png */; };
 		ACB1416E149BBEF500EBB1F5 /* logoSapienza.png in Resources */ = {isa = PBXBuildFile; fileRef = ACB1416C149BBEF500EBB1F5 /* logoSapienza.png */; };
 		ACB1416F149BBEF500EBB1F5 /* logoSapienza@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACB1416D149BBEF500EBB1F5 /* logoSapienza@2x.png */; };
 		ACB38CD8161303E6005CE09B /* insertJobButtonSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = ACB38CD7161303E6005CE09B /* insertJobButtonSelected.png */; };
@@ -260,6 +264,10 @@
 		AC8C34ED14543642007BEE76 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		AC8C34EE14543642007BEE76 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		ACA915E1145EA10500806FD3 /* filter-table.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "filter-table.plist"; sourceTree = "<group>"; };
+		ACAF3864161CB657007D1A3B /* filterActive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = filterActive.png; path = icons/filterActive.png; sourceTree = SOURCE_ROOT; };
+		ACAF3865161CB657007D1A3B /* filterActive@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "filterActive@2x.png"; path = "icons/filterActive@2x.png"; sourceTree = SOURCE_ROOT; };
+		ACAF3866161CB657007D1A3B /* filterDeactive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = filterDeactive.png; path = icons/filterDeactive.png; sourceTree = SOURCE_ROOT; };
+		ACAF3867161CB657007D1A3B /* filterDeactive@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "filterDeactive@2x.png"; path = "icons/filterDeactive@2x.png"; sourceTree = SOURCE_ROOT; };
 		ACB1416C149BBEF500EBB1F5 /* logoSapienza.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logoSapienza.png; sourceTree = "<group>"; };
 		ACB1416D149BBEF500EBB1F5 /* logoSapienza@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logoSapienza@2x.png"; sourceTree = "<group>"; };
 		ACB38CD7161303E6005CE09B /* insertJobButtonSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = insertJobButtonSelected.png; path = icons/insertJobButtonSelected.png; sourceTree = SOURCE_ROOT; };
@@ -738,6 +746,10 @@
 		ACD58178145862DB00CCB281 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				ACAF3864161CB657007D1A3B /* filterActive.png */,
+				ACAF3865161CB657007D1A3B /* filterActive@2x.png */,
+				ACAF3866161CB657007D1A3B /* filterDeactive.png */,
+				ACAF3867161CB657007D1A3B /* filterDeactive@2x.png */,
 				AC25A1601615022C0013F656 /* tableBackgroundSimple.png */,
 				ACF415AC1614999B002D6272 /* pinOrange.png */,
 				ACF415AD1614999B002D6272 /* pinOrange@2x.png */,
@@ -956,6 +968,10 @@
 				ACCB82B41618E6E3001339D9 /* MapViewController.xib in Resources */,
 				AC22B6AB1619FCA40065641C /* en-filter-tableSingleSection.plist in Resources */,
 				AC22B6AD161A02320065641C /* en-sectors-table.plist in Resources */,
+				ACAF3868161CB657007D1A3B /* filterActive.png in Resources */,
+				ACAF3869161CB657007D1A3B /* filterActive@2x.png in Resources */,
+				ACAF386A161CB657007D1A3B /* filterDeactive.png in Resources */,
+				ACAF386B161CB657007D1A3B /* filterDeactive@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
