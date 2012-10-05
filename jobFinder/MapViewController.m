@@ -71,9 +71,14 @@
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)annotationView didChangeDragState:(MKAnnotationViewDragState)newState fromOldState:(MKAnnotationViewDragState)oldState {
 	    
 	if (oldState == MKAnnotationViewDragStateDragging) {
-        //NSLog(@"DRAG PIN FERMO");
+        NSLog(@"DRAG PIN movmento");
+    }
+    else if(oldState == MKAnnotationViewDragStateEnding){
+        NSLog(@"DRAG PIN FERMO");
+        jobToPublish.address = @"Calcolo indirizzo...";
+
         [geoDec searchAddressForCoordinate:[annotationView.annotation coordinate]];
-	}
+    }
 }
 
 
@@ -475,6 +480,8 @@
 {
     NSString *address;
     
+    NSLog(@"ricevuti dati geolog");
+    
     if([[geoData objectForKey:@"status"] isEqualToString:@"OK"]){
         
         NSArray *resultsArray = [geoData objectForKey:@"results"];
@@ -502,6 +509,7 @@
                 address = [NSString stringWithFormat:@"%@, %@", address, number];
             
         }
+        NSLog(@"ADDRESS = %@",address);
     }
     else{
         address = NSLocalizedString(@"NO ADDRESS", @"");
@@ -509,6 +517,9 @@
     //aggiorno il callout
     //NSLog(@"INDIRIZZO CALCOLATO = %@",address);
     jobToPublish.address = address;
+    [self.map deselectAnnotation:jobToPublish animated:NO];
+    [self.map selectAnnotation:jobToPublish animated:NO];
+    
     
     
 }
@@ -638,6 +649,7 @@
             
             //così il pin sarà draggabile
             jobToPublish.isDraggable = YES;
+            jobToPublish.address = @"Calcolo indirizzo...";
             //aggiungo annotazione alla mappa
             [map addAnnotation:jobToPublish];
             //segnalo che c'è un pin draggabile sulla mappa
@@ -664,7 +676,7 @@
             rightPanel.frame = CGRectMake(self.map.frame.size.width, map.frame.size.height - rightPanel.frame.size.height,self.rightPanel.frame.size.width,rightPanel.frame.size.height);
             [self.map addSubview:rightPanel];
             
-            NSLog(@"LEFT PANEL x=%f, y=%f, w=%f,h=%f",leftPanel.frame.origin.x,leftPanel.frame.origin.y,leftPanel.frame.size.width,leftPanel.frame.size.height);
+            //NSLog(@"LEFT PANEL x=%f, y=%f, w=%f,h=%f",leftPanel.frame.origin.x,leftPanel.frame.origin.y,leftPanel.frame.size.width,leftPanel.frame.size.height);
             [UIView animateWithDuration:.5
                             animations:^{
                                     rightPanel.frame = CGRectMake(self.map.frame.size.width - rightPanel.frame.size.width,map.frame.size.height - rightPanel.frame.size.height , self.rightPanel.frame.size.width, rightPanel.frame.size.height);
