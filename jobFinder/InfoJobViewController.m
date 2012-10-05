@@ -42,7 +42,7 @@
     NSArray *sec = [sectionData objectAtIndex:indexPath.section];
     NSDictionary *rowDesc = [sec objectAtIndex:indexPath.row]; 
     
-    if(indexPath.section == 0 && indexPath.row==3 && [job.address isEqualToString:@""]){
+    if(indexPath.section == 0 && indexPath.row==4 && [job.address isEqualToString:@""]){
         //NSLog(@"cellForRow: ritorno Spinner Cell");
         return spinnerCell;
     }
