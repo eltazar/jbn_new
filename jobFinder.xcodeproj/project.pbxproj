@@ -17,7 +17,6 @@
 		AC18EF0814A89D1A00490D2A /* CreditsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC18EF0614A89D1A00490D2A /* CreditsViewController.xib */; };
 		AC22B6AB1619FCA40065641C /* en-filter-tableSingleSection.plist in Resources */ = {isa = PBXBuildFile; fileRef = AC22B6AA1619FCA40065641C /* en-filter-tableSingleSection.plist */; };
 		AC22B6AD161A02320065641C /* en-sectors-table.plist in Resources */ = {isa = PBXBuildFile; fileRef = AC22B6AC161A02320065641C /* en-sectors-table.plist */; };
-		AC22FFED145763BC00DEECB7 /* myPosition.png in Resources */ = {isa = PBXBuildFile; fileRef = AC22FFEC145763BC00DEECB7 /* myPosition.png */; };
 		AC25A1611615022C0013F656 /* tableBackgroundSimple.png in Resources */ = {isa = PBXBuildFile; fileRef = AC25A1601615022C0013F656 /* tableBackgroundSimple.png */; };
 		AC2C73B814897C4500922345 /* Facebook.m in Sources */ = {isa = PBXBuildFile; fileRef = AC2C73A114897C4500922345 /* Facebook.m */; };
 		AC2C73B914897C4500922345 /* FBDialog.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AC2C73A314897C4500922345 /* FBDialog.bundle */; };
@@ -89,7 +88,6 @@
 		ACB6C5471424F0B200693952 /* Job.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB6C5461424F0B200693952 /* Job.m */; };
 		ACB8693D1459BF430055ED47 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = ACB8693B1459BF420055ED47 /* star.png */; };
 		ACB8693E1459BF430055ED47 /* star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACB8693C1459BF420055ED47 /* star@2x.png */; };
-		ACB869401459C68F0055ED47 /* myPosition@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACB8693F1459C68F0055ED47 /* myPosition@2x.png */; };
 		ACB869471459CCBD0055ED47 /* mail.png in Resources */ = {isa = PBXBuildFile; fileRef = ACB869451459CCBC0055ED47 /* mail.png */; };
 		ACB869481459CCBD0055ED47 /* mail@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACB869461459CCBD0055ED47 /* mail@2x.png */; };
 		ACB8F50116109E22008DB620 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACB8F50016109E22008DB620 /* Default-568h@2x.png */; };
@@ -99,7 +97,6 @@
 		ACBAF56314698F8E006A2A6D /* call.png in Resources */ = {isa = PBXBuildFile; fileRef = ACBAF56214698F8E006A2A6D /* call.png */; };
 		ACBAF56514698F94006A2A6D /* call@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACBAF56414698F94006A2A6D /* call@2x.png */; };
 		ACC0F8961482F39000A4164B /* sectors.plist in Resources */ = {isa = PBXBuildFile; fileRef = ACC0F8951482F39000A4164B /* sectors.plist */; };
-		ACC12432161F1B8400833619 /* miaPosizioneSelected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACC12431161F1B8400833619 /* miaPosizioneSelected@2x.png */; };
 		ACC12434161F206600833619 /* zonaPreferita@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACC12433161F206600833619 /* zonaPreferita@2x.png */; };
 		ACC1FBC51611E1820069545B /* insertJobButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACC1FBC41611E1820069545B /* insertJobButton@2x.png */; };
 		ACC1FBC71611F9760069545B /* insertJobButtonDisabled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACC1FBC61611F9760069545B /* insertJobButtonDisabled@2x.png */; };
@@ -192,7 +189,6 @@
 		AC18EF0614A89D1A00490D2A /* CreditsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreditsViewController.xib; sourceTree = "<group>"; };
 		AC22B6AA1619FCA40065641C /* en-filter-tableSingleSection.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "en-filter-tableSingleSection.plist"; sourceTree = "<group>"; };
 		AC22B6AC161A02320065641C /* en-sectors-table.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "en-sectors-table.plist"; sourceTree = "<group>"; };
-		AC22FFEC145763BC00DEECB7 /* myPosition.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = myPosition.png; path = icons/myPosition.png; sourceTree = SOURCE_ROOT; };
 		AC25A1601615022C0013F656 /* tableBackgroundSimple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tableBackgroundSimple.png; path = icons/tableBackgroundSimple.png; sourceTree = SOURCE_ROOT; };
 		AC2C73A014897C4500922345 /* Facebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Facebook.h; sourceTree = "<group>"; };
 		AC2C73A114897C4500922345 /* Facebook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Facebook.m; sourceTree = "<group>"; };
@@ -297,7 +293,6 @@
 		ACB6C5461424F0B200693952 /* Job.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Job.m; sourceTree = "<group>"; };
 		ACB8693B1459BF420055ED47 /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = star.png; path = icons/star.png; sourceTree = SOURCE_ROOT; };
 		ACB8693C1459BF420055ED47 /* star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "star@2x.png"; path = "icons/star@2x.png"; sourceTree = SOURCE_ROOT; };
-		ACB8693F1459C68F0055ED47 /* myPosition@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "myPosition@2x.png"; path = "icons/myPosition@2x.png"; sourceTree = SOURCE_ROOT; };
 		ACB869451459CCBC0055ED47 /* mail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mail.png; path = icons/mail.png; sourceTree = SOURCE_ROOT; };
 		ACB869461459CCBD0055ED47 /* mail@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "mail@2x.png"; path = "icons/mail@2x.png"; sourceTree = SOURCE_ROOT; };
 		ACB8F50016109E22008DB620 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -310,7 +305,6 @@
 		ACBAF56214698F8E006A2A6D /* call.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = call.png; path = icons/call.png; sourceTree = SOURCE_ROOT; };
 		ACBAF56414698F94006A2A6D /* call@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "call@2x.png"; path = "icons/call@2x.png"; sourceTree = SOURCE_ROOT; };
 		ACC0F8951482F39000A4164B /* sectors.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = sectors.plist; sourceTree = "<group>"; };
-		ACC12431161F1B8400833619 /* miaPosizioneSelected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "miaPosizioneSelected@2x.png"; path = "icons/miaPosizioneSelected@2x.png"; sourceTree = SOURCE_ROOT; };
 		ACC12433161F206600833619 /* zonaPreferita@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "zonaPreferita@2x.png"; path = "icons/zonaPreferita@2x.png"; sourceTree = SOURCE_ROOT; };
 		ACC1FBC41611E1820069545B /* insertJobButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "insertJobButton@2x.png"; path = "icons/insertJobButton@2x.png"; sourceTree = SOURCE_ROOT; };
 		ACC1FBC61611F9760069545B /* insertJobButtonDisabled@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "insertJobButtonDisabled@2x.png"; path = "icons/insertJobButtonDisabled@2x.png"; sourceTree = SOURCE_ROOT; };
@@ -745,7 +739,6 @@
 			isa = PBXGroup;
 			children = (
 				ACC12433161F206600833619 /* zonaPreferita@2x.png */,
-				ACC12431161F1B8400833619 /* miaPosizioneSelected@2x.png */,
 				ACAF3864161CB657007D1A3B /* filterActive.png */,
 				ACAF3865161CB657007D1A3B /* filterActive@2x.png */,
 				ACAF3866161CB657007D1A3B /* filterDeactive.png */,
@@ -803,8 +796,6 @@
 				ACCAC502145D7E47008B0B9F /* home.png */,
 				ACCAC503145D7E47008B0B9F /* home@2x.png */,
 				ACB869461459CCBD0055ED47 /* mail@2x.png */,
-				AC22FFEC145763BC00DEECB7 /* myPosition.png */,
-				ACB8693F1459C68F0055ED47 /* myPosition@2x.png */,
 				ACB8693B1459BF420055ED47 /* star.png */,
 				ACB8693C1459BF420055ED47 /* star@2x.png */,
 			);
@@ -883,10 +874,8 @@
 				ACCAB8051435A115008DA6B8 /* ConfigViewController.xib in Resources */,
 				AC154CD4143A315600AE5FAD /* RootJobViewController.xib in Resources */,
 				AC7135DE144F45CD0022A47C /* SearchZoneViewController.xib in Resources */,
-				AC22FFED145763BC00DEECB7 /* myPosition.png in Resources */,
 				ACB8693D1459BF430055ED47 /* star.png in Resources */,
 				ACB8693E1459BF430055ED47 /* star@2x.png in Resources */,
-				ACB869401459C68F0055ED47 /* myPosition@2x.png in Resources */,
 				ACB869471459CCBD0055ED47 /* mail.png in Resources */,
 				ACB869481459CCBD0055ED47 /* mail@2x.png in Resources */,
 				ACCAC504145D7E48008B0B9F /* home.png in Resources */,
@@ -966,7 +955,6 @@
 				ACAF3869161CB657007D1A3B /* filterActive@2x.png in Resources */,
 				ACAF386A161CB657007D1A3B /* filterDeactive.png in Resources */,
 				ACAF386B161CB657007D1A3B /* filterDeactive@2x.png in Resources */,
-				ACC12432161F1B8400833619 /* miaPosizioneSelected@2x.png in Resources */,
 				ACC12434161F206600833619 /* zonaPreferita@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
