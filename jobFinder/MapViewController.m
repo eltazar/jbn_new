@@ -75,7 +75,7 @@
     }
     else if(oldState == MKAnnotationViewDragStateEnding){
         NSLog(@"DRAG PIN FERMO");
-        jobToPublish.address = @"Calcolo indirizzo...";
+        jobToPublish.address = NSLocalizedString(@"WAIT ADDR", @"");
 
         [geoDec searchAddressForCoordinate:[annotationView.annotation coordinate]];
     }
@@ -649,7 +649,7 @@
             
             //così il pin sarà draggabile
             jobToPublish.isDraggable = YES;
-            jobToPublish.address = @"Calcolo indirizzo...";
+            jobToPublish.address = NSLocalizedString(@"WAIT ADDR", @"");
             //aggiungo annotazione alla mappa
             [map addAnnotation:jobToPublish];
             //segnalo che c'è un pin draggabile sulla mappa
