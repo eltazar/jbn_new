@@ -249,7 +249,7 @@
 
 - (void) chooseKind:(id)sender{
     NSLog(@"SELECTOR kind");
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"employeeDidSet" object:self userInfo:nil];
+
     switch(kindSegmentedCtrl.selectedSegmentIndex)
     {
         case 0:
