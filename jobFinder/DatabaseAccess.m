@@ -38,7 +38,7 @@ NSString* key(NSURLConnection* con)
 //invia richiesta registrazione token device sul db
 -(void)registerDevice:(NSString*)token typeRequest:(NSString*)type{
     
-    NSMutableString *urlString = [NSMutableString stringWithFormat:@"http://www.sapienzaapps.it/jobfinder/registerDevice2.php"];
+    NSMutableString *urlString = [NSMutableString stringWithFormat:@"http://www.sapienzaapps.it/jobfinder/registerDevice_V2.php"];
 
     
     [urlString setString:[urlString stringByReplacingOccurrencesOfString:@" " withString:@"+"]];
@@ -93,7 +93,7 @@ NSString* key(NSURLConnection* con)
 {
     NSLog(@"DBACCESS KIND =%@",kind);
     
-    NSMutableString *urlString = [NSMutableString stringWithFormat:@"http://www.sapienzaapps.it/jobfinder/readV2region.php"];
+    NSMutableString *urlString = [NSMutableString stringWithFormat:@"http://www.sapienzaapps.it/jobfinder/read_V2region.php"];
     
     [urlString setString:[urlString stringByReplacingOccurrencesOfString:@" " withString:@"+"]];
     NSURL *url = [[[NSURL alloc] initWithString:urlString] autorelease];
@@ -138,7 +138,7 @@ NSString* key(NSURLConnection* con)
     
     NSLog(@"DBACCESS KIND =%@",kind);
     
-    NSMutableString *urlString = [NSMutableString stringWithFormat:@"http://www.sapienzaapps.it/jobfinder/readV2.php"];
+    NSMutableString *urlString = [NSMutableString stringWithFormat:@"http://www.sapienzaapps.it/jobfinder/read_V2.php"];
     [urlString setString:[urlString stringByReplacingOccurrencesOfString:@" " withString:@"+"]];
     NSURL *url = [[[NSURL alloc] initWithString:urlString] autorelease];
     
@@ -176,7 +176,7 @@ NSString* key(NSURLConnection* con)
 
 -(void)jobModRequest:(Job *)job
 {
-    NSMutableString *urlString = [NSMutableString stringWithFormat:@"http://www.sapienzaapps.it/jobfinder/editV2.php"];
+    NSMutableString *urlString = [NSMutableString stringWithFormat:@"http://www.sapienzaapps.it/jobfinder/edit_V2.php"];
     //Replace Spaces with a '+' character.
     [urlString setString:[urlString stringByReplacingOccurrencesOfString:@" " withString:@"+"]];  
     NSURL *url = [[[NSURL alloc] initWithString:urlString] autorelease]; //aggiunto autorelease
@@ -288,7 +288,7 @@ NSString* key(NSURLConnection* con)
 //invia richiesta scrittura su db
 -(void)jobWriteRequest:(Job *)job
 { 
-    NSMutableString *urlString = [NSMutableString stringWithFormat:@"http://www.sapienzaapps.it/jobfinder/writeV2.php"];    
+    NSMutableString *urlString = [NSMutableString stringWithFormat:@"http://www.sapienzaapps.it/jobfinder/write_V2.php"];
     //Replace Spaces with a '+' character.
     [urlString setString:[urlString stringByReplacingOccurrencesOfString:@" " withString:@"+"]];  
     NSURL *url = [[[NSURL alloc] initWithString:urlString] autorelease]; //aggiunto autorelease
