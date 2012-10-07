@@ -193,6 +193,7 @@
     }
     else {
         //NSLog(@"IS NOT DRAGGABLE");
+        pinView.pinColor = MKPinAnnotationColorGreen;
         pinView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
         [pinView setDraggable:NO];
     }
