@@ -61,3 +61,6 @@
 "STREET" = "Via del corso, Roma";
 "SEARCH AD" = "Puoi inserire un indirizzo, una zona, un codice postale o una città";
 "SEARCH PLACE" = "Cerca zona";
+"MOD JOB" = "Modifica lavoro";
+"MISS INFO" = "Informazioni mancanti";
+"INFO ADV" = "Inserisci una breve descrizione e almeno un contatto per poter pubblicare l'annuncio";

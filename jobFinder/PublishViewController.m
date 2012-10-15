@@ -95,8 +95,7 @@
 
         }
         else if([theNewJob.description isEqualToString:@""] || ([theNewJob.email isEqualToString:@""] && [theNewJob.phone isEqualToString:@""] && [theNewJob.phone2 isEqualToString:@""] && [[theNewJob urlAsString] isEqualToString:@""] )){
-            
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Informazioni mancanti" message:@"Inserisci una breve descrizione e almeno un contatto per poter pubblicare l'annuncio" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"MISS INFO", @"") message:NSLocalizedString(@"INFO ADV", @"") delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
             [alert show];
             [alert release];
         }

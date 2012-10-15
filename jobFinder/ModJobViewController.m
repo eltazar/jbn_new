@@ -325,7 +325,7 @@
     //     job = [[Job alloc]initWithCoordinate:CLLocationCoordinate2DMake(0,0)];
     NSLog(@"job in MOD: %p, kind = %@",job, job.kind);
     
-    [self.navigationItem setTitle:@"Modifica lavoro"];    
+    [self.navigationItem setTitle:NSLocalizedString(@"MOD JOB", @"")];
     //creo il model della tabella
     NSMutableArray *secA = [[NSMutableArray alloc] init];
     NSMutableArray *secB = [[NSMutableArray alloc] init];
