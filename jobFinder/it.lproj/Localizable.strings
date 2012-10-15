@@ -57,3 +57,7 @@
 "CHOOSE..." = "Scegli...";
 "EXAMPLE" = "esempio";
 "WAIT ADDR" = "Calcolo indirizzo...";
+"GENERAL" = "Generali";
+"STREET" = "Via del corso, Roma";
+"SEARCH AD" = "Puoi inserire un indirizzo, una zona, un codice postale o una città";
+"SEARCH PLACE" = "Cerca zona";

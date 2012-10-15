@@ -172,7 +172,7 @@
     }
     
     //setta titolo vista
-    [self setTitle:@"Generali"];
+    [self setTitle:NSLocalizedString(@"GENERAL", @"")];
     //self.navigationItem.hidesBackButton = TRUE;
     
     

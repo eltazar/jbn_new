@@ -70,7 +70,16 @@
 
 +(NSString*)sectorFromCode:(NSString*)code
 {
-    NSString *plisStructure = [[NSBundle mainBundle] pathForResource:@"sectors" ofType:@"plist"];
+    NSString * language = [[NSLocale preferredLanguages] objectAtIndex:0];
+    NSString *plisStructure = nil;
+    
+    if([language isEqualToString:@"it"]){
+        plisStructure = [[NSBundle mainBundle] pathForResource:@"sectors-it" ofType:@"plist"];
+    }
+    else {
+       plisStructure = [[NSBundle mainBundle] pathForResource:@"sectors-en" ofType:@"plist"];
+    }
+    
     //array di dizionari
     
     NSDictionary *dict = [[NSDictionary alloc] initWithContentsOfFile:plisStructure];

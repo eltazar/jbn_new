@@ -146,7 +146,14 @@
     
     if(section == 0 && row == SECTORS_CELL){
         
-        SectorTableViewController *sectorTable = [[SectorTableViewController alloc] initWithPlist:@"sector-table"];
+        NSString * language = [[NSLocale preferredLanguages] objectAtIndex:0];
+        
+        SectorTableViewController *sectorTable = nil;
+        
+        if([language isEqualToString:@"it"])
+            sectorTable = [[SectorTableViewController alloc] initWithPlist:@"it-sectors-table"];
+        else sectorTable = [[SectorTableViewController alloc] initWithPlist:@"en-sectors-table"];
+        
         sectorTable.secDelegate = self;
         [self.navigationController pushViewController:sectorTable animated:YES];
         [sectorTable release];

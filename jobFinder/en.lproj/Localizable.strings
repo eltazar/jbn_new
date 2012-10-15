@@ -57,3 +57,7 @@
 "CHOOSE..." = "Choose...";
 "EXAMPLE" = "example";
 "WAIT ADDR" = "Wait for address...";
+"GENERAL" = "Generals";
+"STREET" = "Carnaby street, London";
+"SEARCH AD" = "You can write either an address, or a city, or a zip code...";
+"SEARCH PLACE" = "Search place";

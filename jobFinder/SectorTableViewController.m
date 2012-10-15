@@ -143,8 +143,17 @@
     NSArray *sectionsTemp = [[NSArray alloc] initWithArray:[[tableStructure allKeys] sortedArrayUsingSelector:@selector(compare:)]];
     
     self.sections = [NSMutableArray arrayWithArray:sectionsTemp];
-    [self.sections removeObject:@"Altro"];
-    [self.sections addObject:@"Altro"];
+
+    NSString * language = [[NSLocale preferredLanguages] objectAtIndex:0];
+    
+    if([language isEqualToString:@"it"]){
+        [self.sections removeObject:@"Altro"];
+        [self.sections addObject:@"Altro"];
+    }
+    else{
+        [self.sections removeObject:@"Other"];
+        [self.sections addObject:@"Other"];
+    }
     
     self.indices = [NSArray arrayWithObjects:@"A",@"B",@"C",@"D",@"E",@"F",@"G",@"H",@"I",@"J",
                     @"K",@"L",@"M",@"N",@"O",@"P",@"Q",@"R",@"S",@"T",@"U",@"V",@"W",@"X",@"Y",@"Z", nil];

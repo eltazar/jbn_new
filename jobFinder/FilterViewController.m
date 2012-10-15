@@ -322,15 +322,19 @@
     NSLog(@"LINGUA = %@",language);
     
     NSString *plistStructure1 = nil;
+    NSString *plistStructure2;
     
     //recupero path del file plist
-    if([language isEqualToString:@"it"])
+    if([language isEqualToString:@"it"]){
         plistStructure1 = [[NSBundle mainBundle] pathForResource:@"it-filter-tableSingleSection" ofType:@"plist"];
-    else plistStructure1 = [[NSBundle mainBundle] pathForResource:@"en-filter-tableSingleSection" ofType:@"plist"];
-    NSLog(@"PLIST = %@",plistStructure1);
-    
-    NSString *plistStructure2 = [[NSBundle mainBundle] pathForResource:@"filter-table" ofType:@"plist"];
-    
+        plistStructure2 = [[NSBundle mainBundle] pathForResource:@"it-filter-table" ofType:@"plist"];
+    }
+    else {
+        plistStructure1 = [[NSBundle mainBundle] pathForResource:@"en-filter-tableSingleSection" ofType:@"plist"];
+        plistStructure2 = [[NSBundle mainBundle] pathForResource:@"en-filter-table" ofType:@"plist"];
+    }
+    //NSLog(@"PLIST = %@",plistStructure1);
+        
     
     //recupero array di dizionari
     self.structureForContentTable = [NSArray arrayWithContentsOfFile:plistStructure2];
@@ -357,8 +361,14 @@
     NSArray *tempArray2 =[[tableStructureForContentTable allKeys] sortedArrayUsingSelector:@selector(compare:)];
     self.sectionsForContentTable = [[[NSMutableArray alloc] initWithArray:tempArray2] autorelease];    
     //così "altro" sarà ultima sezione
-    [sectionsForContentTable removeObject:@"Altro"];
-    [sectionsForContentTable addObject:@"Altro"];
+    if([language isEqualToString:@"it"]){
+        [sectionsForContentTable removeObject:@"Altro"];
+        [sectionsForContentTable addObject:@"Altro"];
+    }
+    else{
+        [sectionsForContentTable removeObject:@"Other"];
+        [sectionsForContentTable addObject:@"Other"];
+    }
     //NSLog(@"SECTIONS 2 = %@", sections2);
     
     //array contente informazioni su quali celle sono state selezionate

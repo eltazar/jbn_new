@@ -237,7 +237,7 @@
     }
     
 //    self.navigationController.navigationBarHidden = YES;
-    [self setTitle:@"Cerca Zona"];
+    [self setTitle:NSLocalizedString(@"SEARCH PLACE", @"")];
     self.tableData =[[[NSMutableArray alloc]init] autorelease];
     self.disableViewOverlay = [[[UIView alloc]
                                initWithFrame:CGRectMake(0.0f,86.0f,320.0f,416.0f)]autorelease];
@@ -249,7 +249,7 @@
     label.textColor = [UIColor whiteColor];
     label.numberOfLines = 2;
     label.lineBreakMode = UILineBreakModeWordWrap;
-    label.text = @"Puoi inserire un indirizzo, una zona, un codice postale o una città.";
+    label.text = NSLocalizedString(@"SEARCH AD", @"");
     [self.disableViewOverlay addSubview:label];
     [label release];
     
