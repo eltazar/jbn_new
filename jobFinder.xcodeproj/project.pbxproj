@@ -16,7 +16,6 @@
 		AC18EF0714A89D1A00490D2A /* CreditsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC18EF0514A89D1A00490D2A /* CreditsViewController.m */; };
 		AC18EF0814A89D1A00490D2A /* CreditsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC18EF0614A89D1A00490D2A /* CreditsViewController.xib */; };
 		AC22B6AB1619FCA40065641C /* en-filter-tableSingleSection.plist in Resources */ = {isa = PBXBuildFile; fileRef = AC22B6AA1619FCA40065641C /* en-filter-tableSingleSection.plist */; };
-		AC22B6AD161A02320065641C /* en-sectors-table.plist in Resources */ = {isa = PBXBuildFile; fileRef = AC22B6AC161A02320065641C /* en-sectors-table.plist */; };
 		AC25A1611615022C0013F656 /* tableBackgroundSimple.png in Resources */ = {isa = PBXBuildFile; fileRef = AC25A1601615022C0013F656 /* tableBackgroundSimple.png */; };
 		AC2C73B814897C4500922345 /* Facebook.m in Sources */ = {isa = PBXBuildFile; fileRef = AC2C73A114897C4500922345 /* Facebook.m */; };
 		AC2C73B914897C4500922345 /* FBDialog.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AC2C73A314897C4500922345 /* FBDialog.bundle */; };
@@ -57,21 +56,22 @@
 		AC5E303216129242003EE1D0 /* rightPanel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AC5E303116129242003EE1D0 /* rightPanel@2x.png */; };
 		AC5E30341612924C003EE1D0 /* leftPanel2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AC5E30331612924C003EE1D0 /* leftPanel2@2x.png */; };
 		AC7135DD144F45CD0022A47C /* SearchZoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7135DB144F45CC0022A47C /* SearchZoneViewController.m */; };
-		AC7135DE144F45CD0022A47C /* SearchZoneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC7135DC144F45CD0022A47C /* SearchZoneViewController.xib */; };
 		AC736EFD1434D176003626F7 /* ConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC736EFC1434D176003626F7 /* ConfigViewController.m */; };
+		AC76E00C162B6032006E93F8 /* sectors-en.plist in Resources */ = {isa = PBXBuildFile; fileRef = AC76E00B162B6032006E93F8 /* sectors-en.plist */; };
 		AC7ED930145188B50070DA49 /* GeoDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7ED92F145188B50070DA49 /* GeoDecoder.m */; };
 		AC81AFC2147A9DA40034A5AA /* favPin.png in Resources */ = {isa = PBXBuildFile; fileRef = AC81AFC0147A9DA30034A5AA /* favPin.png */; };
 		AC81AFC3147A9DA40034A5AA /* favPin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AC81AFC1147A9DA30034A5AA /* favPin@2x.png */; };
 		AC840BAA1463F25F00070F1D /* it-sectors-table.plist in Resources */ = {isa = PBXBuildFile; fileRef = AC840BA91463F25F00070F1D /* it-sectors-table.plist */; };
 		AC8C34EC1454359D007BEE76 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC8C34EB1454359D007BEE76 /* SystemConfiguration.framework */; };
 		AC8C34EF14543642007BEE76 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = AC8C34EE14543642007BEE76 /* Reachability.m */; };
-		ACA915E2145EA10500806FD3 /* filter-table.plist in Resources */ = {isa = PBXBuildFile; fileRef = ACA915E1145EA10500806FD3 /* filter-table.plist */; };
+		ACA915E2145EA10500806FD3 /* it-filter-table.plist in Resources */ = {isa = PBXBuildFile; fileRef = ACA915E1145EA10500806FD3 /* it-filter-table.plist */; };
 		ACAF3868161CB657007D1A3B /* filterActive.png in Resources */ = {isa = PBXBuildFile; fileRef = ACAF3864161CB657007D1A3B /* filterActive.png */; };
 		ACAF3869161CB657007D1A3B /* filterActive@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACAF3865161CB657007D1A3B /* filterActive@2x.png */; };
 		ACAF386A161CB657007D1A3B /* filterDeactive.png in Resources */ = {isa = PBXBuildFile; fileRef = ACAF3866161CB657007D1A3B /* filterDeactive.png */; };
 		ACAF386B161CB657007D1A3B /* filterDeactive@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACAF3867161CB657007D1A3B /* filterDeactive@2x.png */; };
 		ACB1416E149BBEF500EBB1F5 /* logoSapienza.png in Resources */ = {isa = PBXBuildFile; fileRef = ACB1416C149BBEF500EBB1F5 /* logoSapienza.png */; };
 		ACB1416F149BBEF500EBB1F5 /* logoSapienza@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACB1416D149BBEF500EBB1F5 /* logoSapienza@2x.png */; };
+		ACB2FFD6162B2FDA00351C1F /* SearchZoneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACB2FFD8162B2FDA00351C1F /* SearchZoneViewController.xib */; };
 		ACB38CD8161303E6005CE09B /* insertJobButtonSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = ACB38CD7161303E6005CE09B /* insertJobButtonSelected.png */; };
 		ACB38CE016136161005CE09B /* fbButton.png in Resources */ = {isa = PBXBuildFile; fileRef = ACB38CDF16136161005CE09B /* fbButton.png */; };
 		ACB38CE2161365D7005CE09B /* mailButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACB38CE1161365D7005CE09B /* mailButton@2x.png */; };
@@ -93,10 +93,12 @@
 		ACB8F50116109E22008DB620 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACB8F50016109E22008DB620 /* Default-568h@2x.png */; };
 		ACB8F5061610A345008DB620 /* NSString+MD5Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB8F5051610A345008DB620 /* NSString+MD5Addition.m */; };
 		ACB8F5091610A354008DB620 /* UIDevice+IdentifierAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB8F5081610A354008DB620 /* UIDevice+IdentifierAddition.m */; };
+		ACB9B78F162C3B2A009EB38D /* en-filter-table.plist in Resources */ = {isa = PBXBuildFile; fileRef = ACB9B78E162C3B2A009EB38D /* en-filter-table.plist */; };
+		ACB9B792162C4089009EB38D /* en-sectors-table.plist in Resources */ = {isa = PBXBuildFile; fileRef = ACB9B791162C4089009EB38D /* en-sectors-table.plist */; };
 		ACBAF55014696963006A2A6D /* MKMapView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = ACBAF54F14696963006A2A6D /* MKMapView+Utils.m */; };
 		ACBAF56314698F8E006A2A6D /* call.png in Resources */ = {isa = PBXBuildFile; fileRef = ACBAF56214698F8E006A2A6D /* call.png */; };
 		ACBAF56514698F94006A2A6D /* call@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACBAF56414698F94006A2A6D /* call@2x.png */; };
-		ACC0F8961482F39000A4164B /* sectors.plist in Resources */ = {isa = PBXBuildFile; fileRef = ACC0F8951482F39000A4164B /* sectors.plist */; };
+		ACC0F8961482F39000A4164B /* sectors-it.plist in Resources */ = {isa = PBXBuildFile; fileRef = ACC0F8951482F39000A4164B /* sectors-it.plist */; };
 		ACC12434161F206600833619 /* zonaPreferita@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACC12433161F206600833619 /* zonaPreferita@2x.png */; };
 		ACC1FBC51611E1820069545B /* insertJobButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACC1FBC41611E1820069545B /* insertJobButton@2x.png */; };
 		ACC1FBC71611F9760069545B /* insertJobButtonDisabled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACC1FBC61611F9760069545B /* insertJobButtonDisabled@2x.png */; };
@@ -188,7 +190,6 @@
 		AC18EF0514A89D1A00490D2A /* CreditsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreditsViewController.m; sourceTree = "<group>"; };
 		AC18EF0614A89D1A00490D2A /* CreditsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreditsViewController.xib; sourceTree = "<group>"; };
 		AC22B6AA1619FCA40065641C /* en-filter-tableSingleSection.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "en-filter-tableSingleSection.plist"; sourceTree = "<group>"; };
-		AC22B6AC161A02320065641C /* en-sectors-table.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "en-sectors-table.plist"; sourceTree = "<group>"; };
 		AC25A1601615022C0013F656 /* tableBackgroundSimple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tableBackgroundSimple.png; path = icons/tableBackgroundSimple.png; sourceTree = SOURCE_ROOT; };
 		AC2C73A014897C4500922345 /* Facebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Facebook.h; sourceTree = "<group>"; };
 		AC2C73A114897C4500922345 /* Facebook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Facebook.m; sourceTree = "<group>"; };
@@ -247,9 +248,9 @@
 		AC5E30331612924C003EE1D0 /* leftPanel2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "leftPanel2@2x.png"; path = "icons/leftPanel2@2x.png"; sourceTree = SOURCE_ROOT; };
 		AC7135DA144F45CC0022A47C /* SearchZoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchZoneViewController.h; sourceTree = "<group>"; };
 		AC7135DB144F45CC0022A47C /* SearchZoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchZoneViewController.m; sourceTree = "<group>"; };
-		AC7135DC144F45CD0022A47C /* SearchZoneViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchZoneViewController.xib; sourceTree = "<group>"; };
 		AC736EFB1434D176003626F7 /* ConfigViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigViewController.h; sourceTree = "<group>"; };
 		AC736EFC1434D176003626F7 /* ConfigViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigViewController.m; sourceTree = "<group>"; };
+		AC76E00B162B6032006E93F8 /* sectors-en.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "sectors-en.plist"; sourceTree = "<group>"; };
 		AC7ED92F145188B50070DA49 /* GeoDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoDecoder.m; sourceTree = "<group>"; };
 		AC81AFC0147A9DA30034A5AA /* favPin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = favPin.png; path = icons/favPin.png; sourceTree = SOURCE_ROOT; };
 		AC81AFC1147A9DA30034A5AA /* favPin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "favPin@2x.png"; path = "icons/favPin@2x.png"; sourceTree = SOURCE_ROOT; };
@@ -258,13 +259,15 @@
 		AC8C34EB1454359D007BEE76 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		AC8C34ED14543642007BEE76 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		AC8C34EE14543642007BEE76 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
-		ACA915E1145EA10500806FD3 /* filter-table.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "filter-table.plist"; sourceTree = "<group>"; };
+		ACA915E1145EA10500806FD3 /* it-filter-table.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "it-filter-table.plist"; sourceTree = "<group>"; };
 		ACAF3864161CB657007D1A3B /* filterActive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = filterActive.png; path = icons/filterActive.png; sourceTree = SOURCE_ROOT; };
 		ACAF3865161CB657007D1A3B /* filterActive@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "filterActive@2x.png"; path = "icons/filterActive@2x.png"; sourceTree = SOURCE_ROOT; };
 		ACAF3866161CB657007D1A3B /* filterDeactive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = filterDeactive.png; path = icons/filterDeactive.png; sourceTree = SOURCE_ROOT; };
 		ACAF3867161CB657007D1A3B /* filterDeactive@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "filterDeactive@2x.png"; path = "icons/filterDeactive@2x.png"; sourceTree = SOURCE_ROOT; };
 		ACB1416C149BBEF500EBB1F5 /* logoSapienza.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logoSapienza.png; sourceTree = "<group>"; };
 		ACB1416D149BBEF500EBB1F5 /* logoSapienza@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logoSapienza@2x.png"; sourceTree = "<group>"; };
+		ACB2FFD7162B2FDA00351C1F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SearchZoneViewController.xib; sourceTree = "<group>"; };
+		ACB2FFDA162B2FDF00351C1F /* it */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = it; path = it.lproj/SearchZoneViewController.xib; sourceTree = "<group>"; };
 		ACB38CD7161303E6005CE09B /* insertJobButtonSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = insertJobButtonSelected.png; path = icons/insertJobButtonSelected.png; sourceTree = SOURCE_ROOT; };
 		ACB38CDF16136161005CE09B /* fbButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fbButton.png; path = icons/fbButton.png; sourceTree = SOURCE_ROOT; };
 		ACB38CE1161365D7005CE09B /* mailButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "mailButton@2x.png"; path = "icons/mailButton@2x.png"; sourceTree = SOURCE_ROOT; };
@@ -300,11 +303,13 @@
 		ACB8F5051610A345008DB620 /* NSString+MD5Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+MD5Addition.m"; path = "jobFinder/NSString+MD5Addition.m"; sourceTree = "<group>"; };
 		ACB8F5071610A354008DB620 /* UIDevice+IdentifierAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIDevice+IdentifierAddition.h"; path = "jobFinder/UIDevice+IdentifierAddition.h"; sourceTree = "<group>"; };
 		ACB8F5081610A354008DB620 /* UIDevice+IdentifierAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIDevice+IdentifierAddition.m"; path = "jobFinder/UIDevice+IdentifierAddition.m"; sourceTree = "<group>"; };
+		ACB9B78E162C3B2A009EB38D /* en-filter-table.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "en-filter-table.plist"; sourceTree = "<group>"; };
+		ACB9B791162C4089009EB38D /* en-sectors-table.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "en-sectors-table.plist"; sourceTree = "<group>"; };
 		ACBAF54E14696963006A2A6D /* MKMapView+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKMapView+Utils.h"; sourceTree = "<group>"; };
 		ACBAF54F14696963006A2A6D /* MKMapView+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKMapView+Utils.m"; sourceTree = "<group>"; };
 		ACBAF56214698F8E006A2A6D /* call.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = call.png; path = icons/call.png; sourceTree = SOURCE_ROOT; };
 		ACBAF56414698F94006A2A6D /* call@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "call@2x.png"; path = "icons/call@2x.png"; sourceTree = SOURCE_ROOT; };
-		ACC0F8951482F39000A4164B /* sectors.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = sectors.plist; sourceTree = "<group>"; };
+		ACC0F8951482F39000A4164B /* sectors-it.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "sectors-it.plist"; sourceTree = "<group>"; };
 		ACC12433161F206600833619 /* zonaPreferita@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "zonaPreferita@2x.png"; path = "icons/zonaPreferita@2x.png"; sourceTree = SOURCE_ROOT; };
 		ACC1FBC41611E1820069545B /* insertJobButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "insertJobButton@2x.png"; path = "icons/insertJobButton@2x.png"; sourceTree = SOURCE_ROOT; };
 		ACC1FBC61611F9760069545B /* insertJobButtonDisabled@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "insertJobButtonDisabled@2x.png"; path = "icons/insertJobButtonDisabled@2x.png"; sourceTree = SOURCE_ROOT; };
@@ -615,12 +620,14 @@
 		ACA915D9145E994E00806FD3 /* table plists */ = {
 			isa = PBXGroup;
 			children = (
-				ACA915E1145EA10500806FD3 /* filter-table.plist */,
-				ACC0F8951482F39000A4164B /* sectors.plist */,
+				ACA915E1145EA10500806FD3 /* it-filter-table.plist */,
+				ACB9B78E162C3B2A009EB38D /* en-filter-table.plist */,
+				ACC0F8951482F39000A4164B /* sectors-it.plist */,
+				AC76E00B162B6032006E93F8 /* sectors-en.plist */,
 				AC0B0404147EB74000788ADC /* it-filter-tableSingleSection.plist */,
 				AC22B6AA1619FCA40065641C /* en-filter-tableSingleSection.plist */,
 				AC840BA91463F25F00070F1D /* it-sectors-table.plist */,
-				AC22B6AC161A02320065641C /* en-sectors-table.plist */,
+				ACB9B791162C4089009EB38D /* en-sectors-table.plist */,
 			);
 			name = "table plists";
 			sourceTree = "<group>";
@@ -730,7 +737,7 @@
 				ACCAB8041435A115008DA6B8 /* ConfigViewController.xib */,
 				AC7135DA144F45CC0022A47C /* SearchZoneViewController.h */,
 				AC7135DB144F45CC0022A47C /* SearchZoneViewController.m */,
-				AC7135DC144F45CD0022A47C /* SearchZoneViewController.xib */,
+				ACB2FFD8162B2FDA00351C1F /* SearchZoneViewController.xib */,
 			);
 			name = "information interfaces";
 			sourceTree = "<group>";
@@ -873,7 +880,7 @@
 				AC4A049C1422369200FE96F7 /* InfoPlist.strings in Resources */,
 				ACCAB8051435A115008DA6B8 /* ConfigViewController.xib in Resources */,
 				AC154CD4143A315600AE5FAD /* RootJobViewController.xib in Resources */,
-				AC7135DE144F45CD0022A47C /* SearchZoneViewController.xib in Resources */,
+				ACB2FFD6162B2FDA00351C1F /* SearchZoneViewController.xib in Resources */,
 				ACB8693D1459BF430055ED47 /* star.png in Resources */,
 				ACB8693E1459BF430055ED47 /* star@2x.png in Resources */,
 				ACB869471459CCBD0055ED47 /* mail.png in Resources */,
@@ -883,7 +890,7 @@
 				ACCAC508145D80B3008B0B9F /* search.png in Resources */,
 				ACCAC509145D80B3008B0B9F /* search@2x.png in Resources */,
 				ACC54A81145DFF0F002F41D3 /* FilterViewController.xib in Resources */,
-				ACA915E2145EA10500806FD3 /* filter-table.plist in Resources */,
+				ACA915E2145EA10500806FD3 /* it-filter-table.plist in Resources */,
 				AC442BD01462ACC60083F9B6 /* greenButton.png in Resources */,
 				AC442BD31462AE5B0083F9B6 /* redButton.png in Resources */,
 				AC840BAA1463F25F00070F1D /* it-sectors-table.plist in Resources */,
@@ -892,7 +899,7 @@
 				AC81AFC2147A9DA40034A5AA /* favPin.png in Resources */,
 				AC81AFC3147A9DA40034A5AA /* favPin@2x.png in Resources */,
 				AC0B0405147EB74000788ADC /* it-filter-tableSingleSection.plist in Resources */,
-				ACC0F8961482F39000A4164B /* sectors.plist in Resources */,
+				ACC0F8961482F39000A4164B /* sectors-it.plist in Resources */,
 				AC2C73B914897C4500922345 /* FBDialog.bundle in Resources */,
 				ACCC4E14148B7F4A00EEF4AE /* facebook.png in Resources */,
 				ACCC4E15148B7F4A00EEF4AE /* facebook@2x.png in Resources */,
@@ -950,12 +957,14 @@
 				ACCB82AF1618E468001339D9 /* Localizable.strings in Resources */,
 				ACCB82B41618E6E3001339D9 /* MapViewController.xib in Resources */,
 				AC22B6AB1619FCA40065641C /* en-filter-tableSingleSection.plist in Resources */,
-				AC22B6AD161A02320065641C /* en-sectors-table.plist in Resources */,
 				ACAF3868161CB657007D1A3B /* filterActive.png in Resources */,
 				ACAF3869161CB657007D1A3B /* filterActive@2x.png in Resources */,
 				ACAF386A161CB657007D1A3B /* filterDeactive.png in Resources */,
 				ACAF386B161CB657007D1A3B /* filterDeactive@2x.png in Resources */,
 				ACC12434161F206600833619 /* zonaPreferita@2x.png in Resources */,
+				AC76E00C162B6032006E93F8 /* sectors-en.plist in Resources */,
+				ACB9B78F162C3B2A009EB38D /* en-filter-table.plist in Resources */,
+				ACB9B792162C4089009EB38D /* en-sectors-table.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1080,6 +1089,15 @@
 				ACFA97331618AF9300832F8F /* it */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		ACB2FFD8162B2FDA00351C1F /* SearchZoneViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ACB2FFD7162B2FDA00351C1F /* en */,
+				ACB2FFDA162B2FDF00351C1F /* it */,
+			);
+			name = SearchZoneViewController.xib;
 			sourceTree = "<group>";
 		};
 		ACCB82AD1618E468001339D9 /* Localizable.strings */ = {
