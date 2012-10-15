@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>0</key>
+	<string>Prova Settore</string>
+	<key>a1</key>
+	<string>Clothing industry</string>
+	<key>a2</key>
+	<string>Purchasing</string>
+	<key>a3</key>
+	<string>Legal business</string>
+	<key>a4</key>
+	<string>Agriculture</string>
+	<key>a5</key>
+	<string>Hotel - hospitality</string>
+	<key>a6</key>
+	<string>Food services</string>
+	<key>a7</key>
+	<string>Administrative</string>
+	<key>a8</key>
+	<string>Architecture - design</string>
+	<key>a9</key>
+	<string>Arts - culture</string>
+	<key>a10</key>
+	<string>Handicraft</string>
+	<key>a11</key>
+	<string>Insurance services</string>
+	<key>b1</key>
+	<string>Banking</string>
+	<key>b2</key>
+	<string>Biology</string>
+	<key>b3</key>
+	<string>Biotech</string>
+	<key>c1</key>
+	<string>Call center</string>
+	<key>c2</key>
+	<string>Chemistry</string>
+	<key>c3</key>
+	<string>Film industry</string>
+	<key>c4</key>
+	<string>Trading</string>
+	<key>c5</key>
+	<string>Consulting</string>
+	<key>c6</key>
+	<string>Accounting</string>
+	<key>c7</key>
+	<string>Personal care</string>
+	<key>d1</key>
+	<string>Distribution</string>
+	<key>e1</key>
+	<string>Construction</string>
+	<key>e2</key>
+	<string>Editorial - press</string>
+	<key>e3</key>
+	<string>Electronics industry</string>
+	<key>e4</key>
+	<string>Energy - ecology services</string>
+	<key>f1</key>
+	<string>Pharmaceutical</string>
+	<key>f2</key>
+	<string>Education</string>
+	<key>g1</key>
+	<string>Entertainment industry</string>
+	<key>i1</key>
+	<string>Real estate industry</string>
+	<key>i2</key>
+	<string>Import - export</string>
+	<key>i3</key>
+	<string>Industry - manifacturing</string>
+	<key>i4</key>
+	<string>Information Technology</string>
+	<key>i5</key>
+	<string>Engineering</string>
+	<key>i6</key>
+	<string>Internet</string>
+	<key>l1</key>
+	<string>Houseworks</string>
+	<key>l2</key>
+	<string>Public sector</string>
+	<key>l3</key>
+	<string>Law and finance</string>
+	<key>l4</key>
+	<string>Free profession</string>
+	<key>l5</key>
+	<string>Pubs - restaurants</string>
+	<key>l6</key>
+	<string>Logistics</string>
+	<key>m1</key>
+	<string>Management</string>
+	<key>m2</key>
+	<string>Unskilled labor</string>
+	<key>m3</key>
+	<string>Marketing</string>
+	<key>m4</key>
+	<string>Industrial mechanic</string>
+	<key>m5</key>
+	<string>Medicine</string>
+	<key>m6</key>
+	<string>Fashion - style</string>
+	<key>m7</key>
+	<string>Music</string>
+	<key>p1</key>
+	<string>Fishing</string>
+	<key>p2</key>
+	<string>Manufactoring</string>
+	<key>p3</key>
+	<string>Public administration</string>
+	<key>r1</key>
+	<string>Research - development</string>
+	<key>r2</key>
+	<string>Maintenance - repair</string>
+	<key>r3</key>
+	<string>Human Resources</string>
+	<key>r4</key>
+	<string>Restaurant industry</string>
+	<key>s1</key>
+	<string>Science</string>
+	<key>s2</key>
+	<string>Executive</string>
+	<key>s3</key>
+	<string>General services</string>
+	<key>s4</key>
+	<string>Public services</string>
+	<key>s5</key>
+	<string>Security</string>
+	<key>s6</key>
+	<string>Sport - free time</string>
+	<key>s7</key>
+	<string>Customer service</string>
+	<key>t1</key>
+	<string>Telecommunications - ICT</string>
+	<key>t2</key>
+	<string>Tourism industry</string>
+	<key>v1</key>
+	<string>Sales</string>
+	<key>spec1</key>
+	<string>Other</string>
+</dict>
+</plist>
