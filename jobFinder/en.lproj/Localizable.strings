@@ -30,7 +30,7 @@
 "DELETING ADV" = "Pushing \"Delete Offer\" you'll delete permanently your offer";
 "DELETE" = "Delete";
 "SHARE" = "Share";
-"WEBSITE" = "Visit web site";
+"WEBSITE" = "Website";
 "MAIL" = "Write a mail";
 "CALL" = "Call";
 "PUBLISHED" = "Published";
@@ -64,3 +64,9 @@
 "MOD JOB" = "Change info";
 "MISS INFO" = "Miss information";
 "INFO ADV" = "Please insert a description and one or more contacts to publish the offer";
+"DISCLAIMER" = "JobNavigator is a service which contains information shared by its community of users. The creators of this application don't have any control and have no responsabilities for the reliability of the content and informations available in the application. In the same way, the creators of the application decline any responsability for any direct or indirect damages or lost profits that could result from the use of the datas and informations freely provided.";
+"SUPERVISOR" = "Supervisor";
+"DEVELOPER" = "Developer";
+"COMPUTER SCIENCE DEP" = "Computer science department";
+"WRITE US" = "Write us";
+"DONE" = "Done";

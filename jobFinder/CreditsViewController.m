@@ -69,7 +69,7 @@
 {
     switch (section) {
         case 0:
-            return @"Dipartimento di Informatica";
+            return NSLocalizedString(@"COMPUTER SCIENCE DEP", @"");
             break;
         case 1:
             return @"";
@@ -175,7 +175,7 @@
     [secD insertObject:[[[NSDictionary alloc] initWithObjectsAndKeys:
                          @"email",            @"DataKey",
                          @"ActionCell",       @"kind",
-                         @"Scrivici",       @"label",
+                         NSLocalizedString(@"WRITE US", @""),       @"label",
                          @"mail.png",         @"img",
                          [NSString stringWithFormat:@"%d", UITableViewCellStyleValue1], @"style",
                          nil] autorelease] atIndex: 0];
@@ -183,7 +183,7 @@
     [secD insertObject:[[[NSDictionary alloc] initWithObjectsAndKeys:
                          @"site",             @"DataKey",
                          @"ActionCell",       @"kind",
-                         @"Visitaci",   @"label",
+                         NSLocalizedString(@"WEBSITE", @""),   @"label",
                          @"home.png",                 @"img",
                          [NSString stringWithFormat:@"%d", UITableViewCellStyleValue1], @"style",
                          nil]autorelease] atIndex: 1];
@@ -191,7 +191,7 @@
     
     
     sectionData = [[NSArray alloc] initWithObjects:secB, secC,secD, nil];
-    sectionDescripition = [[NSArray alloc] initWithObjects:@"Supervisore",@"Sviluppatore",@"Contatti",nil];
+    sectionDescripition = [[NSArray alloc] initWithObjects:NSLocalizedString(@"SUPERVISOR", @""),NSLocalizedString(@"DEVELOPER", @""),NSLocalizedString(@"CONTACTS", @""),nil];
     
     [secB autorelease];
     [secC autorelease];

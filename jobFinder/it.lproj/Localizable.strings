@@ -30,7 +30,7 @@
 "DELETING ADV" = "Attenzione: premendo \"Cancella offerta\" eliminerai definitivamente la tua inserzione dal sistema";
 "DELETE" = "Cancella annuncio";
 "SHARE" = "Condividi";
-"WEBSITE" = "Visita";
+"WEBSITE" = "Sito web";
 "MAIL" = "Scrivi";
 "CALL" = "Chiama";
 "PUBLISHED" = "Pubblicato il";
@@ -64,3 +64,8 @@
 "MOD JOB" = "Modifica lavoro";
 "MISS INFO" = "Informazioni mancanti";
 "INFO ADV" = "Inserisci una breve descrizione e almeno un contatto per poter pubblicare l'annuncio";
+"DISCLAIMER" = "JobNavigator è un servizio contenente informazioni messe a disposizione dalla community di utenti che ne usufruiscono. I creatori di tale applicazione non esercitano alcun controllo e non sono in alcun modo responsabili dell'affidabilità e delll'esattezza dei contenuti e delle informazioni riportate nell'applicazione. Allo stesso modo i creatori dell'applicazione declinano ogni responsabilità diretta e indiretta per i danni o le perdite di profitti che potrebbero derivare agli utenti dall'uso dei dati e delle informazioni gratuitamente fornite.";
+"SUPERVISOR" = "Supervisore";
+"DEVELOPER" = "Sviluppatore";
+"COMPUTER SCIENCE DEP" = "Dipartimento di informatica";
+"DONE" = "Fatto";

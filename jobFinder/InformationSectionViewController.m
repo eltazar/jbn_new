@@ -70,7 +70,7 @@
         //rendo la cella non editabile
         ((TextAreaCell *)cell).textView.editable = NO;
         [((TextAreaCell *)cell).textView setFrame:CGRectMake(((TextAreaCell *)cell).textView.frame.origin.x, ((TextAreaCell *)cell).textView.frame.origin.y, ((TextAreaCell *)cell).textView.frame.size.width, ((TextAreaCell *)cell).textView.frame.size.height*2)];
-        ((TextAreaCell *)cell).textView.text = @"JobNavigator è un servizio contenente informazioni messe a disposizione dalla community di utenti che ne usufruiscono. I creatori di tale applicazione non esercitano alcun controllo e non sono in alcun modo responsabili dell'affidabilità e delll'esattezza dei contenuti e delle informazioni riportate nell'applicazione. Allo stesso modo i creatori dell'applicazione declinano ogni responsabilità diretta e indiretta per i danni o le perdite di profitti che potrebbero derivare agli utenti dall'uso dei dati e delle informazioni gratuitamente fornite.";
+        ((TextAreaCell *)cell).textView.text = NSLocalizedString(@"DISCLAIMER", @"");
     }
     else{
         cell.textLabel.text = [rowDesc objectForKey:@"label"];
@@ -202,7 +202,7 @@
                          @"credits",            @"DataKey",
                          @"ActionCell",         @"kind",
                          @"Credits",            @"label",
-                         @"",                   @"img",
+                         @"aboutUs.png",                   @"img",
                          [NSString stringWithFormat:@"%d", UITableViewCellStyleDefault], @"style",
                          nil] autorelease] atIndex: 2];
     

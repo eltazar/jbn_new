@@ -206,7 +206,7 @@
     [self setTitle:NSLocalizedString(@"CONFIG", @"")];
     self.navigationItem.hidesBackButton = TRUE;
     //aggiungo bottone "fatto" alla barra e setto azione
-    UIBarButtonItem *anotherButton = [[UIBarButtonItem alloc] initWithTitle:@"Fatto" style:UIBarButtonItemStyleDone target:self action:@selector(doneButtonClicked:)];          
+    UIBarButtonItem *anotherButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"DONE", @"")   style:UIBarButtonItemStyleDone target:self action:@selector(doneButtonClicked:)];
     self.navigationItem.rightBarButtonItem = anotherButton;
     [anotherButton release];
     
