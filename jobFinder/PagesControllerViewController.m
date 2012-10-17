@@ -22,15 +22,29 @@ static NSArray *__pageControlColorList = nil;
 + (UIImageView *)pageControlColorWithIndex:(NSUInteger)index {
     if (__pageControlColorList == nil) {
         
-        UIImageView *imgView1 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"helpView1.png"]];
+        NSString * language = [[NSLocale preferredLanguages] objectAtIndex:0];
+        UIImageView *imgView1 = nil;
+        UIImageView *imgView2 = nil;
+        UIImageView *imgView3 = nil;
+        UIImageView *imgView4 = nil;
+        
+        if([language isEqualToString:@"it"]){
+            imgView1 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"helpView1.png"]];
+            imgView2 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"helpView2.png"]];
+            imgView3 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"helpView3.png"]];
+            imgView4 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"helpView4.png"]];
+        }
+        else{
+            imgView1 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"helpView1-en.png"]];
+            imgView2 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"helpView2-en.png"]];
+            imgView3 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"helpView3-en.png"]];
+            imgView4 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"helpView4-en.png"]];
+
+        }
+        
         [imgView1 setFrame:CGRectMake(0, 0, 320, 389)];
-        UIImageView *imgView2 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"helpView2.png"]];
         [imgView2 setFrame:CGRectMake(0, 0, 320, 389)];
-        
-        UIImageView *imgView3 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"helpView3.png"]];
         [imgView3 setFrame:CGRectMake(0, 0, 320, 389)];
-        
-        UIImageView *imgView4 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"helpView4.png"]];
         [imgView4 setFrame:CGRectMake(0, 0, 320, 389)];
         
        // UIImageView *imgView5 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"helpView5.png"]];
