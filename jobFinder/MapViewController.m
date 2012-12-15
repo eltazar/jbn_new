@@ -1115,8 +1115,8 @@
     
     newJobs = nil;
     
-    self.rightPanel = nil;
-    self.leftPanel = nil;
+    //self.rightPanel = nil;
+    //self.leftPanel = nil;
     
     [super viewDidUnload];
     // Release any retained subviews of the main view.
