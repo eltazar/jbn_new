@@ -77,7 +77,7 @@
     switch (section) {
         case 0:
             if(row == 0)
-                cell.detailTextLabel.text = job.kind;
+                cell.detailTextLabel.text = [job getLocalizedKind];
             else if(row == 1)
                 cell.detailTextLabel.text = [Utilities sectorFromCode:job.code];
             else if(row == 2){
@@ -103,7 +103,7 @@
             if(row == 0){
                 if(![job.description isEqualToString:@""])
                     ((TextAreaCell*)cell).textView.text = job.description;
-                else ((TextAreaCell*)cell).textView.text = @"Descrizione non disponibile";
+                else ((TextAreaCell*)cell).textView.text = NSLocalizedString(@"NOT SPECIFIED",@"");
             }
                 break;
         case 2:

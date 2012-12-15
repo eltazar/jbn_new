@@ -26,7 +26,7 @@
                    forControlEvents:UIControlEventValueChanged];
         contractSegmentedCtrl.segmentedControlStyle = UISegmentedControlStyleBar;
         
-        kindSegmentedCtrl = [[UISegmentedControl alloc] initWithItems:[NSArray arrayWithObjects:@"Offro",@"Cerco", nil]];
+        kindSegmentedCtrl = [[UISegmentedControl alloc] initWithItems:[NSArray arrayWithObjects:NSLocalizedString(@"JOB OFFER", @""),NSLocalizedString(@"FIND A JOB", @""), nil]];
         kindSegmentedCtrl.frame = CGRectMake(27, 7, 140, 30);
         [kindSegmentedCtrl addTarget:self
                                   action:@selector(chooseKind:)
