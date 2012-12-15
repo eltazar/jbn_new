@@ -68,5 +68,6 @@
 +(NSInteger)jobBinarySearch:(NSArray*)array withID:(NSInteger) x;
 +(void)orderJobsByID:(NSMutableArray*)jobs;
 +(void)mergeArray:(NSArray*)totalArray withArray:(NSArray*)jobs;
+- (NSString *)getLocalizedKind;
 
 @end

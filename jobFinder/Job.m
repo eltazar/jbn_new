@@ -293,6 +293,14 @@
 }
 
 
+- (NSString *)getLocalizedKind
+{
+    NSLog(@"tipo di lavoro = %@",kind);
+    if([self.kind isEqualToString:@"Offro"])
+        return NSLocalizedString(@"JOB OFFER", @"");
+    else return NSLocalizedString(@"FIND A JOB", @"");
+}
+
 - (NSString *)description
 {
     NSString *tmpDescription;
