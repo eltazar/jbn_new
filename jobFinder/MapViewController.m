@@ -16,6 +16,7 @@
 #import "MKMapView+Utils.h"
 #import "Utilities.h"
 #import "HelpViewController.h"
+#import "PopoverView.h"
 
 #define DEFAULT_COORDINATE -180
 #define DEFAUlT_COORDINATE_0 0
@@ -885,8 +886,18 @@
 
 -(void) refreshViewMap
 {
-    NSLog(@"REFRESH MAP view");
+    //NSLog(@"REFRESH MAP view");
     [self bookmarkBtnClicked:self];
+    
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    
+    if([[prefs objectForKey:@"kindOfOffer"] isEqualToString:@"Cerco"]){
+        //NSLog(@"filtro è su tipo cerco");
+        PopoverView *pop = [[PopoverView alloc] init];
+        [pop setOrigin:CGPointMake(160,50)];
+        //[self.map addSubview:pop];
+        [pop showPopover:self.map];
+    }
 }
 
 
