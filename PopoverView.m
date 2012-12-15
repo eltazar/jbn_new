@@ -37,7 +37,7 @@
                      autorelease];
         //text.center = self.center;
         //text.backgroundColor = [UIColor yellowColor];
-        text.text = @"Imposta il filtro su Offro per visualizzare i lavori notificati";
+        text.text = NSLocalizedString(@"NOTIFICATION", @"");
         text.lineBreakMode = UILineBreakModeWordWrap;
         text.numberOfLines = 0;
         text.textAlignment = UITextAlignmentCenter;
