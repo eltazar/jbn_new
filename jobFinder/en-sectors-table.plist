@@ -21,19 +21,19 @@
 			</dict>
 			<dict>
 				<key>label</key>
-				<string>Agriculture</string>
+				<string>Administrative</string>
 				<key>code</key>
-				<string>a4</string>
+				<string>a7</string>
 				<key>kind</key>
 				<string>InfoCell</string>
 				<key>style</key>
 				<string>UITableViewCellStyleDefault</string>
 			</dict>
-			<dict>
+            <dict>
 				<key>label</key>
-				<string>Administrative</string>
+				<string>Agriculture</string>
 				<key>code</key>
-				<string>a7</string>
+				<string>a4</string>
 				<key>kind</key>
 				<string>InfoCell</string>
 				<key>style</key>
@@ -363,11 +363,11 @@
 				<key>style</key>
 				<string>UITableViewCellStyleDefault</string>
 			</dict>
-			<dict>
+            <dict>
 				<key>label</key>
-				<string>Industrial mechanic</string>
+				<string>Industry - manifacturing</string>
 				<key>code</key>
-				<string>m4</string>
+				<string>i3</string>
 				<key>kind</key>
 				<string>InfoCell</string>
 				<key>style</key>
@@ -375,9 +375,9 @@
 			</dict>
 			<dict>
 				<key>label</key>
-				<string>Industry - manifacturing</string>
+				<string>Industrial mechanic</string>
 				<key>code</key>
-				<string>i3</string>
+				<string>m4</string>
 				<key>kind</key>
 				<string>InfoCell</string>
 				<key>style</key>

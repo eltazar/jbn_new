@@ -13,15 +13,15 @@
                 </dict>
                 <dict>
                     <key>label</key>
-                    <string>Agriculture</string>
-                    <key>enum</key>
-                    <string>a4</string>
-                </dict>
-                <dict>
-                    <key>label</key>
                     <string>Administrative</string>
                     <key>enum</key>
                     <string>a7</string>
+                </dict>
+                <dict>
+                    <key>label</key>
+                    <string>Agriculture</string>
+                    <key>enum</key>
+                    <string>a4</string>
                 </dict>
                 <dict>
                     <key>label</key>
