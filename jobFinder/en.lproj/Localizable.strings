@@ -31,12 +31,12 @@
 "DELETE" = "Delete";
 "SHARE" = "Share";
 "WEBSITE" = "Website";
-"MAIL" = "Write a mail";
-"CALL" = "Call";
+"MAIL" = "E-mail";
+"CALL" = "Phone";
 "PUBLISHED" = "Published";
 "ZONE" = "Zone";
 "JOB" = "Job";
-"CHANGE POSITION" = "Change position if you like";
+"CHANGE POSITION" = "Drag to move";
 "NOT AVAILABLE" = "Not available";
 "PREF ZONE" = "Favourite zone";
 "NOT SPECIFIED" = "Not specified";
@@ -70,3 +70,5 @@
 "COMPUTER SCIENCE DEP" = "Computer science department";
 "WRITE US" = "Write us";
 "DONE" = "Done";
+"JOB OFFER" = "Job offer";
+"FIND A JOB" = "Find a job";
