@@ -10475,13 +10475,11 @@ AAEAAQABA</bytes>
 							<string>configBtnClicked:</string>
 							<string>filterBtnClicked:</string>
 							<string>publishBtnClicked:</string>
-							<string>refreshViewMap</string>
 							<string>saveNewJobInPositionBtnClicked:</string>
 							<string>showUserLocationButtonClicked:</string>
 						</object>
 						<object class="NSArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>id</string>
 							<string>id</string>
 							<string>id</string>
 							<string>id</string>
@@ -10500,7 +10498,6 @@ AAEAAQABA</bytes>
 							<string>configBtnClicked:</string>
 							<string>filterBtnClicked:</string>
 							<string>publishBtnClicked:</string>
-							<string>refreshViewMap</string>
 							<string>saveNewJobInPositionBtnClicked:</string>
 							<string>showUserLocationButtonClicked:</string>
 						</object>
@@ -10524,10 +10521,6 @@ AAEAAQABA</bytes>
 							</object>
 							<object class="IBActionInfo">
 								<string key="name">publishBtnClicked:</string>
-								<string key="candidateClassName">id</string>
-							</object>
-							<object class="IBActionInfo">
-								<string key="name">refreshViewMap</string>
 								<string key="candidateClassName">id</string>
 							</object>
 							<object class="IBActionInfo">
