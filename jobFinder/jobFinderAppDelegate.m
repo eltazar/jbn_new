@@ -14,6 +14,7 @@
 #import "MapViewController.h"
 #import "InfoJobViewController.h"
 #import "FBConnect.h"
+#import "Flurry.h"
 
 @implementation jobFinderAppDelegate
 
@@ -28,7 +29,9 @@
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{            
+{
+    [Flurry startSession:@"428W4PRBV7F3THWRBNM8"];
+    
     self.window.rootViewController = self.navController;
     
     // Override point for customization after application launch.
