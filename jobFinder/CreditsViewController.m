@@ -88,20 +88,39 @@
     int section = indexPath.section;
     int row = indexPath.row;
     NSURL *url; 
-    
-    if(section == 2){
-        switch (row) {
-            case 0:
-                NSLog(@"emaildidSelectRow");
-                MFMailComposeViewController *mail = [[MFMailComposeViewController alloc] init];
-                mail.mailComposeDelegate = self;
-                
+    MFMailComposeViewController *mail = [[MFMailComposeViewController alloc] init];
+    mail.mailComposeDelegate = self;
+
+    if(section == 0){
+        if(row == 0){
+            if([MFMailComposeViewController canSendMail]){
+                [mail setToRecipients:[NSArray arrayWithObjects:EMAIL_CONTACT_2, nil]];
+                [mail setSubject:@"Email da JobNavigator"];
+                [mail setMessageBody:@"" isHTML:NO];
+                [self presentModalViewController:mail animated:YES];
+            }
+        }
+    }
+    else if(section == 1){
+            if(row == 0){
                 if([MFMailComposeViewController canSendMail]){
-                    [mail setToRecipients:[NSArray arrayWithObjects:EMAIL_CONTACT_1,EMAIL_CONTACT_2, nil]];
+                    [mail setToRecipients:[NSArray arrayWithObjects:EMAIL_CONTACT_1, nil]];
                     [mail setSubject:@"Email da JobNavigator"];
                     [mail setMessageBody:@"" isHTML:NO];
                     [self presentModalViewController:mail animated:YES];
-                    [mail release];
+                }
+            }
+    }
+    else if(section == 2){
+        switch (row) {
+            case 0:
+                NSLog(@"emaildidSelectRow");
+                                
+                if([MFMailComposeViewController canSendMail]){
+                    [mail setToRecipients:[NSArray arrayWithObjects:EMAIL_CONTACT_1, nil]];
+                    [mail setSubject:@"Email da JobNavigator"];
+                    [mail setMessageBody:@"" isHTML:NO];
+                    [self presentModalViewController:mail animated:YES];
                 }
                 break; 
             case 1:
@@ -113,6 +132,8 @@
         }
     }
     
+    [mail release];
+
     //deseleziona la cella
     [tableView deselectRowAtIndexPath:indexPath animated:YES];  
 }
@@ -160,7 +181,7 @@
                          @"site",              @"DataKey",
                          @"InfoCell",          @"kind",
                          @"Prof. Emanuele Panizzi",  @"label",
-                         @"",                  @"img",
+                         @"mail.png",                  @"img",
                          [NSString stringWithFormat:@"%d", UITableViewCellStyleValue1], @"style",
                          nil]autorelease] atIndex: 0];
     
@@ -168,7 +189,7 @@
                          @"site",             @"DataKey",
                          @"InfoCell",         @"kind",
                          @"Mario Greco",      @"label",
-                         @"",         @"img",
+                         @"mail.png",         @"img",
                          [NSString stringWithFormat:@"%d", UITableViewCellStyleValue1], @"style",
                          nil]autorelease] atIndex: 0];
     
