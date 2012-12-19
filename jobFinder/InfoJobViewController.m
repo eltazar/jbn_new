@@ -89,6 +89,7 @@
                 cell.detailTextLabel.text = [job stringFromDate];
             else if(row == 4){
                 if([job.address isEqualToString:@""]){
+                    
                 }
                 else{
                     cell.accessoryView = nil;
@@ -577,7 +578,6 @@
 //                         [NSString stringWithFormat:@"%d", UITableViewCellStyleSubtitle], @"style",
 //                         nil]autorelease] atIndex: 1];
 
-
     
     sectionData = [[NSArray alloc] initWithObjects: secA, secB, secC, secD,nil];
     sectionDescripition = [[NSArray alloc] initWithObjects:NSLocalizedString(@"GENERAL INFORMATION",@""), NSLocalizedString(@"DESCRIPTION",@"") , NSLocalizedString(@"CONTACTS",@""),@"", nil];
@@ -649,7 +649,7 @@
     UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] 
                initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
     [spinner startAnimating];
-    spinnerCell = [[InfoCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"spinner" withDictionary:[secA objectAtIndex:3]];
+    spinnerCell = [[InfoCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"spinner" withDictionary:[secA objectAtIndex:4]];
     spinnerCell.accessoryView = spinner;
     [spinner release];
 }
