@@ -19,9 +19,6 @@
     UIView *mainView;
     UITableView *switchTable;
     UITableView *contentTable;
-    
-    UISegmentedControl *kindSegmentedCtrl;
-    
 }
 
 @property(nonatomic,retain) NSArray *indices;

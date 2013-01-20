@@ -30,12 +30,13 @@
         [aSwitch addTarget:self action:@selector(switchChanged) forControlEvents:UIControlEventValueChanged];
         aSwitch.on = NO;
         
-        kindSegmentedCtrl = [[UISegmentedControl alloc] initWithItems:[NSArray arrayWithObjects:NSLocalizedString(@"JOB OFFER", @""),NSLocalizedString(@"FIND A JOB", @""), nil]];
-        kindSegmentedCtrl.frame = CGRectMake(27, 7, 140, 30);
-        [kindSegmentedCtrl addTarget:self
-                              action:@selector(chooseKind:)
-                    forControlEvents:UIControlEventValueChanged];
-        kindSegmentedCtrl.segmentedControlStyle = UISegmentedControlStyleBar;
+        /*  filtro offro-cerco */
+//        kindSegmentedCtrl = [[UISegmentedControl alloc] initWithItems:[NSArray arrayWithObjects:NSLocalizedString(@"JOB OFFER", @""),NSLocalizedString(@"FIND A JOB", @""), nil]];
+//        kindSegmentedCtrl.frame = CGRectMake(27, 7, 140, 30);
+//        [kindSegmentedCtrl addTarget:self
+//                              action:@selector(chooseKind:)
+//                    forControlEvents:UIControlEventValueChanged];
+//        kindSegmentedCtrl.segmentedControlStyle = UISegmentedControlStyleBar;
         //NSLog(@"init");
     }
     return self;
@@ -99,14 +100,9 @@
         
         cell.textLabel.text = [rowDesc objectForKey:@"label"];
         
-        if(indexPath.section == 0 && indexPath.row == 1){
+        if(indexPath.section == 0 && indexPath.row == 0){
            // cell.textLabel.text = @"Filtro";
             cell.accessoryView = aSwitch; 
-            cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        }
-        else if(indexPath.section == 0 && indexPath.row == 0){
-            //cell.textLabel.text = @"Filtro";
-            cell.accessoryView = kindSegmentedCtrl;
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
         }
         else{
@@ -247,27 +243,28 @@
     [switchTable reloadData];
 }
 
-- (void) chooseKind:(id)sender{
-    NSLog(@"SELECTOR kind");
-
-    switch(kindSegmentedCtrl.selectedSegmentIndex)
-    {
-        case 0:
-            [[NSUserDefaults standardUserDefaults] setObject:@"Offro" forKey:@"kindOfOffer"];
-            break;
-        case 1:
-            [[NSUserDefaults standardUserDefaults] setObject:@"Cerco" forKey:@"kindOfOffer"];
-            break;
-        default:
-            [[NSUserDefaults standardUserDefaults] setObject:@"Offro" forKey:@"kindOfOffer"];
-            break;
-    }
-    
-    [[NSUserDefaults standardUserDefaults] synchronize];
-    //NSLog(@"job.time = %@",job.time);
-    
-    
-}
+/*  filtro offro-cerco */
+//- (void) chooseKind:(id)sender{
+//    NSLog(@"SELECTOR kind");
+//
+//    switch(kindSegmentedCtrl.selectedSegmentIndex)
+//    {
+//        case 0:
+//            [[NSUserDefaults standardUserDefaults] setObject:@"Offro" forKey:@"kindOfOffer"];
+//            break;
+//        case 1:
+//            [[NSUserDefaults standardUserDefaults] setObject:@"Cerco" forKey:@"kindOfOffer"];
+//            break;
+//        default:
+//            [[NSUserDefaults standardUserDefaults] setObject:@"Offro" forKey:@"kindOfOffer"];
+//            break;
+//    }
+//    
+//    [[NSUserDefaults standardUserDefaults] synchronize];
+//    //NSLog(@"job.time = %@",job.time);
+//    
+//    
+//}
 
 
 
@@ -389,16 +386,17 @@
 
     if([prefs objectForKey:@"selectedCells"]  != nil)
         self.selectedCells = [[[prefs objectForKey:@"selectedCells"]mutableCopy]autorelease];
-    
-    if([prefs objectForKey:@"kindOfOffer"] != nil){
-        kindSegmentedCtrl.selectedSegmentIndex = [[prefs objectForKey:@"kindOfOffer"] intValue];
-        if([[prefs objectForKey:@"kindOfOffer"] isEqualToString:@"Offro"])
-            kindSegmentedCtrl.selectedSegmentIndex = 0;
-        else kindSegmentedCtrl.selectedSegmentIndex = 1;
-    }
-    else{
-        kindSegmentedCtrl.selectedSegmentIndex = 0;
-    }
+
+    /*  filtro offro-cerco */
+//    if([prefs objectForKey:@"kindOfOffer"] != nil){
+//        kindSegmentedCtrl.selectedSegmentIndex = [[prefs objectForKey:@"kindOfOffer"] intValue];
+//        if([[prefs objectForKey:@"kindOfOffer"] isEqualToString:@"Offro"])
+//            kindSegmentedCtrl.selectedSegmentIndex = 0;
+//        else kindSegmentedCtrl.selectedSegmentIndex = 1;
+//    }
+//    else{
+//        kindSegmentedCtrl.selectedSegmentIndex = 0;
+//    }
 
     //indici per la content view
     self.indices = [NSArray arrayWithObjects:@"A",@"B",@"C",@"D",@"E",@"F",@"G",@"H",@"I",@"J",
@@ -487,7 +485,6 @@
     [indices release];
     [selectedCells release];
     [aSwitch release];
-    [kindSegmentedCtrl release];
     
     [structureForSwitchTable release];
     [tableStructureForSwitchTable release];
