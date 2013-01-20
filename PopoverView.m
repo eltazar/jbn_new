@@ -26,7 +26,7 @@
     
     if(self){
         // Initialization code
-        UIImage *image = [UIImage imageNamed:@"popover"];
+        UIImage *image = [UIImage imageNamed:@"popover2"];
         //image.size = CGSizeMake(self.frame.size.width, self.frame.size.height);
         UIImageView *imageView = [[UIImageView alloc]initWithImage:image];
         
@@ -36,7 +36,8 @@
         self.text = [[[UILabel alloc] initWithFrame:CGRectMake(10,13, 130, 70)]
                      autorelease];
         //text.center = self.center;
-        //text.backgroundColor = [UIColor yellowColor];
+        text.backgroundColor = [UIColor clearColor];
+        text.textColor = [UIColor whiteColor];
         text.text = NSLocalizedString(@"NOTIFICATION", @"");
         text.lineBreakMode = UILineBreakModeWordWrap;
         text.numberOfLines = 0;

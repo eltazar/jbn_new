@@ -14,4 +14,5 @@
 @property(nonatomic, retain) UILabel *text;
 -(void)setOrigin:(CGPoint)point;
 -(void)showPopover:(UIView*)parentView;
+-(void)dismissPopover;
 @end
