@@ -77,13 +77,18 @@
         theNewJob.user = [[UIDevice currentDevice] uniqueDeviceIdentifier];
     }
     //NSLog(@"NSDATE IS : %@", [theNewJob stringFromDate]);
-       
+    NSLog(@"CODICE DEL SETTORE = %@",theNewJob.code);
     //se i campi inseriti sono formalmente validi controllo connessione per invio
     if([self validate:theNewJob]){
         NSLog(@"THE NEW JOB KIND = %@",theNewJob.kind);
         //controllo stato connessione
         if(![Utilities networkReachable]){
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle: NSLocalizedString(@"NO NETWORK TITLE", @"") message: NSLocalizedString(@"NO NETWORK MEX", @"") delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+            [alert show];
+            [alert release];
+        }
+        else if(!theNewJob.code || theNewJob.code == 0){
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"MISS SECTOR", "") message:NSLocalizedString(@"MISS SECTOR TEXT", "") delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
             [alert show];
             [alert release];
         }
