@@ -7,10 +7,6 @@
 		<array>
 			<dict>
 				<key>label</key>
-				<string>Tipo annuncio</string>
-			</dict>
-			<dict>
-				<key>label</key>
 				<string>Filtro settori</string>
 			</dict>
 		</array>

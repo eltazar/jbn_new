@@ -7,10 +7,6 @@
 		<array>
 			<dict>
 				<key>label</key>
-				<string>Kind of offer</string>
-			</dict>
-			<dict>
-				<key>label</key>
 				<string>Sectors filter</string>
 			</dict>
 		</array>
