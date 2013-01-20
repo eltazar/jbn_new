@@ -73,3 +73,5 @@
 "JOB OFFER" = "Offro";
 "FIND A JOB" = "Cerco";
 "NOTIFICATION" = "Imposta il filtro su \"Offro\" per visualizzare i lavori notificati";
+"MISS SECTOR" = "Scegli un settore";
+"MISS SECTOR TEXT" = "Per favore scegli un settore per il lavoro";
