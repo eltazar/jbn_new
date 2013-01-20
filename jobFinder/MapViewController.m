@@ -17,6 +17,7 @@
 #import "Utilities.h"
 #import "HelpViewController.h"
 #import "PopoverView.h"
+#import "FilterOfferView.h"
 
 #define DEFAULT_COORDINATE -180
 #define DEFAUlT_COORDINATE_0 0
@@ -722,7 +723,10 @@
 
 //mostra la posizione attuale dell'utente
 -(IBAction) showUserLocationButtonClicked:(id)sender
-{ 
+{
+    
+    NSLog(@"show user location");
+    
     if(refreshBtn.enabled){
         //riposiziona la region alla userLocation
         MKCoordinateSpan span = MKCoordinateSpanMake(0.017731, 0.01820);
@@ -882,6 +886,33 @@
     [map addAnnotation:favouriteAnnotation];
 }
 
+#pragma mark - FilterOfferViewDelegate
+-(void)didChangeFilter:(NSInteger)value{
+    switch (value) {
+        case 0:
+            [map removeAnnotations:[map jobAnnotations]];
+            [dbAccess jobReadRequest:map.region field:[Utilities createFieldsString] kind: @"Offro"];
+            break;
+        case 1:
+            [map removeAnnotations:[map jobAnnotations]];
+            [dbAccess jobReadRequest:map.region field:[Utilities createFieldsString] kind: @"Cerco"];
+            break;
+        default:
+            [map removeAnnotations:[map jobAnnotations]];
+            [dbAccess jobReadRequest:map.region field:[Utilities createFieldsString] kind: @"Offro"];
+            break;
+    }
+    
+    [(PullableView*)[self.view viewWithTag:696] setOpened:FALSE animated:YES];
+    [((PopoverView *)[self.view viewWithTag:698]) dismissPopover];
+}
+
+- (void)pullableView:(PullableView *)pView didChangeState:(BOOL)opened{
+    NSLog(@"STATO DEL SIDE PANEL = %@", opened?@"aperto":@"chiuso");
+    if(!opened)
+        [((PopoverView *)[self.view viewWithTag:698]) dismissPopover];
+}
+
 #pragma  mark - View lyfe cicle
 
 -(void) refreshViewMap
@@ -893,13 +924,19 @@
     
     if([[prefs objectForKey:@"kindOfOffer"] isEqualToString:@"Cerco"]){
         //NSLog(@"filtro è su tipo cerco");
+        [(PullableView*)[self.view viewWithTag:696] setOpened:TRUE animated:YES];
         PopoverView *pop = [[PopoverView alloc] init];
-        [pop setOrigin:CGPointMake(160,50)];
+        [pop setTag:698];
+        [pop setOrigin:CGPointMake(80,85)];
         //[self.map addSubview:pop];
         [pop showPopover:self.map];
     }
 }
 
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    [(PullableView*)[self.view viewWithTag:696] setOpened:FALSE animated:YES];
+}
 
 -(void)viewWillAppear:(BOOL)animated
 {
@@ -919,13 +956,13 @@
      
     //setto il colore del tasto di filtro per segnalare se l'utente ha il filtro su on od off
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
-    NSLog(@"OLD KIND OFFER = %@", oldKindOffer);
+    //NSLog(@"OLD KIND OFFER = %@", oldKindOffer);
     //se cambio il tipo di filtro sul tipo di annuncio cancello i pin
-    if(([[prefs objectForKey:@"kindOfOffer"] isEqualToString:@"Offro"] && [oldKindOffer isEqualToString:@"Cerco"]) ||
-       ([[prefs objectForKey:@"kindOfOffer"] isEqualToString:@"Cerco"] && ([oldKindOffer isEqualToString:@"Offro"] || oldKindOffer == nil))){
-        [map removeAnnotations:[map jobAnnotations]];
-        [dbAccess jobReadRequest:map.region field:[Utilities createFieldsString] kind: [prefs objectForKey:@"kindOfOffer"]?[prefs objectForKey:@"kindOfOffer"]:@"Offro"];
-    }
+//    if(([[prefs objectForKey:@"kindOfOffer"] isEqualToString:@"Offro"] && [oldKindOffer isEqualToString:@"Cerco"]) ||
+//       ([[prefs objectForKey:@"kindOfOffer"] isEqualToString:@"Cerco"] && ([oldKindOffer isEqualToString:@"Offro"] || oldKindOffer == nil))){
+//        [map removeAnnotations:[map jobAnnotations]];
+//        [dbAccess jobReadRequest:map.region field:[Utilities createFieldsString] kind: [prefs objectForKey:@"kindOfOffer"]?[prefs objectForKey:@"kindOfOffer"]:@"Offro"];
+//    }
     
     //gestisco alla comparsa della view come settare il tasto per il filtro e come effettuare le query
         
@@ -960,7 +997,7 @@
         #endif    
     }
     
-    oldKindOffer = [prefs objectForKey:@"kindOfOffer"];
+    //oldKindOffer = [prefs objectForKey:@"kindOfOffer"];
     oldSwitch = [prefs boolForKey:@"switch"];
     self.oldFieldsString = [Utilities createFieldsString];
     //NSLog(@"selected cells = %@",[prefs objectForKey:@"selectedCells"]);
@@ -997,7 +1034,14 @@
 //    rightPanel.frame = CGRectMake(self.map.frame.size.width, map.frame.size.height - rightPanel.frame.size.height,self.rightPanel.frame.size.width,rightPanel.frame.size.height);
 //    [self.map addSubview:rightPanel];
     
-    
+    //righ top panel per il filtro Offro-Cerco
+    FilterOfferView *filterOfferPanel = [[FilterOfferView alloc] initWithFrame:CGRectMake(self.map.frame.size.width,70,190, 35)];
+    filterOfferPanel.alpha = 0.8;
+    filterOfferPanel.fDelegate = self;
+    [filterOfferPanel setDelegate:self];
+    [filterOfferPanel setTag:696];
+    [self.map addSubview:filterOfferPanel];
+    [filterOfferPanel release];
     /*inizializzo i buffer per lo zoom e per le annotazioni
      */
     //buffer di annotazioni aggiunte sotto la soglia di zoom 10

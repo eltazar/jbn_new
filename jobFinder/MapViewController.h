@@ -15,8 +15,10 @@
 #import "DatabaseAccess.h"
 #import "InformationSectionViewController.h"
 #import "GeoDecoder.h"
+#import "FilterOfferView.h"
+#import "PullableView.h"
 
-@interface MapViewController : UIViewController <PublishViewControllerDelegate,  MKMapViewDelegate, DatabaseAccessDelegate,InformationSectionViewControllerDelegate,GeoDecoderDelegate>{
+@interface MapViewController : UIViewController <PublishViewControllerDelegate,  MKMapViewDelegate, DatabaseAccessDelegate,InformationSectionViewControllerDelegate,GeoDecoderDelegate, FilterOfferViewDelegate, PullableViewDelegate>{
     
     MKMapView *map;
     UIToolbar *toolBar;  
@@ -61,7 +63,7 @@
 -(IBAction)showUserLocationButtonClicked:(id)sender;
 -(IBAction)backBtnClicked:(id)sender;
 -(IBAction)filterBtnClicked:(id)sender;
--(void) refreshViewMap;
+-(IBAction) refreshViewMap;
 //-(void)launchTourMessage:(id)sender;
 
 @end
